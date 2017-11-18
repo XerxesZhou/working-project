@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- BEGIN HEAD --><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no" name="viewport"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>帮助中心</title>
+    <link href="../css/HelpPageCss.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            background:#fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="usehelp">
+	<input id="needGuide" type="hidden" value="1">
+	<ul>
+		<li class="payVersion">
+			<img src="../@images/CJY_Logo.png">
+            <p class="version">版本V2.2.6</p>
+		</li>
+	</ul>
+	<p class="sTitle">帮助中心</p>  
+	<ul>
+		<input type="hidden" id="bindGuideEvent" value="">
+		<li><a class="dingtalkNavGo" href="HelpForEmployee.htm">员工手册</a></li>
+		<li><a class="dingtalkNavGo" href="Netnumen.htm" navgoid="xbbConfigBook">配置手册</a></li>
+		<li><a class="dingtalkNavGo" href="Revision.htm" navgoid="xbbUpgradeHistory">历史版本</a></li>
+		<li><a class="dingtalkNavGo" href="Question.htm" navgoid="xbbQuestions">常见问题</a></li>
+		<li><a href="FeedBack.aspx" navgoid="feedback">问题反馈</a></li>
+		<li><a href="tel:0755-33160172">联系电话：0755-33160172 </a></li>	</ul>
+</div>
+</body></html>

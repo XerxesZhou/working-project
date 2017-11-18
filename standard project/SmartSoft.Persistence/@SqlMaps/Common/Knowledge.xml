@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="Knowledge" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="Knowledge" type="SmartSoft.Domain.Common.Knowledge, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="Knowledge">
+      <result property="knowID" column="knowid" />
+      <result property="knowTheme" column="knowtheme" />
+      <result property="knowContent" column="knowcontent" />
+      <result property="knowType" column="knowtype" />
+      <result property="knowOperator" column="knowoperator" />
+      <result property="knowOperateDate" column="knowoperatedate" />
+      <result property="knowFilePath" column="knowfilepath" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectKnowledgeDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [Knowledge]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectKnowledgeDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectKnowledge" parameterClass="int" resultMap="SelectResult">
+      Select
+      knowid,
+      knowtheme,
+      knowcontent,
+      knowtype,
+      knowoperator,
+      knowoperatedate,
+      knowfilepath
+      From [Knowledge]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          knowid=#knowID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertKnowledge" parameterClass="Knowledge">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'Knowledge'
+      Insert Into [Knowledge] (
+      knowid,
+      knowtheme,
+      knowcontent,
+      knowtype,
+      knowoperator,
+      knowoperatedate,
+      knowfilepath
+      )Values(
+      @primarykeyid ,
+      #knowTheme#,
+      #knowContent#,
+      #knowType#,
+      #knowOperator#,
+      #knowOperateDate#,
+      #knowFilePath#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateKnowledge" parameterClass="Knowledge">
+      Update [Knowledge] Set
+      knowid=#knowID#,
+      knowtheme=#knowTheme#,
+      knowcontent=#knowContent#,
+      knowtype=#knowType#,
+      knowoperator=#knowOperator#,
+      knowoperatedate=#knowOperateDate#,
+      knowfilepath=#knowFilePath#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          knowid=#knowID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteKnowledge" parameterClass="int">
+      Delete From [Knowledge]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          knowid=#knowID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

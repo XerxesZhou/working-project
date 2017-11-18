@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Menu" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="Menu" type="SmartSoft.Domain.Purview.Menu, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="Menu">
+			<result property="MenuId" column="menuid" />
+			<result property="MenuName" column="menuname" />
+      <result property="MenuPageId" column="menupageid" />
+      <result property="MenuParentId" column="menuparentid" />
+			<result property="MenuImageUrl" column="menuimageurl" />
+			<result property="MenuOrderByNo" column="menuorderbyno" />
+		</resultMap>
+
+    <resultMap id="List" class="Menu" extends="SelectResult">
+      <result property="MenuPageName" column="menupagename" />
+      <result property="MenuPageUrl" column="menupageurl" />
+      <result property="PageSortId" column="pagesortid" />
+    </resultMap>
+    
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectMenu" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  menuid,
+				  menuname,
+				  menupageid,
+				  menuparentid,
+				  menuimageurl,
+				  menuorderbyno
+			From Menu
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					menuid=#MenuId# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectMenu" parameterClass="int" resultMap="List">
+			Select 
+				  menuid,
+				  menuname,
+				  menupageid,
+          (Select PageName From Page Where PageID=Menu.MenuPageId) as menupagename,
+          (Select PageFilePath From Page Where PageID=Menu.MenuPageId) as menupageurl,
+          (Select PageSortId From Page Where PageID=Menu.MenuPageId) as pagesortid,
+				  menuparentid,
+				  menuimageurl,
+				  menuorderbyno
+			From Menu
+		</select>
+		
+		<select id="MenuDetail" parameterClass="int" resultMap="List" extends="BaseSelectMenu">
+			Where menuid=#MenuId#
+		</select>
+
+    <select id="SelectMenuListByParentId" parameterClass="int" resultMap="List" extends="BaseSelectMenu">
+      Where menuparentid=#MenuParentId# Order By menuorderbyno
+    </select>
+
+    <select id="SelectAllowMenuListByParentId" parameterClass="Hashtable" resultMap="List">
+      Select
+        menuid,
+        menuname,
+        menupageid,
+        (Select PageName From Page Where PageID=Menu.MenuPageId) as menupagename,
+        (Select PageFilePath From Page Where PageID=Menu.MenuPageId) as menupageurl,
+        (Select PageSortId From Page Where PageID=Menu.MenuPageId) as pagesortid,
+        menuparentid,
+        menuimageurl,
+        menuorderbyno
+      From Menu
+      Where menuparentid=#MenuParentId#
+      <dynamic prepend="AND">
+        <iterate conjunction="OR" open="(" close=")" property="KeywordList">
+          menuid=#KeywordList[]#
+        </iterate>
+      </dynamic>
+      Order By menuorderbyno
+    </select>
+				
+		<insert id="InsertMenu" parameterClass="Menu">
+      Insert Into Menu (
+        menuid,
+        menuname,
+        menupageid,
+        menuparentid,
+        menuimageurl,
+        menuorderbyno
+      )Values(
+        #MenuId#,
+        #MenuName#,
+        #MenuPageId#,
+        #MenuParentId#,
+        #MenuImageUrl#,
+        #MenuId#
+      )
+    </insert>
+		
+		<update id="UpdateMenu" parameterClass="Menu">
+			Update Menu Set 
+				menuname=#MenuName#,
+				menupageid=#MenuPageId#,
+				menuparentid=#MenuParentId#,
+				menuimageurl=#MenuImageUrl#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					menuid=#MenuId#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeleteMenu" parameterClass="int">
+			Delete From Menu
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					menuid=#MenuId#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

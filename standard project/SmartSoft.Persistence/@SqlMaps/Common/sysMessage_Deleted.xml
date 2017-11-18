@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysMessage_Deleted" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysMessage_Deleted" type="SmartSoft.Domain.Common.sysMessage_Deleted, SmartSoft.Domain.Common" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysMessage_Deleted">
+			<result property="MessageID" column="messageid" />
+			<result property="OperatorID" column="operatorid" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysMessage_Deleted" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  messageid,
+				  operatorid
+			From sysMessage_Deleted
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID# AND
+					operatorid=#OperatorID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysMessage_Deleted" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  messageid,
+				  operatorid
+			From sysMessage_Deleted
+		</select>
+		
+		<select id="ChildSelectsysMessage_Deleted" parameterClass="int" resultMap="SelectResult" extends="BaseSelectsysMessage_Deleted">
+			
+		</select>
+				
+		<insert id="InsertsysMessage_Deleted" parameterClass="sysMessage_Deleted">
+			Insert Into sysMessage_Deleted (
+				  messageid,
+				  operatorid
+			)Values(
+				 #MessageID#,
+				 #OperatorID#
+			)
+		</insert>
+		
+		<update id="UpdatesysMessage_Deleted" parameterClass="sysMessage_Deleted">
+			Update sysMessage_Deleted Set 
+				messageid=#MessageID#,
+				operatorid=#OperatorID#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID#AND
+					operatorid=#OperatorID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysMessage_Deleted" parameterClass="int">
+			Delete From sysMessage_Deleted
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID#AND
+					operatorid=#OperatorID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

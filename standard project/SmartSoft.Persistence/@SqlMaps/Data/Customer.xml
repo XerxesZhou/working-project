@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="Customer" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="Customer" type="SmartSoft.Domain.Data.Customer, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="Customer">
+      <result property="cusID" column="cusid" />
+      <result property="cusCN" column="cuscn" />
+      <result property="cusName" column="cusname" />
+      <result property="cusEnglishName" column="cusenglishname" />
+      <result property="cusTel" column="custel" />
+      <result property="cusFax" column="cusfax" />
+      <result property="cusEmail" column="cusemail" />
+      <result property="cusWebsite" column="cuswebsite" />
+      <result property="cusAddress" column="cusaddress" />
+      <result property="cusAreaID" column="cusareaid" />
+      <result property="cusKindID" column="cuskindid" />
+      <result property="cusOperatorID" column="cusoperatorid" />
+      <result property="cusDepartmentID" column="cusdepartmentid" />
+      <result property="cusSourceID" column="cussourceid" />
+      <result property="cusAddOperatorID" column="cusaddoperatorid" />
+      <result property="cusAddDate" column="cusadddate" />
+      <result property="cusModifyOperatorID" column="cusmodifyoperatorid" />
+      <result property="cusModifyDate" column="cusmodifydate" />
+      <result property="cusIntroduction" column="cusintroduction" />
+      <result property="cusRemark" column="cusremark" />
+      <result property="cusCertificationType" column="cuscertificationtype" />
+      <result property="cusCertificationNO" column="cuscertificationno" />
+      <result property="cusContactor" column="cuscontactor" />
+      <result property="cusExtType1" column="cusexttype1" />
+      <result property="cusExtType2" column="cusexttype2" />
+      <result property="cusExtType3" column="cusexttype3" />
+      <result property="cusExtText1" column="cusexttext1" />
+      <result property="cusExtText2" column="cusexttext2" />
+      <result property="cusExtText3" column="cusexttext3" />
+      <result property="cusLongtitude" column="cuslongtitude" />
+      <result property="cusLatitude" column="cuslatitude" />
+      <result property="cusLastFollowDate" column="cuslastfollowdate" />
+      <result property="cusExpiredDate" column="cusexpireddate" />
+      <result property="cusProtectDaysLeft" column="cusprotectdaysleft" />
+      <result property="cusLastOrderDate" column="cuslastorderdate" />
+      <result property="cusStatusID" column="cusstatusid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [Customer]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomer" parameterClass="int" resultMap="SelectResult">
+      Select
+      cusid,
+      cuscn,
+      cusname,
+      cusenglishname,
+      custel,
+      cusfax,
+      cusemail,
+      cuswebsite,
+      cusaddress,
+      cusareaid,
+      cuskindid,
+      cusoperatorid,
+      cusdepartmentid,
+      cussourceid,
+      cusaddoperatorid,
+      cusadddate,
+      cusmodifyoperatorid,
+      cusmodifydate,
+      cusintroduction,
+      cusremark,
+      cuscertificationtype,
+      cuscertificationno,
+      cuscontactor,
+      cusexttype1,
+      cusexttype2,
+      cusexttype3,
+      cusexttext1,
+      cusexttext2,
+      cusexttext3,
+      cuslongtitude,
+      cuslatitude,
+      cuslastfollowdate,
+      cusexpireddate,
+      cusprotectdaysleft,
+      cuslastorderdate,
+      cusstatusid
+      From [Customer]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cusid=#cusID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomer" parameterClass="Customer">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'Customer'
+      Insert Into [Customer] (
+      cusid,
+      cuscn,
+      cusname,
+      cusenglishname,
+      custel,
+      cusfax,
+      cusemail,
+      cuswebsite,
+      cusaddress,
+      cusareaid,
+      cuskindid,
+      cusoperatorid,
+      cusdepartmentid,
+      cussourceid,
+      cusaddoperatorid,
+      cusadddate,
+      cusmodifyoperatorid,
+      cusmodifydate,
+      cusintroduction,
+      cusremark,
+      cuscertificationtype,
+      cuscertificationno,
+      cuscontactor,
+      cusexttype1,
+      cusexttype2,
+      cusexttype3,
+      cusexttext1,
+      cusexttext2,
+      cusexttext3,
+      cuslongtitude,
+      cuslatitude,
+      cuslastfollowdate,
+      cusexpireddate,
+      cusprotectdaysleft,
+      cuslastorderdate,
+      cusstatusid
+      )Values(
+      @primarykeyid ,
+      #cusCN#,
+      #cusName#,
+      #cusEnglishName#,
+      #cusTel#,
+      #cusFax#,
+      #cusEmail#,
+      #cusWebsite#,
+      #cusAddress#,
+      #cusAreaID#,
+      #cusKindID#,
+      #cusOperatorID#,
+      #cusDepartmentID#,
+      #cusSourceID#,
+      #cusAddOperatorID#,
+      #cusAddDate#,
+      #cusModifyOperatorID#,
+      #cusModifyDate#,
+      #cusIntroduction#,
+      #cusRemark#,
+      #cusCertificationType#,
+      #cusCertificationNO#,
+      #cusContactor#,
+      #cusExtType1#,
+      #cusExtType2#,
+      #cusExtType3#,
+      #cusExtText1#,
+      #cusExtText2#,
+      #cusExtText3#,
+      #cusLongtitude#,
+      #cusLatitude#,
+      #cusLastFollowDate#,
+      #cusExpiredDate#,
+      #cusProtectDaysLeft#,
+      #cusLastOrderDate#,
+      #cusStatusID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomer" parameterClass="Customer">
+      Update [Customer] Set
+      cusid=#cusID#,
+      cuscn=#cusCN#,
+      cusname=#cusName#,
+      cusenglishname=#cusEnglishName#,
+      custel=#cusTel#,
+      cusfax=#cusFax#,
+      cusemail=#cusEmail#,
+      cuswebsite=#cusWebsite#,
+      cusaddress=#cusAddress#,
+      cusareaid=#cusAreaID#,
+      cuskindid=#cusKindID#,
+      cusoperatorid=#cusOperatorID#,
+      cusdepartmentid=#cusDepartmentID#,
+      cussourceid=#cusSourceID#,
+      cusaddoperatorid=#cusAddOperatorID#,
+      cusadddate=#cusAddDate#,
+      cusmodifyoperatorid=#cusModifyOperatorID#,
+      cusmodifydate=#cusModifyDate#,
+      cusintroduction=#cusIntroduction#,
+      cusremark=#cusRemark#,
+      cuscertificationtype=#cusCertificationType#,
+      cuscertificationno=#cusCertificationNO#,
+      cuscontactor=#cusContactor#,
+      cusexttype1=#cusExtType1#,
+      cusexttype2=#cusExtType2#,
+      cusexttype3=#cusExtType3#,
+      cusexttext1=#cusExtText1#,
+      cusexttext2=#cusExtText2#,
+      cusexttext3=#cusExtText3#,
+      cuslongtitude=#cusLongtitude#,
+      cuslatitude=#cusLatitude#,
+      cuslastfollowdate=#cusLastFollowDate#,
+      cusexpireddate=#cusExpiredDate#,
+      cusprotectdaysleft=#cusProtectDaysLeft#,
+      cuslastorderdate=#cusLastOrderDate#,
+      cusstatusid=#cusStatusID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cusid=#cusID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomer" parameterClass="int">
+      Delete From [Customer]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cusid=#cusID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

@@ -1,0 +1,54 @@
+[2009-09-15 22:18:19] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:18:43] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:19:01] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:19:09] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:19:16] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:19:23] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:20:48] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:21:29] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:21:40] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 22:21:55] Error occurred in page /Data/CustomerFollowHistoryEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.initDataForCustomer() in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 146
+   at SmartSoft.Web.Data.CustomerFollowHistoryEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFollowHistoryEditForm.aspx.cs:line 130
+
+[2009-09-15 23:35:23] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 230
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 100
+
+[2009-09-15 23:36:11] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 230
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 100
+

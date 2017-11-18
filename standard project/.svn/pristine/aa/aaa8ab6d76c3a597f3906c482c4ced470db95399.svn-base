@@ -1,0 +1,468 @@
+[2009-08-27 21:05:38] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:05:59] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:05:59] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:06:46] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:06:46] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:07:55] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:07:55] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:13:45] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:13:45] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:16:08] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:16:23] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:16:58] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:17:15] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:18:39] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:18:40] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:18:45] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:18:46] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:19:34] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:19:43] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: Unable to cast object of type 'System.Int32' to type 'System.String'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at System.Data.SqlClient.SqlBuffer.get_String()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at IBatisNet.DataMapper.TypeHandlers.StringTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:30:47] Error occurred in page Service.BaseService at function:SelectDynamic Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrderItemDynamic' for list.  Cause: soiitemid ---> System.IndexOutOfRangeException: soiitemid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Int32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 65
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 71
+   at SmartSoft.Service.BaseService.SelectDynamic[T](String whereCondition, String orderByExpression) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 61
+
+[2009-08-27 21:32:12] Error occurred in page Service.BaseService at function:SelectDynamic Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrderItemDynamic' for list.  Cause: soiitemid ---> System.IndexOutOfRangeException: soiitemid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Int32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 65
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 71
+   at SmartSoft.Service.BaseService.SelectDynamic[T](String whereCondition, String orderByExpression) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 61
+
+[2009-08-27 21:39:37] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrder' for insert.  Cause: 列名 'sobilltypeid' 无效。 ---> System.Data.SqlClient.SqlException: 列名 'sobilltypeid' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-08-27 21:42:20] Error occurred in page Service.BaseService at function:SelectDynamic Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrderDynamic' for list.  Cause: 列名 'billtypeid' 无效。
+由于绑定错误，未能使用视图或函数 'XSellOrder'。 ---> System.Data.SqlClient.SqlException: 列名 'billtypeid' 无效。
+由于绑定错误，未能使用视图或函数 'XSellOrder'。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject, Int32 skipResults, Int32 maxResults)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 65
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 71
+   at SmartSoft.Service.BaseService.SelectDynamic[T](String whereCondition, String orderByExpression) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 61
+
+[2009-08-27 21:42:21] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectSellOrder' for object.  Cause: 列名 'billtypeid' 无效。
+由于绑定错误，未能使用视图或函数 'XSellOrder'。 ---> System.Data.SqlClient.SqlException: 列名 'billtypeid' 无效。
+由于绑定错误，未能使用视图或函数 'XSellOrder'。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-27 21:43:31] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-08-27 21:44:15] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-08-27 21:45:21] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+

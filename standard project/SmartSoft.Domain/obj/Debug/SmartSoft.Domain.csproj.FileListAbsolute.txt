@@ -1,0 +1,8 @@
+F:\working project\standard project\SmartSoft.Domain\bin\Debug\SmartSoft.Domain.dll
+F:\working project\standard project\SmartSoft.Domain\bin\Debug\SmartSoft.Domain.pdb
+F:\working project\standard project\SmartSoft.Domain\bin\Debug\IBatisNet.Common.dll
+F:\working project\standard project\SmartSoft.Domain\bin\Debug\IBatisNet.DataMapper.dll
+F:\working project\standard project\SmartSoft.Domain\bin\Debug\Castle.DynamicProxy.dll
+F:\working project\standard project\SmartSoft.Domain\obj\Debug\SmartSoft.Domain.csprojResolveAssemblyReference.cache
+F:\working project\standard project\SmartSoft.Domain\obj\Debug\SmartSoft.Domain.dll
+F:\working project\standard project\SmartSoft.Domain\obj\Debug\SmartSoft.Domain.pdb

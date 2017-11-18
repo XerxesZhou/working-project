@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysParameter" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysParameter" type="SmartSoft.Domain.Common.sysParameter, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysParameter">
+			<result property="ParameterID" column="parameterid" />
+			<result property="ParameterName" column="parametername" />
+			<result property="ParameterValue" column="parametervalue" />
+			<result property="ParameterDataType" column="parameterdatatype" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysParameter" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  parameterid,
+				  parametername,
+				  parametervalue,
+				  parameterdatatype
+			From sysParameter
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					parameterid=#ParameterID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysParameter" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  parameterid,
+				  parametername,
+				  parametervalue,
+				  parameterdatatype
+			From sysParameter
+		</select>
+				
+		<insert id="InsertsysParameter" parameterClass="sysParameter">
+			Insert Into sysParameter (
+				  parameterid,
+				  parametername,
+				  parametervalue,
+				  parameterdatatype
+			)Values(
+				 #ParameterID#,
+				 #ParameterName#,
+				 #ParameterValue#,
+				 #ParameterDataType#
+			)
+		</insert>
+		
+		<update id="UpdatesysParameter" parameterClass="sysParameter">
+			Update sysParameter Set 
+				parametername=#ParameterName#,
+				parametervalue=#ParameterValue#,
+				parameterdatatype=#ParameterDataType#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					parameterid=#ParameterID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysParameter" parameterClass="int">
+			Delete From sysParameter
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					parameterid=#ParameterID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

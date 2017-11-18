@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="DataBaseColumn" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="DataBaseColumn" type="SmartSoft.Domain.Data.DataBaseColumn, SmartSoft.Domain" />
+    <!--<typeAlias alias="DataBaseColumnBaseIDName" type="SmartSoft.Domain.Enumerate.BaseIDName, UDEF.Domain" />-->
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="DataBaseColumn">
+      <result property="OrderBy" column="orderby" />
+      <result property="ColumnName" column="columnname" />
+      <result property="Description" column="description" />
+      <result property="DataType" column="datatype" />
+      <result property="IsPrimary" column="isprimary" />
+      <result property="IsNullable" column="isnullable" />
+    </resultMap>
+
+    <!--<resultMap id="SelectDataBaseTableResult" class="DataBaseColumnBaseIDName">
+      <result property="ID" column="id" />
+      <result property="Name" column="name" />
+    </resultMap>-->
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="tableName" />
+      <parameter property="whereCondition" />
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+    <procedure id="SelectDataBaseColumnDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      usp_SelectDataBaseColumnDynamic
+    </procedure>
+
+    <!--<select id="SelectDataBaseTableAll" resultMap="SelectDataBaseTableResult">
+      select [id], [name]
+      from sysobjects
+      where xtype = 'U'  AND [name] != 'dtproperties'
+      order by [name]
+    </select>-->
+  </statements>
+</sqlMap>

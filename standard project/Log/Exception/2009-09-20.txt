@@ -1,0 +1,928 @@
+[2009-09-20 11:39:08] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:39:48] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:40:13] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:40:17] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:41:34] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:41:45] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:44:03] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:44:07] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:45:24] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Web.HttpException: Failed to load viewstate.  The control tree into which viewstate is being loaded must match the control tree that was used to save viewstate during the previous request.  For example, when adding controls dynamically, the controls added during a post-back must match the type and position of the controls added during the initial request.
+   at UDEF.Service.UserDefineBaseService.InitEditPage(Control container, Int32 layoutID, Boolean bReadOnly, String tableCss, String tableHeaderCss, Boolean isAddSummary, Hashtable htDataTypeFormat)
+   at SmartSoft.Presentation.BaseController.InitEditPage(Control ctrl, Int32 layoutID, Boolean bReadOnly, String tableCSS, String TableHeaderCss, Hashtable htDataTypeFormat, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\BaseController.cs:line 233
+   at SmartSoft.Presentation.PageBaseEdit.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseEdit.cs:line 256
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 97
+
+[2009-09-20 11:45:26] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:45:28] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:45:42] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Web.HttpException: Failed to load viewstate.  The control tree into which viewstate is being loaded must match the control tree that was used to save viewstate during the previous request.  For example, when adding controls dynamically, the controls added during a post-back must match the type and position of the controls added during the initial request.
+   at UDEF.Service.UserDefineBaseService.InitEditPage(Control container, Int32 layoutID, Boolean bReadOnly, String tableCss, String tableHeaderCss, Boolean isAddSummary, Hashtable htDataTypeFormat)
+   at SmartSoft.Presentation.BaseController.InitEditPage(Control ctrl, Int32 layoutID, Boolean bReadOnly, String tableCSS, String TableHeaderCss, Hashtable htDataTypeFormat, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\BaseController.cs:line 233
+   at SmartSoft.Presentation.PageBaseEdit.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseEdit.cs:line 256
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 97
+
+[2009-09-20 11:45:45] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:45:49] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:46:05] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 11:46:09] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 80
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:46:59] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 11:47:08] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 67
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:47:41] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 11:47:53] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 67
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 11:48:43] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 11:48:49] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: Specified argument was out of the range of valid values.
+Parameter name: index ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: index
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterPropertyCollection.get_Item(Int32 index)
+   at IBatisNet.DataMapper.Configuration.ParameterMapping.ParameterMap.GetProperty(Int32 index)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.ApplyParameterMap(IDalSession session, IDbCommand command, RequestScope request, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.Commands.DefaultPreparedCommand.Create(RequestScope request, IDalSession session, IStatement statement, Object parameterObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 67
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 12:32:38] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 12:32:44] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 69
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 12:34:00] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 12:34:28] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+违反了 UNIQUE KEY 约束 'UQ_CLIENT'。不能在对象 'client' 中插入重复键。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 69
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 12:34:48] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在! ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 12:35:01] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:0213已经存在! ---> System.Data.SqlClient.SqlException: 编号:0213已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 69
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 120
+
+[2009-09-20 12:41:50] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: 编号:000102已经存在! ---> System.Data.SqlClient.SqlException: 编号:000102已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 13:13:09] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at SmartSoft.Web.Data.XCustomerEditForm.get_rowID() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 49
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 235
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-20 13:17:30] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: $$简称:标艺陶瓷已经存在! ---> System.Data.SqlClient.SqlException: $$简称:标艺陶瓷已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 13:19:00] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: $$简称:test2已经存在! ---> System.Data.SqlClient.SqlException: $$简称:test2已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 13:19:34] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXCustomer' for update.  Cause: $$全称:铠恩国际家居名都光明家居已经存在! ---> System.Data.SqlClient.SqlException: $$全称:铠恩国际家居名都光明家居已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 13:20:13] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: $$简称:test2已经存在! ---> System.Data.SqlClient.SqlException: $$简称:test2已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 13:20:40] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: $$全称:test2已经存在! ---> System.Data.SqlClient.SqlException: $$全称:test2已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 17:41:18] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: $$全称:已经存在! ---> System.Data.SqlClient.SqlException: $$全称:已经存在!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 18:30:17] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 18:32:00] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 18:32:38] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_SellOrderItem_SellOrder' 冲突。该冲突发生于数据库 'SmartSoft'，表 'SellOrder', column 'soorderid'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-20 18:51:12] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateSellOrder' for update.  Cause: 对象名 'SD203N_200.dbo.sorder' 无效。 ---> System.Data.SqlClient.SqlException: 对象名 'SD203N_200.dbo.sorder' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2009-09-20 20:16:08] Error occurred in page PageBaseList at function lb_Search_Click by Jack Details:System.Data.SqlClient.SqlException: 第 7 行: 'ISNULL' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 796
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 867
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 517
+
+[2009-09-20 20:16:11] Error occurred in page PageBaseList at function lb_Search_Click by Jack Details:System.Data.SqlClient.SqlException: 第 7 行: 'ISNULL' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 796
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 867
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 517
+
+[2009-09-20 20:51:49] Error occurred in page PageBaseList at function lb_Search_Click by 童芳 Details:System.Data.SqlClient.SqlException: 列名 'empid' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 796
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 867
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 517
+
+[2009-09-20 20:52:46] Error occurred in page PageBaseList at function lb_Search_Click by 童芳 Details:System.Data.SqlClient.SqlException: 列名 'empid' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 796
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 867
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 517
+
+[2009-09-20 20:55:26] Error occurred in page PageBaseList at function lb_Search_Click by 童芳 Details:System.Data.SqlClient.SqlException: 列名 'empid' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 796
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 867
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 517
+
+[2009-09-20 22:39:02] Error occurred in page Service.BaseService at function:Delete(rowID) Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'DeleteXCustomer' for delete.  Cause: 此客户来自速达，不可在本系统删除! ---> System.Data.SqlClient.SqlException: 此客户来自速达，不可在本系统删除!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Delete(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteDelete(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 200
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteDelete(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 204
+   at SmartSoft.Service.BaseService.Delete[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 177
+
+[2009-09-20 22:39:02] Error occurred in page /Data/XCustomerList.aspx at function lb_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'DeleteXCustomer' for delete.  Cause: 此客户来自速达，不可在本系统删除! ---> System.Data.SqlClient.SqlException: 此客户来自速达，不可在本系统删除!
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Delete(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteDelete(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 200
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Delete[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 182
+   at SmartSoft.Presentation.CommonController.Delete[T](String strListDelete, Int32 viewID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 187
+   at SmartSoft.Web.Data.XCustomerList.lb_Delete_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerList.aspx.cs:line 70
+

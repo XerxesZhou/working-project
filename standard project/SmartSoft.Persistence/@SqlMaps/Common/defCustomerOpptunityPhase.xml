@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="defCustomerOpptunityPhase" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="defCustomerOpptunityPhase" type="SmartSoft.Domain.Common.defCustomerOpptunityPhase, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="defCustomerOpptunityPhase">
+      <result property="cofID" column="cofid" />
+      <result property="cofName" column="cofname" />
+      <result property="cofRate" column="cofrate" />
+      <result property="cofRemark" column="cofremark" />
+      <result property="cofOrderBy" column="coforderby" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectdefCustomerOpptunityPhaseDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [defCustomerOpptunityPhase]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectdefCustomerOpptunityPhaseDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectdefCustomerOpptunityPhase" parameterClass="int" resultMap="SelectResult">
+      Select
+      cofid,
+      cofname,
+      cofrate,
+      cofremark,
+      coforderby
+      From [defCustomerOpptunityPhase]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cofid=#cofID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertdefCustomerOpptunityPhase" parameterClass="defCustomerOpptunityPhase">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'defCustomerOpptunityPhase'
+      Insert Into [defCustomerOpptunityPhase] (
+      cofid,
+      cofname,
+      cofrate,
+      cofremark,
+      coforderby
+      )Values(
+      @primarykeyid ,
+      #cofName#,
+      #cofRate#,
+      #cofRemark#,
+      #cofOrderBy#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdatedefCustomerOpptunityPhase" parameterClass="defCustomerOpptunityPhase">
+      Update [defCustomerOpptunityPhase] Set
+      cofid=#cofID#,
+      cofname=#cofName#,
+      cofrate=#cofRate#,
+      cofremark=#cofRemark#,
+      coforderby=#cofOrderBy#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cofid=#cofID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeletedefCustomerOpptunityPhase" parameterClass="int">
+      Delete From [defCustomerOpptunityPhase]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cofid=#cofID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

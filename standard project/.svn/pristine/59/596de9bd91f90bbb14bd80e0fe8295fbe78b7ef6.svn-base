@@ -1,0 +1,623 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  color: #7f8c97;
+  background-color: #e9f0f5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.SavaBtn
+{
+    background-color: #5E97F6;
+    border-radius: 5px;
+    color: #fff !important;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-shadow: none;
+}
+
+.ListLeft
+{
+    float: left;
+    width: 60%;
+}
+        
+.ListRight
+{
+    float: right; 
+    width: 40%; 
+    text-align:right;
+}
+
+.lblccStatus
+{
+    border: 1px solid #3C96DE;
+    color: #3C96DE;
+    border-radius: 3px;
+}
+
+.GroupDiv
+{
+    font-size: small; 
+    font-weight: normal;
+}
+
+select
+{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    outline: none;
+    background: url("../@images/combo_arrow.png") no-repeat 99%;
+    font-size: 14px;
+    background-size: 12px;
+    direction: rtl;
+    padding-right: 25px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+
+div.ui-input-text input.ui-input-text
+{
+    text-align:right;
+}
+
+.cssTextarea
+{
+    text-align:left !important;
+    height:80px !important;
+}
+
+textarea.ui-input-text
+{
+    text-align:right;
+}
+
+.cssMainPanel
+{
+    width:50%;
+    float:left;
+    overflow:auto;
+}
+
+.cssMainPanel ul
+{
+    margin:0px !important;
+}
+
+.cssMainPanel table
+{
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 3em;
+    width: 100%;
+    font-family: @微软雅黑;
+    border: 0;
+}
+
+.cssMainPanel table tr {
+    line-height: 3em;
+}
+
+.cssMainPanel table tr th
+{
+    text-align: left;
+    width: 35%;
+    color: #828181;
+    font-size:15px;
+    padding-left:10px;
+    border-bottom: 1px solid #EEE;
+    font-weight: normal;
+}
+
+.cssMainPanel table tr td
+{
+    text-align: left;
+    border-bottom: 1px solid #EEE;
+    font-weight:normal;
+}
+
+.searchTable
+{
+    width:100%;
+    font-size: small;
+    font-weight: normal;
+    line-height: 3.5em;
+}
+
+ .searchTable tr th
+{
+    text-align:left;
+    padding-left:10px;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.searchTable tr td
+{
+    border-bottom: 1px solid #eee;
+}
+
+.DateSelect
+{
+    width: 80%;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline:none;
+    text-align: right;
+}
+
+.dis
+{
+    color:#888181;
+}
+
+.ui-content
+{
+    padding:0px;
+}
+
+.pullDown
+{
+    display:none;
+}
+
+textarea
+{
+    border: 0;
+}
+
+.cssHeader
+{
+    text-align: center;
+    color: #333333;
+}
+
+.cssMainPanel div label
+{
+    font-weight: normal;
+}
+
+.new_img
+{
+    height: 20px;
+    float: left;
+    margin-top: 10px;
+}
+        
+.new_div
+{
+    margin-left: 3px;
+    height: 40px;
+    line-height: 40px;
+}
+        
+.new_divtable
+{
+    border: 1px solid #ccc !important;
+    border-radius: 6px;
+}
+.new_table
+{
+    line-height: 40px !important;
+    background-color: #f8f8f8 !important;
+    height: 40px !important;
+}
+
+.new_div a
+{
+    font-size: 15px;
+    cursor:pointer;
+}
+/*菜单滑动*/
+#divNavigation
+{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    top: 80px;
+    background-color: white;
+    z-index: 1003;
+}
+        
+#divNavigation ul
+{
+    position: absolute;
+    height: 40px;
+}
+        
+#divNavigation ul li
+{
+    float: left;
+    width: 33.33%;
+    height: 40px;
+}
+        
+#divNavigation ul a
+{
+    width: 100%;
+    color: #3C96DE;
+    font-weight: normal;
+    line-height: 40px;
+    display: block;
+    height: 40px;
+    text-align: center;
+    cursor:pointer;
+}
+        
+#divNavigation .preNext
+{
+    width: 33px;
+    height: 100px;
+    position: absolute;
+    top: -33px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+    cursor: pointer;
+}
+#divNavigation .pre
+{
+    left: 0;
+}
+#divNavigation .next
+{
+    right: 0;
+    background-position: right top;
+}
+/*菜单滑动结束*/
+.li_title
+{
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #3C96DE;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.TitlecusName
+{
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    float: left;
+    padding: 5px 0px 5px 0px;
+    text-shadow: none;
+    width: 100%;
+    text-align: left;
+}
+
+.TitleTable tr td
+{
+    text-align: left;
+    font-size: 12px;
+    color: #989191;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.picView
+{
+    text-align: center;
+    max-width: 30%;
+    margin-right: 10px;
+}
+/*点赞评论*/
+.cssLike
+{
+    color:#3C96DE;
+}
+.cssNotLike
+{
+    color:Gray;
+}
+/*点赞评论结束*/
+
+.MainPanelli
+{
+    padding:0px !important;
+    margin-bottom:20px !important;
+}
+
+.MainView
+{
+    overflow: auto;
+    margin: 0px 4px 7px 4px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-top: 0px;    
+    cursor:pointer;
+}
+
+.footerRecord
+{
+    border-top: 1px solid #ddd;
+    background: #fff !important;
+    color: #888181 !important;
+    text-shadow: none !important;
+    text-align: right !important;
+    font-weight: normal !important;
+    padding-right: 10px;
+}
+
+ .lblName
+{
+    font-size:14px;
+    color:#666;
+}
+        
+.lblType
+{
+    padding: 5px;
+    color: #0174CF;
+    border: 1px solid;
+    border-radius: 5px;
+}
+        
+    .cssLikePerson
+{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0174CF;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;   
+    margin:5px;
+    float:left; 
+    text-shadow: none;
+}
+        
+.cssTxt
+{
+    height: 30px;
+    line-height: 30px;
+    float:left;
+    margin:5px;
+}
+        
+.MeunButton
+{
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #0174CF;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #0174CF;
+    border-radius: 5px;
+    margin-left:10px;
+    cursor:pointer;
+    text-shadow: none;
+    font-weight:normal;
+}
+        
+.CancelBtn
+{
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor:pointer;
+    text-shadow: none;
+}
+
+#MenuLi
+{
+    list-style:none;
+    float:left;
+}
+        
+#MenuLi li
+{
+    float:left;
+    padding:10px;
+}
+        
+.black_overlay
+{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: alpha(opacity=80);
+    opacity: 0.3;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.CssForTrans
+{
+    z-index: 99999; 
+    border-radius:5px; 
+    margin:auto; 
+    position: fixed; 
+    width: 35%; 
+    background-color: #fff; 
+    height:20%; 
+    display:none; 
+    top:0; 
+    left:0; 
+    right:0; 
+    bottom:0;
+}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background-color:#ddd;}
+::-webkit-scrollbar-thumb{background-color:#aaa;}
+
+
+
+
+/** 
+ 
+ @Name： laydate 核心样式
+ @Author：
+
+ 
+**/
+
+html
+{
+    _background-image:url(about:blank);
+      _background-attachment:fixed;
+      overflow:hidden;
+   }
+.laydate_body .laydate_box, .laydate_body .laydate_box *{margin:0; padding:0;}
+.laydate-icon,
+.laydate-icon-default,
+.laydate-icon-danlan,
+.laydate-icon-dahong,
+.laydate-icon-molv{height:22px; line-height:22px; padding-right:20px; border:1px solid #C6C6C6; background-repeat:no-repeat; background-position:right center;  background-color:#fff; outline:0;}
+.laydate-icon-default{ background-image:url(../images/icon.png)}
+.laydate-icon-danlan{border:1px solid #B1D2EC; background-image:url(../images/icon.png)}
+.laydate-icon-dahong{background-image:url(../images/icon.png)}
+.laydate-icon-molv{background-image:url(../images/icon.png)}
+.laydate_body .laydate_box{width:240px; font:12px '\5B8B\4F53'; z-index:99999999; *margin:-2px 0 0 -2px; *overflow:hidden; _margin:0; _position:absolute!important; background-color:#fff;}
+.laydate_body .laydate_box li{list-style:none;}
+.laydate_body .laydate_box .laydate_void{cursor:text!important;}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{text-decoration:none; blr:expression(this.onFocus=this.blur()); cursor:pointer;}
+.laydate_body .laydate_box a:hover{text-decoration:none;}
+.laydate_body .laydate_box cite, .laydate_body .laydate_box label{position:absolute; width:0; height:0; border-width:5px; border-style:dashed; border-color:transparent; overflow:hidden; cursor:pointer;}
+.laydate_body .laydate_box .laydate_yms, .laydate_body .laydate_box .laydate_time{display:none;}
+.laydate_body .laydate_box .laydate_show{display:block;}
+.laydate_body .laydate_box input{outline:0; font-size:14px; background-color:#fff;}
+.laydate_body .laydate_top{position:relative; height:26px; padding:5px; *width:100%; z-index:99;}
+.laydate_body .laydate_ym{position:relative; float:left; height:24px; cursor:pointer;}
+.laydate_body .laydate_ym input{float:left; height:24px; line-height:24px; text-align:center; border:none; cursor:pointer;}
+.laydate_body .laydate_ym .laydate_yms{position:absolute; left: -1px; top: 24px; height:181px;}
+.laydate_body .laydate_y{width:121px; margin-right:6px;}
+.laydate_body .laydate_y input{width:64px; margin-right:15px;}
+.laydate_body .laydate_y .laydate_yms{width:121px; text-align:center;}
+.laydate_body .laydate_y .laydate_yms a{position:relative; display:block; height:20px;}
+.laydate_body .laydate_y .laydate_yms ul{height:139px; padding:0; *overflow:hidden;}
+.laydate_body .laydate_y .laydate_yms ul li{float:left; width:60px; height:20px; line-height: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.laydate_body .laydate_m{width:99px;}
+.laydate_body .laydate_m .laydate_yms{width:99px; padding:0;}
+.laydate_body .laydate_m input{width:42px; margin-right:15px;}
+.laydate_body .laydate_m .laydate_yms span{display:block; float:left; width:42px; margin: 5px 0 0 5px; line-height:24px; text-align:center; _display:inline;}
+.laydate_body .laydate_choose{display:block; float:left; position:relative; width:20px; height:24px;}
+.laydate_body .laydate_choose cite, .laydate_body .laydate_tab cite{left:50%; top:50%;}
+.laydate_body .laydate_chtop cite{margin:-7px 0 0 -5px; border-bottom-style:solid;}
+.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label{top:50%; margin:-2px 0 0 -5px; border-top-style:solid;}
+.laydate_body .laydate_chprev cite{margin:-5px 0 0 -7px;}
+.laydate_body .laydate_chnext cite{margin:-5px 0 0 -2px;}
+.laydate_body .laydate_ym label{right:28px;}
+.laydate_body .laydate_table{ width:230px; margin:0 5px; border-collapse:collapse; border-spacing:0px; }
+.laydate_body .laydate_table td{width:31px; height:19px; line-height:19px; text-align: center; cursor:pointer; font-size: 12px;}
+.laydate_body .laydate_table thead{height:22px; line-height:22px;}
+.laydate_body .laydate_table thead th{font-weight:400; font-size:12px; text-align:center;}
+.laydate_body .laydate_bottom{position:relative; height:22px; line-height:20px; padding:5px; font-size:12px;}
+.laydate_body .laydate_bottom #laydate_hms{position: relative; z-index: 1; float:left; }
+.laydate_body .laydate_time{ position:absolute; left:5px; bottom: 26px; width:129px; height:125px; *overflow:hidden;}
+.laydate_body .laydate_time .laydate_hmsno{ padding:5px 0 0 5px;}
+.laydate_body .laydate_time .laydate_hmsno span{display:block; float:left; width:24px; height:19px; line-height:19px; text-align:center; cursor:pointer; *margin-bottom:-5px;}
+.laydate_body .laydate_time1{width:228px; height:154px;}
+.laydate_body .laydate_time1 .laydate_hmsno{padding: 6px 0 0 8px;}
+.laydate_body .laydate_time1 .laydate_hmsno span{width:21px; height:20px; line-height:20px;}
+.laydate_body .laydate_msg{left:49px; bottom:67px; width:141px; height:auto; overflow: hidden;}
+.laydate_body .laydate_msg p{padding:5px 10px;}
+.laydate_body .laydate_bottom li{float:left; height:20px; line-height:20px; border-right:none; font-weight:900;}
+.laydate_body .laydate_bottom .laydate_sj{width:33px; text-align:center; font-weight:400;}
+.laydate_body .laydate_bottom input{float:left; width:21px; height:20px; line-height:20px; border:none; text-align:center; cursor:pointer; font-size:12px;  font-weight:400;}
+.laydate_body .laydate_bottom .laydte_hsmtex{height:20px; line-height:20px; text-align:center;}
+.laydate_body .laydate_bottom .laydte_hsmtex span{position:absolute; width:20px; top:0; right:0px; cursor:pointer;}
+.laydate_body .laydate_bottom .laydte_hsmtex span:hover{font-size:14px;}
+.laydate_body .laydate_bottom .laydate_btn{position:absolute; right:5px; top:5px;}
+.laydate_body .laydate_bottom .laydate_btn a{float:left; height:20px; padding:0 6px; _padding:0 5px;}
+.laydate_body .laydate_bottom .laydate_v{position:absolute; left:10px; top:6px; font-family:Courier; z-index:0;}
+
+
+/** 
+ 
+ @Name： laydate皮肤：淡蓝
+ @Author：贤心
+ @Site：http://sentsin.com/layui/laydate
+ 
+**/
+
+.laydate-icon{border:1px solid #B1D2EC; background-image:url(../images/icon.png)}
+
+.laydate_body .laydate_box,
+.laydate_body .laydate_ym,
+.laydate_body .laydate_ym .laydate_yms,
+.laydate_body .laydate_table,
+.laydate_body .laydate_table td,
+.laydate_body .laydate_bottom #laydate_hms,
+.laydate_body .laydate_time,
+.laydate_body .laydate_bottom .laydate_btn a{border:1px solid #B1D2EC;}
+
+.laydate_body .laydate_y .laydate_yms a,
+.laydate_body .laydate_choose,
+.laydate_body .laydate_table thead{background-color:#DEECF8;}
+
+.laydate_body .laydate_box, 
+.laydate_body .laydate_ym .laydate_yms,
+.laydate_body .laydate_time{box-shadow: 2px 2px 5px rgba(0,0,0,.1);}
+
+.laydate_body .laydate_box{border-top:none; border-bottom:none; background-color:#fff; color:#1F547E;}
+.laydate_body .laydate_box input{color:#1F547E;}
+.laydate_body .laydate_box .laydate_void{color:#BDD8EE!important;}
+.laydate_body .laydate_box .laydate_void:hover{background-color:#fff!important}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{color:#1F547E;}
+.laydate_body .laydate_click{background-color:#DEECF8!important;}
+.laydate_body .laydate_top{border-top:1px solid #B1D2EC;}
+.laydate_body .laydate_ym .laydate_yms{background-color:#fff;}
+.laydate_body .laydate_y .laydate_yms a{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_y .laydate_yms .laydate_chdown{border-top:1px solid #B1D2EC; border-bottom:none;}
+.laydate_body .laydate_y .laydate_yms ul li:hover, 
+.laydate_body .laydate_m .laydate_yms span:hover{color:#000;}
+.laydate_body .laydate_choose{border-left:1px solid #B1D2EC;}
+.laydate_body .laydate_chprev{border-left:none; border-right:1px solid #B1D2EC;}
+.laydate_body .laydate_chtop cite{border-bottom-color:#3081C2;}
+.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label{border-top-color:#3081C2;}
+.laydate_body .laydate_chprev cite{border-right-style:solid; border-right-color:#3081C2;}
+.laydate_body .laydate_chnext cite{border-left-style:solid; border-left-color:#3081C2;}
+.laydate_body .laydate_table td{background-color:#fff; color:#1F547E;}
+.laydate_body .laydate_table .laydate_nothis{color:#60A2D7;}
+.laydate_body .laydate_table thead{color:#163A58;}
+.laydate_body .laydate_bottom{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom #laydate_hms{background-color:#fff;}
+.laydate_body .laydate_time{background-color:#fff;}
+.laydate_body .laydate_bottom .laydate_sj{border-right:1px solid #B1D2EC; background-color:#ECF4FB;}
+.laydate_body .laydate_bottom input{background-color:#fff;}
+.laydate_body .laydate_bottom .laydte_hsmtex{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom .laydate_btn{border-right:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom .laydate_v{color:#75AEDD}
+.laydate_body .laydate_bottom .laydate_btn a{ border-right:none; background-color:#ECF4FB;}
+.laydate_body .laydate_bottom .laydate_btn a:hover{ background-color:#fff;}
+
+.laydate_body .laydate_y .laydate_yms ul li:hover,
+.laydate_body .laydate_m .laydate_yms span:hover,
+.laydate_body .laydate_choose:hover,
+.laydate_body .laydate_y .laydate_yms a:hover,
+.laydate_body .laydate_table td:hover,
+.laydate_body .laydate_bottom .laydate_time span:hover,
+.laydate_body .laydate_bottom .laydte_hsmtex{background-color:#ECF4FB}
+
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

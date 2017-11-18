@@ -1,0 +1,102 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" Description="Template description here." %>
+<%@ Property Name="NameSpace" Type="System.String" Default="" Category="Context" Description="This is a sample string property." %>
+<%@ Property Name="Author" Type="System.String" Default="" Category="Context" Description="author of this code" %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the mapping file is based on" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+
+<script runat="template">
+	public string ToLowercase(string str)
+	{
+		str = str.ToLower();	
+		return str;
+	}
+	
+	public string GetDataType(ColumnSchema column)
+	{
+		string datatype = column.SystemType.ToString();
+		if(datatype == "System.String")
+		{
+			datatype = "string";
+		}
+		if(datatype == "System.Int32")
+		{
+			datatype = "int";
+			if(column.AllowDBNull)
+			{
+				datatype += "?";	
+			}
+		}
+		if(datatype == "System.DateTime")
+		{
+			datatype = "DateTime";
+			if(column.AllowDBNull)
+			{
+				datatype += "?";	
+			}
+		}
+		if(datatype == "System.Boolean")
+		{
+			datatype = "bool";	
+		}
+		if(datatype == "System.Decimal")
+		{
+			datatype = "decimal";
+			if(column.AllowDBNull)
+			{
+				datatype += "?";	
+			}
+		}
+		if(datatype == "System.Double")
+		{
+			datatype = "double";
+			//if(column.AllowDBNull)
+			//{
+			//	datatype += "?";	
+			//}
+		}
+
+		return datatype;	
+	}
+	
+</script>
+/***************************************************************************
+ * 
+ *       功能：     <%=SourceTable.Description%>实体类
+ *       作者：     <%=Author%>
+ *       日期：     <%=System.DateTime.Now.ToShortDateString()%>
+ * 
+ *       修改日期： 
+ *       修改人：
+ *       修改内容：
+ * 
+ * *************************************************************************/
+namespace <%=NameSpace%>
+{
+	using System;
+	
+	/// <summary>
+	/// <%=SourceTable.Name%> 
+	/// </summary>
+	[Serializable]
+	public class <%=SourceTable.Name%>
+	{
+		public <%=SourceTable.Name%>()
+		{
+			
+		}
+
+		<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+		///<sumary>
+		/// <%=SourceTable.Columns[i].Description%>
+		///</sumary>
+		public <%=GetDataType(SourceTable.Columns[i])%> <%=SourceTable.Columns[i].Name%>
+		{
+			get;
+			set;
+		}
+		<%}%>
+	}
+}

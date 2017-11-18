@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="defCommon" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="defCommon" type="SmartSoft.Domain.Data.defCommon, SmartSoft.Domain" />
+  </alias>
+  <resultMaps>
+    <resultMap id="SelectResult" class="defCommon">
+      <result property="ID" column="id" />
+      <result property="Name" column="name" />
+      <result property="TableName" column="tablename" />
+      <result property="Remark" column="remark" />
+      <result property="UseTag" column="usetag" />
+      <result property="OrderBy" column="orderby" />
+      
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="Search">
+      <parameter property="querystr" />
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+    <procedure id="SelectdefCommon" parameterMap="Search" resultMap="SelectResult">
+      usp_ExecDefCommon
+    </procedure>
+
+    <procedure id="BaseSelectdefCommon" parameterMap="Search" resultMap="SelectResult">
+      usp_ExecDefCommon
+    </procedure>
+
+    <procedure id="InsertdefCommon" parameterMap="Search">
+      usp_ExecDefCommon
+    </procedure>
+
+    <procedure id="UpdatedefCommon" parameterMap="Search">
+      usp_ExecDefCommon
+    </procedure>
+
+    <procedure id="DeletedefCommon" parameterMap="Search">
+      usp_ExecDefCommon
+    </procedure>
+
+    <procedure id="OpendefCommon" parameterMap="Search">
+      usp_ExecDefCommon
+    </procedure>
+  </statements>
+</sqlMap>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="ToolbarPurview" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="ToolbarPurview" type="SmartSoft.Domain.Purview.ToolbarPurview, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="ToolbarPurview">
+			<result property="ToolbarId" column="toolbarid" />
+			<result property="ObjectId" column="objectid" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectToolbarPurview" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  toolbarid,
+				  objectid
+			From ToolbarPurview
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId# AND
+					objectid=#ObjectId# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectToolbarPurview" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  toolbarid,
+				  objectid
+			From ToolbarPurview
+		</select>
+		
+		<select id="ChildSelectToolbarPurview" parameterClass="int" resultMap="SelectResult" extends="BaseSelectToolbarPurview">
+			
+		</select>
+				
+		<insert id="InsertToolbarPurview" parameterClass="ToolbarPurview">
+			Insert Into ToolbarPurview (
+				  toolbarid,
+				  objectid
+			)Values(
+				 #ToolbarId#,
+				 #ObjectId#
+			)
+		</insert>
+		
+		<update id="UpdateToolbarPurview" parameterClass="ToolbarPurview">
+			Update ToolbarPurview Set 
+				toolbarid=#ToolbarId#,
+				objectid=#ObjectId#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId#AND
+					objectid=#ObjectId#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeleteToolbarPurview" parameterClass="int">
+			Delete From ToolbarPurview
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId#AND
+					objectid=#ObjectId#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

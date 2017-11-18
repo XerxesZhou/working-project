@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerBusiness" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerBusiness" type="SmartSoft.Domain.Data.CustomerBusiness, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerBusiness">
+      <result property="cbID" column="cbid" />
+      <result property="cbCustomerID" column="cbcustomerid" />
+      <result property="cbBranchID" column="cbbranchid" />
+      <result property="cbBusinessType" column="cbbusinesstype" />
+      <result property="cbName" column="cbname" />
+      <result property="cbStatus" column="cbstatus" />
+      <result property="cbRemark" column="cbremark" />
+      <result property="cbAddDate" column="cbadddate" />
+      <result property="cbAddOperatorID" column="cbaddoperatorid" />
+      <result property="cbModifyDate" column="cbmodifydate" />
+      <result property="cbModifyOperatorID" column="cbmodifyoperatorid" />
+      <result property="cbDate" column="cbdate" />
+      <result property="cbGotAmount" column="cbgotamount" />
+      <result property="cbTotalAmount" column="cbtotalamount" />
+      <result property="cbNotGotAmount" column="cbnotgotamount" />
+      <result property="cbOperatorID" column="cboperatorid" />
+      <result property="cbAfterID" column="cbafterid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerBusinessDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerBusiness]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerBusinessDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerBusiness" parameterClass="int" resultMap="SelectResult">
+      Select
+      cbid,
+      cbcustomerid,
+      cbbranchid,
+      cbbusinesstype,
+      cbname,
+      cbstatus,
+      cbremark,
+      cbadddate,
+      cbaddoperatorid,
+      cbmodifydate,
+      cbmodifyoperatorid,
+      cbdate,
+      cbgotamount,
+      cbtotalamount,
+      cbnotgotamount,
+      cboperatorid,
+      cbafterid
+      From [CustomerBusiness]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cbid=#cbID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerBusiness" parameterClass="CustomerBusiness">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerBusiness'
+      Insert Into [CustomerBusiness] (
+      cbid,
+      cbcustomerid,
+      cbbranchid,
+      cbbusinesstype,
+      cbname,
+      cbstatus,
+      cbremark,
+      cbadddate,
+      cbaddoperatorid,
+      cbmodifydate,
+      cbmodifyoperatorid,
+      cbdate,
+      cbgotamount,
+      cbtotalamount,
+      cbnotgotamount,
+      cboperatorid,
+      cbafterid
+      )Values(
+      @primarykeyid ,
+      #cbCustomerID#,
+      #cbBranchID#,
+      #cbBusinessType#,
+      #cbName#,
+      #cbStatus#,
+      #cbRemark#,
+      #cbAddDate#,
+      #cbAddOperatorID#,
+      #cbModifyDate#,
+      #cbModifyOperatorID#,
+      #cbDate#,
+      #cbGotAmount#,
+      #cbTotalAmount#,
+      #cbNotGotAmount#,
+      #cbOperatorID#,
+      #cbAfterID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerBusiness" parameterClass="CustomerBusiness">
+      Update [CustomerBusiness] Set
+      cbid=#cbID#,
+      cbcustomerid=#cbCustomerID#,
+      cbbranchid=#cbBranchID#,
+      cbbusinesstype=#cbBusinessType#,
+      cbname=#cbName#,
+      cbstatus=#cbStatus#,
+      cbremark=#cbRemark#,
+      cbadddate=#cbAddDate#,
+      cbaddoperatorid=#cbAddOperatorID#,
+      cbmodifydate=#cbModifyDate#,
+      cbmodifyoperatorid=#cbModifyOperatorID#,
+      cbdate=#cbDate#,
+      cbgotamount=#cbGotAmount#,
+      cbtotalamount=#cbTotalAmount#,
+      cbnotgotamount=#cbNotGotAmount#,
+      cboperatorid=#cbOperatorID#,
+      cbafterid=#cbAfterID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cbid=#cbID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerBusiness" parameterClass="int">
+      Delete From [CustomerBusiness]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cbid=#cbID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

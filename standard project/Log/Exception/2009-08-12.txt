@@ -1,0 +1,7 @@
+[2009-08-12 12:34:57] Error occurred in page PageBaseList at function lb_Export_Click by Jack Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) in E:\SmartSoft\SmartSoft.Presentation\PageBase.cs:line 393
+   at SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 581
+

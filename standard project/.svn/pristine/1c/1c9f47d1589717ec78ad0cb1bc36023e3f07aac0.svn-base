@@ -1,0 +1,69 @@
+.NavBar
+{ 
+  background-color: #E5E4E8; 
+  border: 1px solid #9D9DA1; 
+  cursor: default;
+} 
+
+.TopItem
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  border: 1px solid white; 
+  border-right-color: #9D9DA1;
+  border-bottom-color: #9D9DA1;
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  cursor:hand;
+}
+
+.TopItemHover
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  border: 2px solid white; 
+  border-right-color: #9D9DA1;
+  border-bottom-color: #9D9DA1;
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  cursor:hand;
+}
+
+.TopItemActive
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  border: 2px solid #9D9DA1; 
+  border-right-color: white;
+  border-bottom-color: white;
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  cursor:hand;
+}
+
+.Level2Item
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  text-align: center;
+  cursor:hand;
+}
+
+.Level2ItemHover
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  text-decoration:underline;
+  text-align: center;
+  cursor:hand;
+}
+
+.Level2Group
+{
+  border-top-color: #F0F1F5;
+  padding-top:5px;
+}
+
+.Empty
+{
+}

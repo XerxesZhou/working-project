@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="BillComment" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="BillComment" type="SmartSoft.Domain.Data.BillComment, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="BillComment">
+      <result property="bcID" column="bcid" />
+      <result property="bcSourceID" column="bcsourceid" />
+      <result property="bcContent" column="bccontent" />
+      <result property="bcTypeID" column="bctypeid" />
+      <result property="bcOperatorID" column="bcoperatorid" />
+      <result property="bcDate" column="bcdate" />
+      <result property="bcRemark" column="bcremark" />
+      <result property="bcRelatedID" column="bcrelatedid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectBillCommentDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [BillComment]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectBillCommentDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectBillComment" parameterClass="int" resultMap="SelectResult">
+      Select
+      bcid,
+      bcsourceid,
+      bccontent,
+      bctypeid,
+      bcoperatorid,
+      bcdate,
+      bcremark,
+      bcrelatedid
+      From [BillComment]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          bcid=#bcID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertBillComment" parameterClass="BillComment">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'BillComment'
+      Insert Into [BillComment] (
+      bcid,
+      bcsourceid,
+      bccontent,
+      bctypeid,
+      bcoperatorid,
+      bcdate,
+      bcremark,
+      bcrelatedid
+      )Values(
+      @primarykeyid ,
+      #bcSourceID#,
+      #bcContent#,
+      #bcTypeID#,
+      #bcOperatorID#,
+      #bcDate#,
+      #bcRemark#,
+      #bcRelatedID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateBillComment" parameterClass="BillComment">
+      Update [BillComment] Set
+      bcid=#bcID#,
+      bcsourceid=#bcSourceID#,
+      bccontent=#bcContent#,
+      bctypeid=#bcTypeID#,
+      bcoperatorid=#bcOperatorID#,
+      bcdate=#bcDate#,
+      bcremark=#bcRemark#,
+      bcrelatedid=#bcRelatedID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          bcid=#bcID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteBillComment" parameterClass="int">
+      Delete From [BillComment]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          bcid=#bcID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

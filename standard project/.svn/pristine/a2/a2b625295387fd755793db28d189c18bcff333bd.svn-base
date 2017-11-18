@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysRoleLayoutView" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysRoleLayoutView" type="SmartSoft.Domain.Common.sysRoleLayoutView, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysRoleLayoutView">
+			<result property="rlvID" column="rlvid" />
+			<result property="ObjectID" column="objectid" />
+			<result property="LayoutOrViewID" column="layoutorviewid" />
+			<result property="ControlID" column="controlid" />
+			<result property="ActionID" column="actionid" />
+		</resultMap>
+    <resultMap id="List" class="sysRoleLayoutView">
+      <result property="ObjectID" column="objectid" />
+      <result property="LayoutOrViewID" column="layoutorviewid" />
+      <result property="ControlID" column="controlid" />
+      <result property="ActionID" column="actionid" />
+    </resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysRoleLayoutView" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  rlvid,
+				  objectid,
+				  layoutorviewid,
+				  controlid,
+				  actionid
+			From sysRoleLayoutView
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					rlvid=#rlvID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysRoleLayoutView" parameterClass="int" resultMap="List">
+			SELECT 
+				  DISTINCT 
+				  objectid,
+				  layoutorviewid,
+				  controlid,
+				  actionid
+			FROM sysRoleLayoutView
+		</select>
+
+    <!--根据角色控件动作得到相应的布局或视图列表-->
+		<select id="SelectsysRoleLayoutViewByRoleControlAction" parameterClass="Hashtable" resultMap="List" extends="BaseSelectsysRoleLayoutView">
+      WHERE objectid=#ObjectID# AND controlid=#ControlID#
+      <dynamic prepend="AND">
+        <isNotNull property="ActionID">
+          actionid=#ActionID#
+        </isNotNull>
+        <isNull property="ActionID">
+          actionid is null
+        </isNull>
+      </dynamic>
+    </select>
+
+    <select id="SelectsysRoleLayoutViewByRolesControlAction" parameterClass="Hashtable" resultMap="List" extends="BaseSelectsysRoleLayoutView">
+      WHERE controlid=#ControlID#
+      AND objectid IN
+      <iterate property="ObjectIDs" open="(" close=")" conjunction=",">
+        #ObjectIDs[]#
+      </iterate>
+      <dynamic prepend="AND">
+        <isNotNull property="ActionID">
+          (actionid=#ActionID# or actionid is null)
+        </isNotNull>
+        <isNull property="ActionID">
+          actionid is null
+        </isNull>
+      </dynamic>
+      order by actionid desc
+    </select>
+				
+		<insert id="InsertsysRoleLayoutView" parameterClass="sysRoleLayoutView">
+			Insert Into sysRoleLayoutView (
+				  rlvid,
+				  objectid,
+				  layoutorviewid,
+				  controlid,
+				  actionid
+			)Values(
+				 #rlvID#,
+				 #ObjectID#,
+				 #LayoutOrViewID#,
+				 #ControlID#,
+				 #ActionID#
+			)
+		</insert>
+		
+		<update id="UpdatesysRoleLayoutView" parameterClass="sysRoleLayoutView">
+			Update sysRoleLayoutView Set 
+				rlvid=#rlvID#,
+				objectid=#ObjectID#,
+				layoutorviewid=#LayoutOrViewID#,
+				controlid=#ControlID#,
+				actionid=#ActionID#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					rlvid=#rlvID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysRoleLayoutViewByRoleControlAction" parameterClass="Hashtable">
+      DELETE FROM sysRoleLayoutView
+      WHERE controlid=#ControlID# 
+      <dynamic prepend="AND">
+        <isNotNull property="ActionID">
+          actionid=#ActionID#
+        </isNotNull>
+      </dynamic>
+      <dynamic prepend="AND">
+        <isNotNull property="LayoutOrViewID">
+          layoutorviewid=#LayoutOrViewID#
+        </isNotNull>
+      </dynamic>
+      <dynamic prepend="AND">
+        <isNotNull property="ObjectID">
+          objectid=#ObjectID#
+        </isNotNull>
+      </dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Page" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="Page" type="SmartSoft.Domain.Purview.Page, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="Page">
+			<result property="PageID" column="pageid" />
+			<result property="PageName" column="pagename" />
+			<result property="PageSortId" column="pagesortid" />
+			<result property="PageFilePath" column="pagefilepath" />
+			<result property="FunctionCount" column="functioncount" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectPage" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  pageid,
+				  pagename,
+				  pagesortid,
+				  pagefilepath,
+				  functioncount
+			From Page
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pageid=#PageID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectPage" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  pageid,
+				  pagename,
+				  pagesortid,
+				  pagefilepath,
+				  functioncount
+			From Page
+		</select>
+		
+		<select id="ChildSelectPage" parameterClass="int" resultMap="SelectResult" extends="BaseSelectPage">
+			
+		</select>
+				
+		<insert id="InsertPage" parameterClass="Page">
+			Insert Into Page (
+				  pageid,
+				  pagename,
+				  pagesortid,
+				  pagefilepath,
+				  functioncount
+			)Values(
+				 #PageID#,
+				 #PageName#,
+				 #PageSortId#,
+				 #PageFilePath#,
+				 #FunctionCount#
+			)
+		</insert>
+		
+		<update id="UpdatePage" parameterClass="Page">
+			Update Page Set 
+				pageid=#PageID#,
+				pagename=#PageName#,
+				pagesortid=#PageSortId#,
+				pagefilepath=#PageFilePath#,
+				functioncount=#FunctionCount#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pageid=#PageID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletePage" parameterClass="int">
+			Delete From Page
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pageid=#PageID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

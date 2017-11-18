@@ -1,0 +1,21 @@
+[2009-09-25 00:24:09] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertSellOrderItem' for insert.  Cause: 违反了 PRIMARY KEY 约束 'PK_SellOrderItem'。不能在对象 'SellOrderItem' 中插入重复键。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 违反了 PRIMARY KEY 约束 'PK_SellOrderItem'。不能在对象 'SellOrderItem' 中插入重复键。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+

@@ -1,0 +1,17 @@
+﻿<Nodes>
+  <TreeViewNode ID="Customer" Text="客户定义" Expanded="true">
+    <TreeViewNode ID="CustomerFollowHistoryType" Text="跟进类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerFollowHistoryType&amp;TableText=跟进类型"  />
+    <TreeViewNode ID="CustomerArea" Text="所属区域" target="define" NavigateUrl="CustomerAreaList.aspx?TableName=defCustomerArea"  />
+    <TreeViewNode ID="CustomerType" Text="客户类别" target="define" NavigateUrl="CustomerTypeList.aspx?TableName=defCustomerType&amp;TableText=客户类型"  />
+    <TreeViewNode ID="CustomerBusinessType" Text="业务类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerBusinessType&amp;TableText=业务类型"  />
+    <TreeViewNode ID="CustomerReceiptType" Text="收款类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerReceiptType&amp;TableText=收款类型"  />
+    <TreeViewNode ID="CustomerFeedbackType" Text="反馈类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerFeedbackType&amp;TableText=反馈类型"  />
+    <TreeViewNode ID="CustomerSourceType" Text="信息来源" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerSourceType&amp;TableText=信息来源"  />
+    <TreeViewNode ID="CustomerCertificationType" Text="证件类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerCertificationType&amp;TableText=证件类型"  />
+    <TreeViewNode ID="KnowledgeType" Text="知识类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defKnowledgeType&amp;TableText=知识类型"  />
+    <TreeViewNode ID="FieldcoPhase" Text="商机阶段" target="define" NavigateUrl="CustomerOpptunityPhaseList.aspx?TableName=defPhase&amp;TableText=商机阶段"  />
+    <TreeViewNode ID="CustomerLinkMan" Text="联系人类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomeLinkManType&amp;TableText=联系人类型"  />
+    <TreeViewNode ID="CustomerProperty" Text="客户性质" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defCustomerProperty&amp;TableText=客户性质"  />
+    <TreeViewNode ID="MarketActivityType" Text="市场活动类型" target="define" NavigateUrl="DefineCommonList.aspx?TableName=defMarketActivityType&amp;TableText=市场活动类型"  />
+  </TreeViewNode>
+</Nodes>

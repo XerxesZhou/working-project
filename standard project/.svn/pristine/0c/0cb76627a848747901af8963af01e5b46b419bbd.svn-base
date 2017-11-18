@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="sysOperatorSubordinate" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="sysOperatorSubordinate" type="SmartSoft.Domain.Common.sysOperatorSubordinate, SmartSoft.Domain" />
+  </alias>
+  <resultMaps>
+    <resultMap id="SelectResult" class="sysOperatorSubordinate">
+      <result property="OperatorID" column="operatorid" />
+      <result property="SubordinateID" column="subordinateid" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="SelectsysOperatorSubordinates" parameterClass="int" resultMap="SelectResult">
+      Select
+      operatorid,
+      subordinateid
+      From sysOperatorSubordinate
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          operatorid=#OperatorID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <insert id="InsertsysOperatorSubordinate" parameterClass="sysOperatorSubordinate">
+      Insert Into sysOperatorSubordinate (
+      operatorid,
+      subordinateid
+      )Values(
+      #OperatorID#,
+      #SubordinateID#
+      )
+    </insert>
+
+    <delete id="DeletesysOperatorSubordinates" parameterClass="int">
+      Delete From sysOperatorSubordinate
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          operatorid=#OperatorID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+
+  </statements>
+</sqlMap>

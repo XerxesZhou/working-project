@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysFunction" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysFunction" type="SmartSoft.Domain.Common.sysFunction, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysFunction">
+			<result property="FunctionID" column="functionid" />
+			<result property="FunctionName" column="functionname" />
+			<result property="FunctionPurviewCode" column="functionpurviewcode" />
+			<result property="FunctionCode" column="functioncode" />
+			<result property="Remark" column="remark" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysFunction" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  functionid,
+				  functionname,
+				  functionpurviewcode,
+				  functioncode,
+				  remark
+			From sysFunction
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+          functioncode=#FunctionCode#
+        </isParameterPresent>
+			</dynamic>
+		</select>
+
+    <select id="SelectPagesysFunction" parameterClass="int" resultMap="SelectResult">
+      <![CDATA[
+        SELECT
+        functionid,
+        functionname,
+        functionpurviewcode,
+        functioncode,
+        remark
+        FROM sysFunction
+        WHERE
+        (#FunctionCount# & functioncode) > 0
+      ]]>
+    </select>
+    
+    <select id="SelectsysFunctionByPurviewCode" parameterClass="int" resultMap="SelectResult">
+      Select
+        functionid,
+        functionname,
+        functionpurviewcode,
+        functioncode,
+        remark
+      From sysFunction
+      Where functionpurviewcode=#FunctionPurviewCode#
+    </select>
+		
+		<insert id="InsertsysFunction" parameterClass="sysFunction">
+			Insert Into sysFunction (
+				  functionid,
+				  functionname,
+				  functionpurviewcode,
+				  functioncode,
+				  remark
+			)Values(
+				 #FunctionID#,
+				 #FunctionName#,
+				 #FunctionPurviewCode#,
+				 #FunctionCode#,
+				 #Remark#
+			)
+		</insert>
+		
+		<update id="UpdatesysFunction" parameterClass="sysFunction">
+			Update sysFunction Set 
+				functionid=#FunctionID#,
+				functionname=#FunctionName#,
+				functionpurviewcode=#FunctionPurviewCode#,
+				functioncode=#FunctionCode#,
+				remark=#Remark#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					functionid=#FunctionID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysFunction" parameterClass="int">
+			Delete From sysFunction
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					functionid=#FunctionID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

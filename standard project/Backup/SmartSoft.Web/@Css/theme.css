@@ -1,0 +1,360 @@
+@charset 'UTF-8';
+
+/*默认风格 theme-default*/
+
+
+/*头部logo*/
+
+.theme-default .logo {
+    background: #3e4659;
+}
+.theme-default .logo-img span.logo-pic{
+    background: url(/@images/theme_default_logo.png) left center no-repeat;
+    display: inline-block;
+    background-size: 81px 25px;
+}
+
+/*左侧面板颜色*/
+
+.theme-default .nav-menu {
+    background: #363d4d;
+}
+
+
+/*一级菜单鼠标滑过*/
+
+.theme-default .page-link.selected {
+    background: #313540;
+    box-shadow:inset 2px 0px 0px #00aaef; 
+}
+.theme-default .page-link.selected a{
+    color: #00aaef; 
+}
+.theme-default .page-link:hover {
+    background: #3f4a60;
+}
+.theme-default .page-link:hover a {
+    color: #fff;
+}
+
+.theme-default .page-link a {
+    color: #a3b1cc;
+}
+
+.theme-default .page-link.active a {
+    color: #fff;
+}
+.theme-default .page-link.active {
+    background: #3f4a60;
+}
+/*常用菜单鼠标滑过*/
+
+.theme-default .menu-common-use li:hover {
+    background: #3f4a61;
+}
+
+
+/*菜单分割线*/
+
+.theme-default .nav-menu .sub-menu-divide {
+    background: #475469;
+}
+
+
+/*更多菜单按钮*/
+
+/*.theme-default .more-page-menu {
+    border: 1px solid #a3b1cc;
+    opacity: .5;
+}
+.theme-default .more-page-menu:hover{
+  opacity: 1;
+}
+.theme-default .more-page-menu span {
+    color: #a3b1cc;
+    opacity: .6;
+}
+.theme-default .more-page-menu:hover span {
+    opacity: 1;
+}*/
+
+
+/*常用菜单和历史历史记录*/
+
+.theme-default .shortcut-menu h3 {
+    color: #a3b1cc;
+}
+
+.theme-default .shortcut-menu ul li a {
+    color: #a3b1cc;
+}
+.theme-default .shortcut-menu ul li a:hover{
+    color: #fff;
+}
+
+/*菜单缩略框背景图和鼠标滑过效果*/
+
+.theme-default .menu-thumbnail-box {
+    background: #3f4a60;
+}
+
+.theme-default .menu-thumbnail-header {
+    border-bottom: 1px solid #475469;
+}
+
+.theme-default .menu-thumbnail-header h5 {
+    color: #e2e3e8;
+}
+
+.theme-default .menu-thumbnail-list li a {
+    color: #a3b1cc;
+}
+
+.theme-default .menu-thumbnail-list li a:hover {
+    color: #fff;
+}
+
+.theme-default .menu-thumbnail-list li:hover {
+    background: #394458;
+}
+
+
+/*个人设置和菜单设置背景图和鼠标滑过效果*/
+
+.theme-default .profile-drop-div {
+    border: 1px solid #3f4a60;
+    background: #3f4a60;
+}
+
+.theme-default .set-thumbnail-box .arrow-left-wrap {
+    bottom: 20px;
+    left: -12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #3f4a60 transparent transparent;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover {
+    background: #394458;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li a {
+    color: #a3b1cc;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li a:hover {
+    color: #fff;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i {
+    background: url(/@images/left_menu_footer_ico.png) no-repeat;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i {
+    background: url(/@images/left_menu_footer_ico_hover.png) no-repeat;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.logo-set {
+    background-position: 0 0;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.theme-set {
+    background-position: 0 -15px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.p-set {
+    background-position: 0 -31px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.s-set {
+    background-position: 0 -48px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.s-exit {
+    background-position: 0 -64px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.new-guide {
+    background-position: 0 -80px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.m-download {
+    height: 17px;
+    background-position: 0 -95px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.i-rule {
+    height: 17px;
+    background-position: 0 -111px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.p-help {
+    background-position: 0 -128px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.p-video {
+    width: 17px;
+    background-position: 0 -144px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li i.p-message {
+    background-position: 0 -159px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.logo-set {
+    background-position: 0 0;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.theme-set {
+    background-position: 0 -15px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.p-set {
+    background-position: 0 -31px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.s-set {
+    background-position: 0 -48px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.s-exit {
+    background-position: 0 -64px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.new-guide {
+    background-position: 0 -80px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.m-download {
+    height: 17px;
+    background-position: 0 -95px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.i-rule {
+    height: 17px;
+    background-position: 0 -111px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.p-help {
+    background-position: 0 -128px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.p-video {
+    width: 17px;
+    background-position: 0 -144px;
+}
+
+.theme-default .profile-drop-div .profile-drop-menu li:hover i.p-message {
+    background-position: 0 -159px;
+}
+
+/*办公图标 work-menu*/
+.theme-default .work-menu .menu-common-use i {
+    background: url(/@images/left_nav_ico.png?1441090343488) no-repeat;
+}
+
+.theme-default .work-menu i.create-task {
+    background-position: 0 -216px;
+}
+
+.theme-default .work-menu i.submit-report {
+    background-position: 0 -236px;
+}
+
+.theme-default .work-menu i.submit-approval {
+    background-position: 0 -256px;
+}
+
+.theme-default .work-menu i.send-message {
+    background-position: 0 -277px;
+}
+
+.theme-default .work-menu .menu-common-use li:hover i {
+    background: url(/@images/left_nav_ico_hover.png?1441090343488) no-repeat;
+}
+
+.theme-default .work-menu .menu-common-use:hover i.create-task {
+    background-position: 0 -216px;
+}
+
+.theme-default .work-menu .menu-common-use:hover i.submit-report {
+    background-position: 0 -236px;
+}
+
+.theme-default .work-menu .menu-common-use:hover i.submit-approval {
+    background-position: 0 -256px;
+}
+
+.theme-default .work-menu .menu-common-use:hover i.send-message {
+    background-position: 0 -277px;
+}
+
+.theme-default .nav-menu-up  .work-menu span.ico {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/@images/left_nav_ico.png) no-repeat;
+}
+.theme-default .nav-menu-up .work-menu span.create-task {
+    background-position: 0 -216px;
+}
+
+.theme-default .nav-menu-up .work-menu span.submit-report {
+    background-position: 0 -236px;
+}
+
+.theme-default .nav-menu-up .work-menu span.submit-approval {
+    background-position: 0 -256px;
+}
+
+.theme-default .nav-menu-up .work-menu span.send-message {
+    background-position: 0 -277px;
+}
+
+.theme-default .nav-menu-up .work-menu ul li:hover span.ico {
+    background: url(/@images/left_nav_ico_hover.png) no-repeat;
+}
+
+.theme-default .nav-menu-up .work-menu ul li:hover span.create-task {
+    background-position: 0 -216px;
+}
+
+.theme-default .nav-menu-up .work-menu ul li:hover span.submit-report {
+    background-position: 0 -236px;
+}
+
+.theme-default .nav-menu-up .work-menu ul li:hover span.submit-approval {
+    background-position: 0 -256px;
+}
+
+.theme-default .nav-menu-up .work-menu ul li:hover span.send-message {
+    background-position: 0 -277px;
+}
+/*最近访问*/
+
+.theme-default .menu-item-history li:hover {
+    background: #3f4a61;
+}
+
+
+/*个人设置*/
+
+.theme-default .admin-info {
+    border-top: 1px solid #475469;
+}
+
+
+/*底部个人信息*/
+
+.theme-default .nav-menu-footer .personal-info {
+    color: #a3b1cc;
+}
+
+.theme-default .nav-menu-footer .personal-info .peopel-name {
+    color: #a3b1cc;
+}
+
+.theme-default .nav-menu-footer .personal-info .company-name {
+    color: #a3b1cc;
+}
+

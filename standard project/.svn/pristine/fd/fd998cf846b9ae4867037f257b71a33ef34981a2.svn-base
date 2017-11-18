@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    author : Daniel
+    CreateDate : 2006/12~~2007/08
+-->
+<sqlMapConfig 
+  xmlns="http://ibatis.apache.org/dataMapper" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <properties embedded="SmartSoft.Persistence.properties.config,SmartSoft.Persistence" />
+
+  <settings>
+    <setting useStatementNamespaces="false"/>
+    <!--全限定名来引用-->
+  </settings>
+
+  <providers  embedded="${path}providers.config,${assembly}"/>
+
+  <!-- Database connection information -->
+  <database>
+    <provider name="${provider}"/>
+    <dataSource name="SmartSoft" connectionString="${connectionString}"/>
+  </database>
+
+  <sqlMaps>
+    <!-- Common -->
+    <sqlMap embedded="${root}Common.Department.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.Operators.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysStream.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysRole.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysFunction.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysObjectPurview.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysOperatorInRole.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysOperatorSubordinate.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysPage.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysParameter.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysMessage.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysRoleLayoutView.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysViewLayoutControl.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.sysLog.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.Knowledge.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.OperatorLog.xml,${assembly}" />
+    <sqlMap embedded="${root}Common.OperatorDesktop.xml,${assembly}" />
+    <sqlMap embedded="${root}Purview.Menu.xml,${assembly}" />
+    <sqlMap embedded="${root}Purview.MenuPurview.xml,${assembly}" />
+    <sqlMap embedded="${root}Purview.Page.xml,${assembly}" />
+    
+
+    <!-- Data -->
+    <sqlMap embedded="${root}Data.DataBaseColumn.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.Customer.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerFollowHistory.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerFeedback.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerLinkMan.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerFollowPlan.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerBusiness.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerReceipt.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerOpptunity.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.OperatorPlan.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.WorkDiary.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.BillComment.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CoWorker.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.CustomerClue.xml,${assembly}" />
+    <sqlMap embedded="${root}Data.Project.xml,${assembly}" />
+
+    <!--Common-->
+    <sqlMap embedded="${root}Data.defCommon.xml,${assembly}" />
+
+    <!--CustomerDefine-->
+    <sqlMap embedded="${root.UDEF}Column.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnView.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewCondition.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewExpression.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewOrder.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewSort.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomColumn.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomColumnValue.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomSelectType.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DataBaseTable.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DropdownlistOption.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}Layout.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutDetail.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutDetailView.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutPart.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SelectDataDynamic.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SelectType.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}Stream.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemColumn.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemTable.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemSelectType.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DataBaseColumn.xml,${assembly.UDEF}" />
+
+  </sqlMaps>
+
+</sqlMapConfig>

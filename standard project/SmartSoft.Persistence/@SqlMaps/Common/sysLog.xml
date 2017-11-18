@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysLog" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysLog" type="SmartSoft.Domain.Common.sysLog, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysLog">
+			<result property="LogID" column="logid" />
+			<result property="LogTime" column="logtime" />
+			<result property="OperatorID" column="operatorid" />
+			<result property="IP" column="ip" />
+			<result property="Action" column="action" />
+			<result property="Keywords" column="keywords" />
+			<result property="PageUrl" column="pageurl" />
+			<result property="TableName" column="tablename" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysLog" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  logid,
+				  logtime,
+				  operatorid,
+				  ip,
+				  action,
+				  keywords,
+				  pageurl,
+				  tablename
+			From sysLog
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					logid=#LogID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysLog" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  logid,
+				  logtime,
+				  operatorid,
+				  ip,
+				  action,
+				  keywords,
+				  pageurl,
+				  tablename
+			From sysLog
+		</select>
+		
+		<select id="ChildSelectsysLog" parameterClass="int" resultMap="SelectResult" extends="BaseSelectsysLog">
+			
+		</select>
+				
+		<insert id="InsertsysLog" parameterClass="sysLog">
+			Insert Into sysLog (
+				  logid,
+				  logtime,
+				  operatorid,
+				  ip,
+				  action,
+				  keywords,
+				  pageurl,
+				  tablename
+			)Values(
+				 #LogID#,
+				 #LogTime#,
+				 #OperatorID#,
+				 #IP#,
+				 #Action#,
+				 #Keywords#,
+				 #PageUrl#,
+				 #TableName#
+			)
+		</insert>
+		
+		<update id="UpdatesysLog" parameterClass="sysLog">
+			Update sysLog Set 
+				logid=#LogID#,
+				logtime=#LogTime#,
+				operatorid=#OperatorID#,
+				ip=#IP#,
+				action=#Action#,
+				keywords=#Keywords#,
+				pageurl=#PageUrl#,
+				tablename=#TableName#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					logid=#LogID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysLog" parameterClass="int">
+			Delete From sysLog
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					logid=#LogID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

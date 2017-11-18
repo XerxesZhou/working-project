@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="sysPage" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="sysPage" type="SmartSoft.Domain.Common.sysPage, SmartSoft.Domain" />
+  </alias>
+  <resultMaps>
+    <resultMap id="SelectResult" class="sysPage">
+      <result property="PageID" column="pageid" />
+      <result property="PageName" column="pagename" />
+      <result property="PageFilePath" column="pagefilepath" />
+      <result property="MenuParentPageID" column="menuparentpageid" />
+      <result property="MenuOrderBy" column="menuorderby" />
+      <result property="MenuImagePath" column="menuimagepath" />
+      <result property="MenuSelectedImagePath" column="menuselectedimagepath" />
+      <result property="ToolBarParentPageID" column="toolbarparentpageid" />
+      <result property="ToolOrderBy" column="toolorderby" />
+      <result property="ToolBarImagePath" column="toolbarimagepath" />
+      <result property="ToolBarSelectedImagePath" column="toolbarselectedimagepath" />
+      <result property="IsMenuDirectory" column="ismenudirectory" />
+      <result property="IsToolBarDirectory" column="istoolbardirectory" />
+      <result property="IsMenu" column="ismenu" />
+      <result property="IsToolBar" column="istoolbar" />
+      <result property="FunctionCount" column="functioncount" />
+      <!--Add 01/28-->
+      <result property="ParentPageName" column="parentpagename" />
+      <result property="exeFilePath" column="exefilepath" />
+      <result property="FormName" column="formname" />
+      <result property="PageNo" column="pageno" />
+
+    </resultMap>
+    
+    <resultMap id="SelectMenuResult" class="sysPage">
+      <result property="PageID" column="pageid" />
+      <result property="PageName" column="pagename" />
+      <result property="PageFilePath" column="pagefilepath" />
+      <result property="MenuParentPageID" column="menuparentpageid" />
+      <result property="MenuOrderBy" column="menuorderby" />
+      <result property="MenuImagePath" column="menuimagepath" />
+      <result property="MenuSelectedImagePath" column="menuselectedimagepath" />
+      <result property="IsMenuDirectory" column="ismenudirectory" />
+    </resultMap>
+    
+    <resultMap id="SelectToolBarResult" class="sysPage">
+      <result property="PageID" column="pageid" />
+      <result property="PageName" column="pagename" />
+      <result property="PageFilePath" column="pagefilepath" />
+      <result property="ToolBarParentPageID" column="toolbarparentpageid" />
+      <result property="ToolOrderBy" column="toolorderby" />
+      <result property="ToolBarImagePath" column="toolbarimagepath" />
+      <result property="ToolBarSelectedImagePath" column="toolbarselectedimagepath" />
+      <result property="IsToolBarDirectory" column="istoolbardirectory" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="Search">
+      <parameter property="querystr" />
+    </parameterMap>
+
+    <parameterMap id="MenuSearch">
+      <parameter property="ObjectIDArray" />
+      <parameter property="MenuParentPageID" />
+    </parameterMap>
+
+    <parameterMap id="ToolBarSearch">
+      <parameter property="ObjectIDArray" />
+      <parameter property="ToolBarParentPageID" />
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+    <select id="SelectsysPage" parameterClass="int" resultMap="SelectResult">
+      Select
+      pageid,
+      pagename,
+      pagefilepath,
+      menuparentpageid,
+      menuorderby,
+      menuimagepath,
+      menuselectedimagepath,
+      toolbarparentpageid,
+      toolorderby,
+      toolbarimagepath,
+      toolbarselectedimagepath,
+      ismenudirectory,
+      istoolbardirectory,
+      ismenu,
+      istoolbar,
+      functioncount,
+      '' as ParentPageName,
+      exefilepath,
+      formname,
+      pageno
+      From sysPage
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          pageid=#PageID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <select id="SelectsysPageForOAQuanXi" parameterClass="int" resultMap="SelectResult">
+      select
+      A.pageid,
+      pagename,
+      pagefilepath,
+      menuparentpageid,
+      menuorderby,
+      menuimagepath,
+      menuselectedimagepath,
+      toolbarparentpageid,
+      toolorderby,
+      toolbarimagepath,
+      toolbarselectedimagepath,
+      ismenudirectory,
+      istoolbardirectory,
+      ismenu,
+      istoolbar,
+      '' as ParentPageName,
+      exefilepath,
+      formname,
+      pageno,
+      PurviewCode AS FunctionCount
+      from
+      (
+      select distinct PageID, PurviewCode from sysObjectPurview where (objectID = #OperatorID# or objectID in (select RoleID from sysOperatorInRole where OperatorID = #OperatorID#))
+      ) A inner join sysPage B on A.PageID = B.PageID where B.exeFilePath is not null and B.exeFilePath != '';
+    </select>
+
+    
+    <procedure id="GetsysPageByCondition" parameterMap="Search" resultMap="SelectResult">
+      Usp_GetAllRecordset
+    </procedure>
+
+    <insert id="InsertsysPage" parameterClass="sysPage">
+      Insert Into sysPage (
+      pageid,
+      pagename,
+      pagefilepath,
+      menuparentpageid,
+      menuorderby,
+      menuimagepath,
+      menuselectedimagepath,
+      toolbarparentpageid,
+      toolorderby,
+      toolbarimagepath,
+      toolbarselectedimagepath,
+      ismenudirectory,
+      istoolbardirectory,
+      ismenu,
+      istoolbar,
+      functioncount,
+      exefilepath,
+      formname,
+      pageno
+      )Values(
+      #PageID#,
+      #PageName#,
+      #PageFilePath#,
+      #MenuParentPageID#,
+      #MenuOrderBy#,
+      #MenuImagePath#,
+      #MenuSelectedImagePath#,
+      #ToolBarParentPageID#,
+      #ToolOrderBy#,
+      #ToolBarImagePath#,
+      #ToolBarSelectedImagePath#,
+      #IsMenuDirectory#,
+      #IsToolBarDirectory#,
+      #IsMenu#,
+      #IsToolBar#,
+      #FunctionCount#,
+      #exeFilePath#,
+      #FormName#,
+      #PageNo#
+      )
+    </insert>
+
+    <update id="UpdatesysPage" parameterClass="sysPage">
+      Update sysPage Set
+      pagename=#PageName#,
+      pagefilepath=#PageFilePath#,
+      menuparentpageid=#MenuParentPageID#,
+      menuorderby=#MenuOrderBy#,
+      menuimagepath=#MenuImagePath#,
+      menuselectedimagepath=#MenuSelectedImagePath#,
+      toolbarparentpageid=#ToolBarParentPageID#,
+      toolorderby=#ToolOrderBy#,
+      toolbarimagepath=#ToolBarImagePath#,
+      toolbarselectedimagepath=#ToolBarSelectedImagePath#,
+      ismenudirectory=#IsMenuDirectory#,
+      istoolbardirectory=#IsToolBarDirectory#,
+      ismenu=#IsMenu#,
+      istoolbar=#IsToolBar#,
+      functioncount=#FunctionCount#,
+      exefilepath=#exeFilePath#,
+      formname=#FormName#,
+      pageno=#PageNo#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          pageid=#PageID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeletesysPage" parameterClass="int">
+      Delete From sysPage
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          pageid=#PageID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+
+    <!--得到菜单列表-->
+    <procedure id="SelectMenusysPage" parameterMap="MenuSearch" resultMap="SelectMenuResult">
+      usp_GetSysMenuPage
+    </procedure>
+
+    <!--得到菜单列表-->
+    <procedure id="SelectToolBarsysPage" parameterMap="ToolBarSearch" resultMap="SelectToolBarResult">
+      usp_GetSysToolBarPage
+    </procedure>
+
+    <select id="SelectsysPageIDByPageFilePath" parameterclass="string" resultClass="int">
+      select
+      pageid
+      From
+      sysPage
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          pagefilepath=#PageFilePath#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <select id="GetMaxsysPageID"  resultClass="int">
+      select
+      Max(pageid)
+      From
+      sysPage
+    </select>
+    
+  </statements>
+
+
+</sqlMap>

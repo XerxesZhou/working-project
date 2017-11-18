@@ -1,0 +1,103 @@
+[2009-07-27 10:14:59] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:15:15] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:15:32] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:15:40] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:16:39] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:20:38] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 82
+
+[2009-07-27 10:27:34] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:27:43] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:29:16] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:31:21] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 276
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:35:11] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.initGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 668
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 238
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:35:33] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.initGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 668
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 238
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:36:27] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.initGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 668
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 238
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:37:33] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 243
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:39:36] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by 管理员 Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 243
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-07-27 10:42:30] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertCustomerAssistantRelation' for insert.  Cause: 为过程或函数 usp_GetID 指定的参数太多。 ---> System.Data.SqlClient.SqlException: 为过程或函数 usp_GetID 指定的参数太多。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-07-27 10:45:20] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertCustomerAssistantRelation' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_CUSTOEMRASSISTANT_CUSTOMERI_CUSTOMER' 冲突。该冲突发生于数据库 'SmartSoft'，表 'ExtendCustomer', column 'xcusID'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_CUSTOEMRASSISTANT_CUSTOMERI_CUSTOMER' 冲突。该冲突发生于数据库 'SmartSoft'，表 'ExtendCustomer', column 'xcusID'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+

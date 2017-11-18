@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysMessage_Looker" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysMessage_Looker" type="SmartSoft.Domain.Common.sysMessage_Looker, SmartSoft.Domain.Common" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysMessage_Looker">
+			<result property="MessageID" column="messageid" />
+			<result property="ObjectID" column="objectid" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysMessage_Looker" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  messageid,
+				  objectid
+			From sysMessage_Looker
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID# AND
+					objectid=#ObjectID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysMessage_Looker" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  messageid,
+				  objectid
+			From sysMessage_Looker
+		</select>
+		
+		<select id="ChildSelectsysMessage_Looker" parameterClass="int" resultMap="SelectResult" extends="BaseSelectsysMessage_Looker">
+			
+		</select>
+				
+		<insert id="InsertsysMessage_Looker" parameterClass="sysMessage_Looker">
+			Insert Into sysMessage_Looker (
+				  messageid,
+				  objectid
+			)Values(
+				 #MessageID#,
+				 #ObjectID#
+			)
+		</insert>
+		
+		<update id="UpdatesysMessage_Looker" parameterClass="sysMessage_Looker">
+			Update sysMessage_Looker Set 
+				messageid=#MessageID#,
+				objectid=#ObjectID#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID# AND
+					objectid=#ObjectID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+
+    <update id="UpdatesysMessage_LookerByMessageID" parameterClass="Hashtable">
+      Update sysMessage_Looker Set
+      objectid=#ObjectID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          messageid=#MessageID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+    
+		<delete id="DeletesysMessage_Looker" parameterClass="int">
+			Delete From sysMessage_Looker
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID# AND
+					objectid=#ObjectID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

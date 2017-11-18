@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerFeedback" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerFeedback" type="SmartSoft.Domain.Data.CustomerFeedback, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerFeedback">
+      <result property="cfbID" column="cfbid" />
+      <result property="cfbCustomerID" column="cfbcustomerid" />
+      <result property="cfbFeedbackTypeID" column="cfbfeedbacktypeid" />
+      <result property="cfbOrderRelated" column="cfborderrelated" />
+      <result property="cfbContent" column="cfbcontent" />
+      <result property="cfbLinkman" column="cfblinkman" />
+      <result property="cfbTelephone" column="cfbtelephone" />
+      <result property="cfbEmail" column="cfbemail" />
+      <result property="cfbOperatorID" column="cfboperatorid" />
+      <result property="cfbAddOperatorID" column="cfbaddoperatorid" />
+      <result property="cfbAddDate" column="cfbadddate" />
+      <result property="cfbModifyOperatorID" column="cfbmodifyoperatorid" />
+      <result property="cfbModifyDate" column="cfbmodifydate" />
+      <result property="cfbStatusID" column="cfbstatusid" />
+      <result property="cfbResult" column="cfbresult" />
+      <result property="cfbHandleOperatorID" column="cfbhandleoperatorid" />
+      <result property="cfbHandleDate" column="cfbhandledate" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerFeedbackDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerFeedback]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerFeedbackDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerFeedback" parameterClass="int" resultMap="SelectResult">
+      Select
+      cfbid,
+      cfbcustomerid,
+      cfbfeedbacktypeid,
+      cfborderrelated,
+      cfbcontent,
+      cfblinkman,
+      cfbtelephone,
+      cfbemail,
+      cfboperatorid,
+      cfbaddoperatorid,
+      cfbadddate,
+      cfbmodifyoperatorid,
+      cfbmodifydate,
+      cfbstatusid,
+      cfbresult,
+      cfbhandleoperatorid,
+      cfbhandledate
+      From [CustomerFeedback]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfbid=#cfbID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerFeedback" parameterClass="CustomerFeedback">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerFeedback'
+      Insert Into [CustomerFeedback] (
+      cfbid,
+      cfbcustomerid,
+      cfbfeedbacktypeid,
+      cfborderrelated,
+      cfbcontent,
+      cfblinkman,
+      cfbtelephone,
+      cfbemail,
+      cfboperatorid,
+      cfbaddoperatorid,
+      cfbadddate,
+      cfbmodifyoperatorid,
+      cfbmodifydate,
+      cfbstatusid,
+      cfbresult,
+      cfbhandleoperatorid,
+      cfbhandledate
+      )Values(
+      @primarykeyid ,
+      #cfbCustomerID#,
+      #cfbFeedbackTypeID#,
+      #cfbOrderRelated#,
+      #cfbContent#,
+      #cfbLinkman#,
+      #cfbTelephone#,
+      #cfbEmail#,
+      #cfbOperatorID#,
+      #cfbAddOperatorID#,
+      #cfbAddDate#,
+      #cfbModifyOperatorID#,
+      #cfbModifyDate#,
+      #cfbStatusID#,
+      #cfbResult#,
+      #cfbHandleOperatorID#,
+      #cfbHandleDate#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerFeedback" parameterClass="CustomerFeedback">
+      Update [CustomerFeedback] Set
+      cfbid=#cfbID#,
+      cfbcustomerid=#cfbCustomerID#,
+      cfbfeedbacktypeid=#cfbFeedbackTypeID#,
+      cfborderrelated=#cfbOrderRelated#,
+      cfbcontent=#cfbContent#,
+      cfblinkman=#cfbLinkman#,
+      cfbtelephone=#cfbTelephone#,
+      cfbemail=#cfbEmail#,
+      cfboperatorid=#cfbOperatorID#,
+      cfbaddoperatorid=#cfbAddOperatorID#,
+      cfbadddate=#cfbAddDate#,
+      cfbmodifyoperatorid=#cfbModifyOperatorID#,
+      cfbmodifydate=#cfbModifyDate#,
+      cfbstatusid=#cfbStatusID#,
+      cfbresult=#cfbResult#,
+      cfbhandleoperatorid=#cfbHandleOperatorID#,
+      cfbhandledate=#cfbHandleDate#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfbid=#cfbID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerFeedback" parameterClass="int">
+      Delete From [CustomerFeedback]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfbid=#cfbID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

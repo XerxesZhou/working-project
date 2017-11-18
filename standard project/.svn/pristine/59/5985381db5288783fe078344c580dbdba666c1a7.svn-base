@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- BEGIN HEAD --><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no" name="viewport"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>员工手册</title>
+    <link href="../css/HelpPageCss.css" rel="stylesheet" type="text/css" />
+    <link href="../css/HelpForEmployeePageCss.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+	    body{background:#fff;}
+    </style>
+</head>
+<body>
+	
+<div class="configuration">
+	<h3>创捷易CRM 用户使用手册</h3>
+    <h5>钉钉版移动端快速上手</h5>
+	<div class="part">
+		<h4>一、主要名词解释</h4>
+        <p><span class="import">项目报备：</span>对跟人合作的项目信息进行统一报备，以防撞单。适用于跟多方合作，并为其提供售前支持和服务等。</p>
+        <p><span class="import">线索：</span>是指对公司产品有购买意向的潜在客户，一般此时只有联系方式等简单信息，可能是公司分配过来的，也可能是自己找到的。经过确认后如确实是客户，可转为客户，并完善资料。</p>
+        <p><span class="import">客户：</span>是指购买贵公司的产品或服务的企业、机构或个人。客户生命周期价值管理是CRM的核心诉求之一。例：深圳市创捷易科技有限公司，深圳市*政局</p>
+        <p><span class="import">公共池：</span>也叫客户公海，把各个业务员名下不及时跟进的客户，或者推进不及时的客户放入公共池，任何人都可以从池中获取，以缩短客户成交周期，提高客户转化率。</p>
+		<p><span class="import">联系人：</span>当客户为企业或者机构法人的时候，联系人指此客户内部与贵公司保持联系沟通的自然人。联系人是贵公司与客户之间沟通的纽带和桥梁，联系人至少1名以上。例：朱**（总经理）</p>
+		<p><span class="import">商机：</span>通常也称为“销售机会”“项目机会”，是指在销售过程中发现客户存在的需求，该需求有可能通过销售的不断努力最终转换为合同订单的机会。</p>
+		<p><span class="import">跟进记录：</span>记录与客户联系人的沟通情况，通常有QQ微信、电话联系、上门拜访等方式。</p>
+        <p><span class="import">提醒：</span>管理计划提醒，到期后系统自动以手机钉钉消息或者PC内部短消息的形式提醒用户。</p>
+        <p><span class="import">销售阶段：</span>是指对销售机会流程管理的阶段性划分标志。销售阶段可使用系统默认阶段（初期沟通，立项评估，需求调研，方案论证，商机谈判，签订合同，失败），也可按照每个公司自己的实际情况自定义。</p>
+		<p><span class="import">合同：</span>是指与客户签订的产品或服务采购合同。</p>
+        <p><span class="import">回款：</span>合同签订后的回款管理，一个合同可进行多次回款，并自动计算对应合同的已收款，未收款。</p>
+        <p><span class="import">反馈：</span>对客户售后反馈的问题进行记录和处理。</p>
+	</div>
+	<div class="part">
+		<h4>二、登录</h4>
+		<p>创捷易CRM钉钉版移动端需要您下载注册钉钉，并让管理配置好账号后才可以使用。配置好后，直接免登录使用。</p>
+		<img class="picfull lazy" src="/@images/config1.jpg" data-original="/@images/config1.jpg" alt="" style="display: block;">
+        <div class="leftRight clearfix">
+            <span class="spanL">说明：</span>
+            <div class="divR">
+                <p>钉钉iOS版与andriod版界面略有差别，本手册例图为iOS版。</p>
+			</div>
+		</div>
+	</div>
+    <div class="part">
+		<h4>三、业绩目标及达成率</h4>
+		<p>管理员可以在PC端给公司所有员工设定业绩目标，可按年按月分别设定合同目标和收款目标。如果没有按月设置目标，也可在用户信息的月合同额和月收款额中一次性设定。</p>
+		<img class="pic lazy" src="/@images/config2.png" data-original="/@images/config2.png" alt="" style="display: block;">
+		<p>设定了业绩目标后，系统会自动根据您的合同订单记录以及回款记录，为您实时展现您的当月（季）目标完成情况，确保您随时掌握自己的业绩数据。部门主管或者老板可以查看自己管辖范围内的全部业绩目标完成汇总数据。</p>
+	</div>
+	<div class="part">
+		<h4>四、创捷易工作台</h4>
+		<p>欢迎使用创捷易CRM！工作台首页展现的是销售或者老板最关心的主要销售数据看板。</p>
+		<p>见下图：</p>
+		<img class="picfull lazy" src="/@images/config3.png" data-original="/@images/config3.png" alt="" style="display: block;">
+        <p>包括合同达成率，收款达成率，业绩简报，绩效指标完成情况，销售漏斗情况，各种数据的排名情况。</p>
+		<img class="pic lazy" src="/@images/config4.png" data-original="/@images/config4.png" alt="" style="display: block;">
+	</div>
+	
+
+	<div class="part">
+		<h4>五、主要功能概览</h4>
+		<img class="pic lazy" src="/@images/navigator1.png" data-original="/@images/navigator1.png" width="50%" alt="" style="display: block;">
+        <img class="pic lazy" src="/@images/navigator2.png" data-original="/@images/navigator2.png" width="50%" alt="" style="display: block;">
+        <p><span class="import">线索查询：</span> 管理线索信息，可对线索进行分类和跟进确认。也可对线索进行重新分配或转为客户。点击进入线索详情界面。</p>
+		<p><span class="import">客户查询：</span> 管理客户生命周期价值！您可在此查询、新建、编辑和维护您的客户列表。只有自己负责的客户才能修改，协同的客户只能查看和跟进。点击进去后进行客户详情界面。</p>
+		<p><span class="import">商机查询：</span> 精细化管理销售机会，提高赢率！您可在此新建、编辑和维护销售机会列表。点击进入商机详情界面。</p>
+		<p><span class="import">合同查询：</span> 在此查询编辑和维护合同订单及回款。点击进入合同详情界面。 </p>
+        <p><span class="import">收款查询：</span> 在此查询编辑和维护回款信息。点击进入相应客户详情界面。 </p>
+        <p><span class="import">报备查询：</span> 在此查询编辑和维护项目报备信息。点击进入相应项目报备详情界面。 </p>
+        <p><span class="import">客户反馈：</span> 在此查询编辑和维护客户反馈信息。点击进入相应客户详情界面。</p>
+
+        <p><span class="import">客户公海：</span>客户池是指目前还没有归属于销售的客户，您可以从中认领客户，你也可以将现在属于您的客户退回给公海池。点击进入客户详情界面，并可以进行认领。</p>
+        <p><span class="import">客户查重：</span>为避免客户归属纷争，可在新建客户前进行关键字查找客户是否存在。 </p>
+        <p><span class="import">跟进记录：</span>按时间顺序显示跟进记录记录列表，并可点击进去后进行点评和点赞。 </p>
+        <p><span class="import">工作报告：</span>按时间顺序显示自己和下属的工作报告，并可点击进去后进行点评和点赞。 </p>
+        <p><span class="import">联系人：</span>查询和管理所有客户联系人，点击进去后进入相应的客户详情界面。 </p>
+        <p><span class="import">知识库：</span>查看和学习知识技能。 </p>
+
+        <p><span class="import">新增线索：</span>快捷新建线索信息，也可在线索查询界面新建。 </p>
+        <p><span class="import">新增客户：</span>快捷新建客户信息，也可在客户查询界面新建。  </p>
+        <p><span class="import">新建报告：</span>快捷新建工作报告，也可在工作报告界面新建。 </p>
+        <p><span class="import">新建报备：</span>快捷新建项目报备，也可在项目查询界面新建。 </p>
+        <p><span class="import">附近客户：</span>可按您所在的地理位置为中心查找附近客户，由近到远顺序排列。当拜访完某客户后，如仍有时间，可拜访下附近的客户，提高效率。 </p>
+	</div>
+    <div class="part">
+		<h4>六、待办</h4>
+		<p>以日历的形式展示日程提醒计划等以及销售助手工具</p>
+		<p>见下图：</p>
+		<img class="picfull lazy" src="/@images/config5.png" data-original="/@images/config5.png" alt="" style="display: block;">
+        <p>包括超过N天没有跟进的客户，超过N天没有跟进的未成交客户，超过N天没有跟进的成交客户，预计N天内签单的商机，N天内到期的合同，N天内过生日的联系人等。</p>
+		<img class="pic lazy" src="/@images/config6.png" data-original="/@images/config6.png" alt="" style="display: block;">
+	</div>
+	<div class="part">
+		<h4>六、列表界面</h4>
+		<div class="picBox clearfix">
+        	<img class="pic lazy" src="/@images/config7.png" data-original="/@images/config7.png" alt="" style="display: block;">
+        	<img class="pic lazy" src="/@images/config8.png" data-original="/@images/config8.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config9.png" data-original="/@images/config9.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config10.png" data-original="/@images/config10.png" alt="" style="display: block;">
+        </div>
+		<p>1）列表界面，列出了各个列表的关键信息，可在列表界面进行搜索过滤和排序展示。</p>
+		<p>2）系统列表界面包括报备，线索，客户，商机，合同，回款，反馈，跟进，提醒，报表，联系人，知识等。</p>
+		<p>3）点击右上角的"新建",对添加对应信息。</p>
+		<p>4）列表默认返回50条记录，按住上拉一次加载10条符合条件的新记录。</p>
+		<img class="picfull lazy" src="/@images/config11.png" data-original="/@images/config11.png" alt="" style="display: block;">
+		<img class="picfull lazy" src="/@images/config12.png" data-original="/@images/config12.png" alt="" style="display: block;">
+	</div>
+	<div class="part">
+		<h4>七、详细界面</h4>
+        <div class="picBox clearfix">
+        	<img class="pic lazy" src="/@images/config13.png" data-original="/@images/config13.png" alt="" style="display: block;">
+        	<img class="pic lazy" src="/@images/config14.png" data-original="/@images/config14.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config15.png" data-original="/@images/config15.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config16.png" data-original="/@images/config16.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config17.png" data-original="/@images/config17.png" alt="" style="display: block;">
+            <img class="pic lazy" src="/@images/config18.png" data-original="/@images/config18.png" alt="" style="display: block;">
+        </div>
+		<p>1）从列表点击记录，进行相应的详细信息界面。</p>
+		<p>2）点+号，进行相应栏位信息的新增</p>
+		<p>3）点编辑/删除按钮，进行相应栏位信息的修改/删除，只有本人或者管理员有权限进行信息的管理。</p>
+        <p>4）动态和提醒中的图片，点击和划动可查看大图。</p>
+        <p>5）点击右上角的"更多"，可列出详细页相应的功能按钮，如编辑，删除，转移，认领，放入公海等。</p>
+	</div>
+</div>
+</body></html>

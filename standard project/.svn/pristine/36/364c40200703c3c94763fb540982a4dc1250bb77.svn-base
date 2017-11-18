@@ -1,0 +1,28 @@
+[2013-01-21 10:35:00] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+
+[2013-01-21 10:35:24] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+
+[2013-01-21 10:35:37] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+
+[2013-01-21 10:36:08] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerReceipt" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerReceipt" type="SmartSoft.Domain.Data.CustomerReceipt, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerReceipt">
+      <result property="crID" column="crid" />
+      <result property="crCustomerID" column="crcustomerid" />
+      <result property="crBusinessID" column="crbusinessid" />
+      <result property="crRemark" column="crremark" />
+      <result property="crAmount" column="cramount" />
+      <result property="crDate" column="crdate" />
+      <result property="crAddOperatorID" column="craddoperatorid" />
+      <result property="crAddDate" column="cradddate" />
+      <result property="crModifyOperatorID" column="crmodifyoperatorid" />
+      <result property="crModifyDate" column="crmodifydate" />
+      <result property="crTypeID" column="crtypeid" />
+      <result property="crOperatorID" column="croperatorid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerReceiptDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerReceipt]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerReceiptDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerReceipt" parameterClass="int" resultMap="SelectResult">
+      Select
+      crid,
+      crcustomerid,
+      crbusinessid,
+      crremark,
+      cramount,
+      crdate,
+      craddoperatorid,
+      cradddate,
+      crmodifyoperatorid,
+      crmodifydate,
+      crtypeid,
+      croperatorid
+      From [CustomerReceipt]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          crid=#crID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerReceipt" parameterClass="CustomerReceipt">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerReceipt'
+      Insert Into [CustomerReceipt] (
+      crid,
+      crcustomerid,
+      crbusinessid,
+      crremark,
+      cramount,
+      crdate,
+      craddoperatorid,
+      cradddate,
+      crmodifyoperatorid,
+      crmodifydate,
+      crtypeid,
+      croperatorid
+      )Values(
+      @primarykeyid ,
+      #crCustomerID#,
+      #crBusinessID#,
+      #crRemark#,
+      #crAmount#,
+      #crDate#,
+      #crAddOperatorID#,
+      #crAddDate#,
+      #crModifyOperatorID#,
+      #crModifyDate#,
+      #crTypeID#,
+      #crOperatorID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerReceipt" parameterClass="CustomerReceipt">
+      Update [CustomerReceipt] Set
+      crid=#crID#,
+      crcustomerid=#crCustomerID#,
+      crbusinessid=#crBusinessID#,
+      crremark=#crRemark#,
+      cramount=#crAmount#,
+      crdate=#crDate#,
+      craddoperatorid=#crAddOperatorID#,
+      cradddate=#crAddDate#,
+      crmodifyoperatorid=#crModifyOperatorID#,
+      crmodifydate=#crModifyDate#,
+      crtypeid=#crTypeID#,
+      croperatorid=#crOperatorID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          crid=#crID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerReceipt" parameterClass="int">
+      Delete From [CustomerReceipt]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          crid=#crID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

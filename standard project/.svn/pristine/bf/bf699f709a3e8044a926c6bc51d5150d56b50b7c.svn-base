@@ -1,0 +1,227 @@
+[2009-12-13 12:05:35] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:06:50] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:08:51] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:09:14] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:13:31] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:13:54] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 12:14:12] Error occurred in page PageBaseList at function lb_Export_Click by Jack Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) in E:\SmartSoft\SmartSoft.Presentation\PageBase.cs:line 393
+   at SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 586
+
+[2009-12-13 20:54:01] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 20:55:46] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 过程 'xusp_SelectRecentReturnBillForCustomer' 需要参数 '@clientid'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 20:59:26] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 第 1 行: 'xusp_SelectRecentReturnBillForCustomer' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+
+[2009-12-13 21:00:48] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.Data.SqlClient.SqlException: 第 1 行: 'xusp_SelectRecentReturnBillForCustomer' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 406
+   at SmartSoft.Presentation.DataController.SelectRecentReturnBillForCustomer(Int32 clientid) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 118
+   at SmartSoft.Web.Data.XCustomerEditForm.bindRecords() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 306
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 101
+

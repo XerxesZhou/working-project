@@ -1,0 +1,34 @@
+[2009-08-24 11:05:57] Error occurred in page /Data/CustomerFeedbackEditForm.aspx at function lbt_Save_Click by susan Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.DataController.SaveCustomerFeedback(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 141
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomerFeedback(FormAction , Control , Int32 , Int32 , Int32 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_3.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomerFeedback(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID)
+   at SmartSoft.Web.Data.CustomerFeedbackEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\CustomerFeedbackEditForm.aspx.cs:line 133
+
+[2009-08-24 11:26:16] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertCustomerAssistantRelation' for insert.  Cause: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_CUSTOMER_ASSISTANT_OPERATOR' 冲突。该冲突发生于数据库 'SmartSoft'，表 'Operators', column 'opeID'。
+语句已终止。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 COLUMN FOREIGN KEY 约束 'FK_CUSTOMER_ASSISTANT_OPERATOR' 冲突。该冲突发生于数据库 'SmartSoft'，表 'Operators', column 'opeID'。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+

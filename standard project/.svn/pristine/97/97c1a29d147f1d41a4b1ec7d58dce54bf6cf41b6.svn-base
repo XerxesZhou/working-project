@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerOpptunity" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerOpptunity" type="SmartSoft.Domain.Data.CustomerOpptunity, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerOpptunity">
+      <result property="coID" column="coid" />
+      <result property="coCustomerID" column="cocustomerid" />
+      <result property="coName" column="coname" />
+      <result property="coOperatorID" column="cooperatorid" />
+      <result property="coDate" column="codate" />
+      <result property="coPredictFinishDate" column="copredictfinishdate" />
+      <result property="coPredictAmount" column="copredictamount" />
+      <result property="coRequirement" column="corequirement" />
+      <result property="coDecisionFlow" column="codecisionflow" />
+      <result property="coCompetitors" column="cocompetitors" />
+      <result property="coOpptunitySourceID" column="coopptunitysourceid" />
+      <result property="coPhaseID" column="cophaseid" />
+      <result property="coStatusID" column="costatusid" />
+      <result property="coAddDate" column="coadddate" />
+      <result property="coAddOperatorID" column="coaddoperatorid" />
+      <result property="coModifyDate" column="comodifydate" />
+      <result property="coModifyOperatorID" column="comodifyoperatorid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerOpptunityDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerOpptunity]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerOpptunityDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerOpptunity" parameterClass="int" resultMap="SelectResult">
+      Select
+      coid,
+      cocustomerid,
+      coname,
+      cooperatorid,
+      codate,
+      copredictfinishdate,
+      copredictamount,
+      corequirement,
+      codecisionflow,
+      cocompetitors,
+      coopptunitysourceid,
+      cophaseid,
+      costatusid,
+      coadddate,
+      coaddoperatorid,
+      comodifydate,
+      comodifyoperatorid
+      From [CustomerOpptunity]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          coid=#coID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerOpptunity" parameterClass="CustomerOpptunity">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerOpptunity'
+      Insert Into [CustomerOpptunity] (
+      coid,
+      cocustomerid,
+      coname,
+      cooperatorid,
+      codate,
+      copredictfinishdate,
+      copredictamount,
+      corequirement,
+      codecisionflow,
+      cocompetitors,
+      coopptunitysourceid,
+      cophaseid,
+      costatusid,
+      coadddate,
+      coaddoperatorid,
+      comodifydate,
+      comodifyoperatorid
+      )Values(
+      @primarykeyid ,
+      #coCustomerID#,
+      #coName#,
+      #coOperatorID#,
+      #coDate#,
+      #coPredictFinishDate#,
+      #coPredictAmount#,
+      #coRequirement#,
+      #coDecisionFlow#,
+      #coCompetitors#,
+      #coOpptunitySourceID#,
+      #coPhaseID#,
+      #coStatusID#,
+      #coAddDate#,
+      #coAddOperatorID#,
+      #coModifyDate#,
+      #coModifyOperatorID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerOpptunity" parameterClass="CustomerOpptunity">
+      Update [CustomerOpptunity] Set
+      coid=#coID#,
+      cocustomerid=#coCustomerID#,
+      coname=#coName#,
+      cooperatorid=#coOperatorID#,
+      codate=#coDate#,
+      copredictfinishdate=#coPredictFinishDate#,
+      copredictamount=#coPredictAmount#,
+      corequirement=#coRequirement#,
+      codecisionflow=#coDecisionFlow#,
+      cocompetitors=#coCompetitors#,
+      coopptunitysourceid=#coOpptunitySourceID#,
+      cophaseid=#coPhaseID#,
+      costatusid=#coStatusID#,
+      coadddate=#coAddDate#,
+      coaddoperatorid=#coAddOperatorID#,
+      comodifydate=#coModifyDate#,
+      comodifyoperatorid=#coModifyOperatorID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          coid=#coID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerOpptunity" parameterClass="int">
+      Delete From [CustomerOpptunity]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          coid=#coID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

@@ -1,0 +1,204 @@
+[2009-09-19 08:39:38] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:39:38] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-19 08:40:15] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:40:15] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-19 08:40:19] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:40:19] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-19 08:40:24] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:40:24] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-19 08:40:55] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:40:55] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+
+[2009-09-19 08:41:21] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-09-19 08:41:48] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusisconverted ---> System.IndexOutOfRangeException: xcusisconverted
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.BooleanTypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 150
+   at SmartSoft.Presentation.CommonController.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 241
+   at SmartSoft.Web.Data.XCustomerEditForm.initToolBar() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 232
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 94
+

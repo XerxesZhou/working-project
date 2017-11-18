@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>线索帮助</title>
+    <link href="../@Css/Help.css" rel="stylesheet" type="text/css" />
+    <script src="../@Scripts/jquery.js" type="text/javascript"></script>
+    <script language="javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script> 
+
+</head>
+<body>
+    <div class="Page" id="Introduce">
+        <div class="Head">
+            <div class="HeadTitle">
+                什么是线索？
+            </div>
+        </div>
+        <div class="Content">
+            <p>线索是客户产生机会的最前端，一般是举行活动，电话咨询、老客户介绍等多样方式获得客户初级信息，销售人员在持续跟进和推动线索的继续延伸，到达成熟阶段后转换成客户、商机。</p>
+            <p>注：1、线索状态所有数据系统都设置了默认值，若修改相关默认值，建议在使用系统前修改；</p>     
+            <p>
+                <img alt="" src="../@images/ClueIntroduce.gif" />
+            </p>
+        </div>
+    </div>
+    <div class="Page" id="Add">
+        <div class="Head">
+            <div class="HeadTitle">
+                新增线索
+            </div>
+        </div>
+        <div class="Content">
+            <p>点击右上方“新增线索”按钮，按照提示填写即可，其中红色星标为必填项。注：可以在系统后台设置“自定义字段设置”内更改必填项目。</p>
+            <p>
+                <img alt="" src="../@images/ClueAdd.gif" />
+            </p>
+        </div>
+    </div>
+    <!--<div class="Page" id="Import">
+        <div class="Head">
+            <div class="HeadTitle">
+                导入线索
+            </div>
+        </div>
+        <div class="Content">
+            <p>通过此按钮可批量导入线索，下载导入数据模板，按照模板中的项目整理要导入的线索数据。</p>
+            <p>注：1、一次性可导入4000条；</p>     
+            <p>2、数据模板中的表头信息，是来自于系统设置中配置的线索字段，表头名称不能更改，表头行不能删除。</p>
+            <p>
+                <img alt="" src="../@images/ClueImport.gif" />
+            </p>
+        </div>
+    </div>-->
+    <div class="Page" id="InfoManage">
+        <div class="Head">
+            <div class="HeadTitle">
+                线索信息管理
+            </div>
+        </div>
+        <div class="Content">
+            <p>点击线索池中，任何一个线索，进入详情页面。线索信息的详细页面，可以直接管理该销售线索相关的各种数据，包括：跟进记录、 基本资料。若该客户有过一段时间的跟进，其表面有一定购买意向，即可将该线索转为客户。线索跟进，员工可根据客户实际情况填写；跟进记录，领导可对线索跟进记录进行评论。</p>
+            <p>
+                <img alt="" src="../@images/ClueInfoManage.gif" />
+            </p>
+        </div>
+    </div>
+    <div class="Page" id="ToCustomer">
+        <div class="Head">
+            <div class="HeadTitle">
+                线索转成客户
+            </div>
+        </div>
+        <div class="Content">
+            <p>将有效线索转化为客户，方便后续的跟进，点击按钮“转成客户”（出现下图），同时可以创建商机。</p>
+            <p>注：1、系统会根据姓名自动创建联系人，同时客户、商机和联系人不能再转为线索</p>
+            <p>2、线索转换客户之后，名单将转到客户管理中，线索中不再有这条线索</p>
+            <p>
+                <img alt="" src="../@images/ClueToCustomer.gif" />
+            </p>
+        </div>
+    </div>
+    <div class="Page" id="Edit">
+        <div class="Head">
+            <div class="HeadTitle">
+                编辑线索信息
+            </div>
+        </div>
+        <div class="Content">
+            <p>完善或者修改客户信息，点击线索二级页面中“编辑”，进入编辑线索页面，信息填写完整点击“保存”即可</p>
+            <p>
+                <img alt="" src="../@images/ClueEdit.gif" />
+            </p>
+        </div>
+    </div>
+   <!-- <div class="Page" id="Group">
+        <div class="Head">
+            <div class="HeadTitle">
+                查看线索分组
+            </div>
+        </div>
+        <div class="Content">
+            <p>完善或者修改客户信息，点击线索二级页面中“编辑”，进入编辑线索页面，信息填写完整点击“保存”即可</p>
+            <p>
+                <img alt="" src="../@images/ClueGroup.gif" />
+            </p>
+        </div>
+    </div>-->
+    <div class="Page" id="TranslateAndDelete">
+        <div class="Head">
+            <div class="HeadTitle">
+                转移和删除线索
+            </div>
+        </div>
+        <div class="Content">
+            <p>进入销售线索池，勾选需要分配的线索后，点击左上角的“转移给他人”即可。注：有操作权限者才可进行此操作。</p>
+            <p>
+                <img alt="" src="../@images/ClueTranslateAndDelete.gif" />
+            </p>
+        </div>
+    </div>
+    <div class="Page" id="Detail">
+        <div class="Head">
+            <div class="HeadTitle">
+                查看线索信息详情
+            </div>
+        </div>
+        <div class="Content">
+            <p>点击线索池中，任何一个线索，进入详情页面。线索信息的详细页面，可以直接管理该销售线索相关的各种数据，包括：跟进记录、 基本资料。若该客户有过一段时间的跟进，其表面有一定购买意向，即可将该线索转为客户。线索跟进，员工可根据客户实际情况填写；跟进记录，领导可对线索跟进记录进行评论。</p>
+            <p>
+                <img alt="" src="../@images/ClueEdit.gif" />
+            </p>
+        </div>
+    </div>
+</body>
+</html>

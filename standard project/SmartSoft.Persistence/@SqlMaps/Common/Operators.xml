@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Operators" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="Operators" type="SmartSoft.Domain.Common.Operators, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+    <resultMap id="SelectResult" class="Operators">
+      <result property="opeID" column="opeid" />
+      <result property="opeName" column="opename" />
+      <result property="opeStopTag" column="opestoptag" />
+      <result property="opeUseTag" column="opeusetag" />
+      <result property="opeIsAdmin" column="opeisadmin" />
+      <result property="opeDataRange" column="opedatarange" />
+      <result property="opePassword" column="opepassword" />
+      <result property="opeDepartmentID" column="opedepartmentid" />
+      <result property="opeLastLoginTime" column="opelastlogintime" />
+      <result property="opeLastModifyPasswordTime" column="opelastmodifypasswordtime" />
+      <result property="opeLastActiveTime" column="opelastactivetime" />
+      <result property="opeAddDate" column="opeadddate" />
+      <result property="opeAddOperatorID" column="opeaddoperatorid" />
+      <result property="opeModifyDate" column="opemodifydate" />
+      <result property="opeModifyOperatorID" column="opemodifyoperatorid" />
+      <result property="opeEmployeeID" column="opeemployeeid" />
+      <result property="opeIsCanLogin" column="opeiscanlogin" />
+      <result property="opeOrderAmount" column="opeorderamount" />
+      <result property="opeReceiptAmount" column="opereceiptamount" />
+      <result property="opeMobile" column="opemobile" />
+      <result property="opeEmail" column="opeemail" />
+      <result property="opeUrl" column="opeurl" />
+      <result property="opeEnterDate" column="opeenterdate" />
+      <result property="opeIsDeveloper" column="opeisdeveloper" />
+      <result property="opeDingDingUserID" column="opedingdinguserid" />
+      <result property="opeWeChatUserID" column="opewechatuserid" />
+    </resultMap>
+    <resultMap id="OperatorList" class="Operators" extends="SelectResult">
+      <result property="DepartmentName" column="departmentname" />
+    </resultMap>
+	</resultMaps>
+ 
+	<statements>
+		<select id="SelectOperators" parameterClass="int" resultMap="OperatorList">
+      Select
+      A.*,
+      depName AS DepartmentName
+      From Operators A
+      Left Outer join Department ON depDepartmentID=depID
+      <dynamic prepend="WHERE">
+      <isParameterPresent>
+        opeid=#opeID#
+      </isParameterPresent>
+    </dynamic>
+      order by depName desc
+    </select>
+
+    <select id="SelectOperatorList" parameterClass="int" resultMap="OperatorList">
+      Select
+      A.*,
+      depName AS DepartmentName
+      From Operators A
+      Left Outer join Department ON opeDepartmentID=depID
+      where (1=1)
+    </select>
+
+    <select id="SelectAllOperators" parameterClass="int" resultMap="SelectResult">
+      Select * from Operators where (1=1)
+    </select>
+
+    <select id="SelectAllOperators1" parameterClass="int" resultMap="SelectResult">
+      Select * from Operators order by opeName
+    </select>
+
+    <select id="BaseSelectOperators" parameterClass="int" resultMap="OperatorList">
+      SELECT
+      A.*,
+      depName AS DepartmentName
+      FROM Department left outer join Operators A ON depDepartmentID=depID
+    </select>
+
+    <!--得到员工明细-->
+    <select id="OperatorDetail" parameterClass="int" resultMap="OperatorList" extends="SelectOperatorList">
+      and opeid=#opeID#
+    </select>
+    
+    <!--登录验证-->
+    <select id="OperatorLogIn" parameterClass="Hashtable" resultMap="OperatorList" extends="SelectOperatorList">
+      and (opename=#opeUserName# or opemobile=#opeUserName# or opeemail=#opeUserName#) and opepassword=#opePassword# ORDER BY opeIsAdmin DESC
+    </select>
+
+    <!--检查用户名是否重复-->
+    <select id="CheckUserName" parameterClass="Hashtable" resultMap="OperatorList" extends="SelectOperatorList">
+      and opename=#opeUserName#
+    </select>
+
+    <!--得到有效的操作员-->
+    <select id="SelectEffectOperators" parameterClass="int" resultMap="SelectResult" extends="SelectAllOperators">
+      and opeiscanlogin=1
+    </select>
+
+    <statement id="InsertOperators" parameterClass="Operators">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'Operators'
+      Insert Into [Operators] (
+      opeid,
+      opename,
+      opestoptag,
+      opeusetag,
+      opeisadmin,
+      opedatarange,
+      opepassword,
+      opedepartmentid,
+      opelastlogintime,
+      opelastmodifypasswordtime,
+      opelastactivetime,
+      opeadddate,
+      opeaddoperatorid,
+      opemodifydate,
+      opemodifyoperatorid,
+      opeemployeeid,
+      opeiscanlogin,
+      opeorderamount,
+      opereceiptamount,
+      opemobile,
+      opeemail,
+      opeurl,
+      opeenterdate
+      )Values(
+      @primarykeyid ,
+      #opeName#,
+      #opeStopTag#,
+      #opeUseTag#,
+      #opeIsAdmin#,
+      #opeDataRange#,
+      #opePassword#,
+      #opeDepartmentID#,
+      #opeLastLoginTime#,
+      #opeLastModifyPasswordTime#,
+      #opeLastActiveTime#,
+      #opeAddDate#,
+      #opeAddOperatorID#,
+      #opeModifyDate#,
+      #opeModifyOperatorID#,
+      #opeEmployeeID#,
+      #opeIsCanLogin#,
+      #opeOrderAmount#,
+      #opeReceiptAmount#,
+      #opeMobile#,
+      #opeEmail#,
+      #opeUrl#,
+      #opeEnterDate#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateOperators" parameterClass="Operators">
+      Update [Operators] Set
+      opeid=#opeID#,
+      opename=#opeName#,
+      opestoptag=#opeStopTag#,
+      opeusetag=#opeUseTag#,
+      opeisadmin=#opeIsAdmin#,
+      opedatarange=#opeDataRange#,
+      opepassword=#opePassword#,
+      opedepartmentid=#opeDepartmentID#,
+      opelastlogintime=#opeLastLoginTime#,
+      opelastmodifypasswordtime=#opeLastModifyPasswordTime#,
+      opelastactivetime=#opeLastActiveTime#,
+      opeadddate=#opeAddDate#,
+      opeaddoperatorid=#opeAddOperatorID#,
+      opemodifydate=#opeModifyDate#,
+      opemodifyoperatorid=#opeModifyOperatorID#,
+      opeemployeeid=#opeEmployeeID#,
+      opeiscanlogin=#opeIsCanLogin#,
+      opeorderamount=#opeOrderAmount#,
+      opereceiptamount=#opeReceiptAmount#,
+      opemobile=#opeMobile#,
+      opeemail=#opeEmail#,
+      opeurl=#opeUrl#,
+      opeenterdate=#opeEnterDate#,
+      opedingdinguserid=#opeDingDingUserID#,
+      opewechatuserid=#opeWeChatUserID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          opeid=#opeID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <update id="ChangePassword" parameterClass="Hashtable">
+      Update Operators Set 
+      opepassword=#opePassword#
+      Where opeid=#opeID#
+    </update>
+		
+		<delete id="DeleteOperators" parameterClass="int">
+      Delete From Operators
+      where opeID = #opeID#;
+    </delete>
+    
+	</statements>
+</sqlMap>

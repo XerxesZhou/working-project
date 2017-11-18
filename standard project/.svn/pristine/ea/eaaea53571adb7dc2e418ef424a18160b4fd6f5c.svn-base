@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="OperatorPlan" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="OperatorPlan" type="SmartSoft.Domain.Data.OperatorPlan, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="OperatorPlan">
+      <result property="opID" column="opid" />
+      <result property="opOperatorID" column="opoperatorid" />
+      <result property="opTypeID" column="optypeid" />
+      <result property="opYear" column="opyear" />
+      <result property="opM1" column="opm1" />
+      <result property="opM2" column="opm2" />
+      <result property="opM3" column="opm3" />
+      <result property="opM4" column="opm4" />
+      <result property="opM5" column="opm5" />
+      <result property="opM6" column="opm6" />
+      <result property="opM7" column="opm7" />
+      <result property="opM8" column="opm8" />
+      <result property="opM9" column="opm9" />
+      <result property="opM10" column="opm10" />
+      <result property="opM11" column="opm11" />
+      <result property="opM12" column="opm12" />
+      <result property="opTotal" column="optotal" />
+      <result property="opAddDate" column="opadddate" />
+      <result property="opAddOperatorID" column="opaddoperatorid" />
+      <result property="opModifyDate" column="opmodifydate" />
+      <result property="opModifyOperatorID" column="opmodifyoperatorid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectOperatorPlanDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [OperatorPlan]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectOperatorPlanDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectOperatorPlan" parameterClass="int" resultMap="SelectResult">
+      Select
+      opid,
+      opoperatorid,
+      optypeid,
+      opyear,
+      opm1,
+      opm2,
+      opm3,
+      opm4,
+      opm5,
+      opm6,
+      opm7,
+      opm8,
+      opm9,
+      opm10,
+      opm11,
+      opm12,
+      optotal,
+      opadddate,
+      opaddoperatorid,
+      opmodifydate,
+      opmodifyoperatorid
+      From [OperatorPlan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          opid=#opID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertOperatorPlan" parameterClass="OperatorPlan">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'OperatorPlan'
+      Insert Into [OperatorPlan] (
+      opid,
+      opoperatorid,
+      optypeid,
+      opyear,
+      opm1,
+      opm2,
+      opm3,
+      opm4,
+      opm5,
+      opm6,
+      opm7,
+      opm8,
+      opm9,
+      opm10,
+      opm11,
+      opm12,
+      optotal,
+      opadddate,
+      opaddoperatorid,
+      opmodifydate,
+      opmodifyoperatorid
+      )Values(
+      @primarykeyid ,
+      #opOperatorID#,
+      #opTypeID#,
+      #opYear#,
+      #opM1#,
+      #opM2#,
+      #opM3#,
+      #opM4#,
+      #opM5#,
+      #opM6#,
+      #opM7#,
+      #opM8#,
+      #opM9#,
+      #opM10#,
+      #opM11#,
+      #opM12#,
+      #opTotal#,
+      #opAddDate#,
+      #opAddOperatorID#,
+      #opModifyDate#,
+      #opModifyOperatorID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateOperatorPlan" parameterClass="OperatorPlan">
+      Update [OperatorPlan] Set
+      opid=#opID#,
+      opoperatorid=#opOperatorID#,
+      optypeid=#opTypeID#,
+      opyear=#opYear#,
+      opm1=#opM1#,
+      opm2=#opM2#,
+      opm3=#opM3#,
+      opm4=#opM4#,
+      opm5=#opM5#,
+      opm6=#opM6#,
+      opm7=#opM7#,
+      opm8=#opM8#,
+      opm9=#opM9#,
+      opm10=#opM10#,
+      opm11=#opM11#,
+      opm12=#opM12#,
+      optotal=#opTotal#,
+      opadddate=#opAddDate#,
+      opaddoperatorid=#opAddOperatorID#,
+      opmodifydate=#opModifyDate#,
+      opmodifyoperatorid=#opModifyOperatorID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          opid=#opID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteOperatorPlan" parameterClass="int">
+      Delete From [OperatorPlan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          opid=#opID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

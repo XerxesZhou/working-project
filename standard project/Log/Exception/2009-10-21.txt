@@ -1,0 +1,35 @@
+[2009-10-21 06:52:48] Error occurred in page SellOrderEditForm.aspx.cs at function:lb_BuildStockOut_Click Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Web.Sell.SellOrderEditForm.downLoad(String filePath) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 564
+   at SmartSoft.Web.Sell.SellOrderEditForm.lb_BuildStockOut_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 460
+
+[2009-10-21 06:53:41] Error occurred in page SellOrderEditForm.aspx.cs at function:lb_BuildStockOut_Click Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Web.Sell.SellOrderEditForm.downLoad(String filePath) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 564
+   at SmartSoft.Web.Sell.SellOrderEditForm.lb_BuildStockOut_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 460
+
+[2009-10-21 06:54:53] Error occurred in page SellOrderEditForm.aspx.cs at function:lb_BuildStockOut_Click Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Web.Sell.SellOrderEditForm.downLoad(String filePath) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 564
+   at SmartSoft.Web.Sell.SellOrderEditForm.lb_BuildStockOut_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 460
+
+[2009-10-21 06:56:34] Error occurred in page SellOrderEditForm.aspx.cs at function:lb_BuildStockOut_Click Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Web.Sell.SellOrderEditForm.downLoad(String filePath) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 564
+   at SmartSoft.Web.Sell.SellOrderEditForm.lb_BuildStockOut_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 460
+
+[2009-10-21 07:00:24] Error occurred in page SellOrderEditForm.aspx.cs at function:lb_BuildStockOut_Click Details:System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SmartSoft.Web.Sell.SellOrderEditForm.downLoad(String filePath) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 564
+   at SmartSoft.Web.Sell.SellOrderEditForm.lb_BuildStockOut_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Sell\SellOrderEditForm.aspx.cs:line 460
+

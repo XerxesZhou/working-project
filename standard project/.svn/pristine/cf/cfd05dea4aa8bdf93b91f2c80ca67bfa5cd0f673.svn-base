@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <!--   User application and configured property settings go here.-->
+  <!--   Example: <add key="settingName" value="settingValue"/> -->
+  <add key="provider" value="sqlServer1.1" />
+
+  <add 
+		key="connectionString" 
+		value="empty" />
+  <!-- 
+  <add 
+  key="connectionString" 
+  value="server=localhost;database=FES_TEST;uid=sa;pwd=i7200d" />
+  -->
+  <add key="root" value="SmartSoft.Persistence._SqlMaps." />
+  <add key="path" value="SmartSoft.Persistence." />
+  <add key="assembly" value="SmartSoft.Persistence" />
+  <add key="root.UDEF" value="UDEF.Persistence._Maps." />
+  <add key="assembly.UDEF" value="UDEF.Persistence" />
+</settings>

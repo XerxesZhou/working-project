@@ -1,0 +1,98 @@
+[2009-09-21 20:46:21] Error occurred in page Service.BaseService at function:SelectDynamic Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectFairDynamic' for list.  Cause: This SQL map does not contain a MappedStatement named SelectFairDynamic ---> IBatisNet.DataMapper.Exceptions.DataMapperException: This SQL map does not contain a MappedStatement named SelectFairDynamic
+   at IBatisNet.DataMapper.SqlMapper.GetMappedStatement(String id)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 65
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForList[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 71
+   at SmartSoft.Service.BaseService.SelectDynamic[T](String whereCondition, String orderByExpression) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 61
+
+[2009-09-21 20:56:16] Error occurred in page /Data/FairList.aspx at function Page_Load by Jack Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.BaseController.GetViewSource(Control ctrl, String ctrGridViewID, Int32& viewID, Int32 opID) in E:\SmartSoft\SmartSoft.Presentation\BaseController.cs:line 493
+   at SmartSoft.Presentation.PageBaseList.initColumnView() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 414
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 233
+   at SmartSoft.Web.Data.FairList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\FairList.aspx.cs:line 52
+
+[2009-09-21 20:56:18] Error occurred in page /Data/FairList.aspx at function Page_Load by Jack Details:System.NullReferenceException: Object reference not set to an instance of an object.
+   at SmartSoft.Presentation.BaseController.GetViewSource(Control ctrl, String ctrGridViewID, Int32& viewID, Int32 opID) in E:\SmartSoft\SmartSoft.Presentation\BaseController.cs:line 493
+   at SmartSoft.Presentation.PageBaseList.initColumnView() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 414
+   at SmartSoft.Presentation.PageBaseList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 233
+   at SmartSoft.Web.Data.FairList.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\FairList.aspx.cs:line 52
+
+[2009-09-21 21:05:54] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertFair' for insert.  Cause: 为过程或函数 usp_GetID 指定的参数太多。 ---> System.Data.SqlClient.SqlException: 为过程或函数 usp_GetID 指定的参数太多。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-21 21:05:54] Error occurred in page /Data/FairEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertFair' for insert.  Cause: 为过程或函数 usp_GetID 指定的参数太多。 ---> System.Data.SqlClient.SqlException: 为过程或函数 usp_GetID 指定的参数太多。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 77
+   at SmartSoft.Web.Data.FairEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\FairEditForm.aspx.cs:line 104
+
+[2009-09-21 21:06:41] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertFair' for insert.  Cause: 为过程或函数 usp_GetID 指定的参数太多。 ---> System.Data.SqlClient.SqlException: 为过程或函数 usp_GetID 指定的参数太多。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-21 21:06:41] Error occurred in page /Data/FairEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertFair' for insert.  Cause: 为过程或函数 usp_GetID 指定的参数太多。 ---> System.Data.SqlClient.SqlException: 为过程或函数 usp_GetID 指定的参数太多。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 77
+   at SmartSoft.Web.Data.FairEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\FairEditForm.aspx.cs:line 104
+

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="OperatorLog" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="OperatorLog" type="SmartSoft.Domain.Common.OperatorLog, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="OperatorLog">
+      <result property="olID" column="olid" />
+      <result property="olOperatorID" column="oloperatorid" />
+      <result property="olDate" column="oldate" />
+      <result property="olContent" column="olcontent" />
+      <result property="olURL" column="olurl" />
+      <result property="olCustomerID" column="olcustomerid" />
+      <result property="olBusinessID" column="olbusinessid" />
+      <result property="olFromIP" column="olfromip" />
+      <result property="olOperateSource" column="oloperatesource" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectOperatorLogDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [OperatorLog]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectOperatorLogDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectOperatorLog" parameterClass="int" resultMap="SelectResult">
+      Select
+      olid,
+      oloperatorid,
+      oldate,
+      olcontent,
+      olurl,
+      olcustomerid,
+      olbusinessid,
+      olfromip,
+      oloperatesource
+      From [OperatorLog]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          olid=#olID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertOperatorLog" parameterClass="OperatorLog">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'OperatorLog'
+      Insert Into [OperatorLog] (
+      olid,
+      oloperatorid,
+      oldate,
+      olcontent,
+      olurl,
+      olcustomerid,
+      olbusinessid,
+      olfromip,
+      oloperatesource
+      )Values(
+      @primarykeyid ,
+      #olOperatorID#,
+      #olDate#,
+      #olContent#,
+      #olURL#,
+      #olCustomerID#,
+      #olBusinessID#,
+      #olFromIP#,
+      #olOperateSource#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateOperatorLog" parameterClass="OperatorLog">
+      Update [OperatorLog] Set
+      olid=#olID#,
+      oloperatorid=#olOperatorID#,
+      oldate=#olDate#,
+      olcontent=#olContent#,
+      olurl=#olURL#,
+      olcustomerid=#olCustomerID#,
+      olbusinessid=#olBusinessID#,
+      olfromip=#olFromIP#,
+      oloperatesource=#olOperateSource#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          olid=#olID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteOperatorLog" parameterClass="int">
+      Delete From [OperatorLog]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          olid=#olID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

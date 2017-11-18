@@ -1,0 +1,70 @@
+[2010-07-17 16:14:32] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXProduct' for update.  Cause: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。 ---> System.Data.SqlClient.SqlException: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2010-07-17 16:14:32] Error occurred in page /Data/XProductEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXProduct' for update.  Cause: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。 ---> System.Data.SqlClient.SqlException: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 68
+   at SmartSoft.Web.Data.XProductEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XProductEditForm.aspx.cs:line 112
+
+[2010-07-17 16:15:12] Error occurred in page Service.BaseService at function:Update Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXProduct' for update.  Cause: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。 ---> System.Data.SqlClient.SqlException: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 187
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 112
+
+[2010-07-17 16:15:12] Error occurred in page /Data/XProductEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateXProduct' for update.  Cause: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。 ---> System.Data.SqlClient.SqlException: 对视图或函数 'XProduct' 的更新或插入失败，因其包含有派生域或常量域。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 183
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Update[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 117
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 68
+   at SmartSoft.Web.Data.XProductEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XProductEditForm.aspx.cs:line 112
+

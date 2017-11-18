@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerFollowPlan" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerFollowPlan" type="SmartSoft.Domain.Data.CustomerFollowPlan, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerFollowPlan">
+      <result property="cfpID" column="cfpid" />
+      <result property="cfpSource" column="cfpsource" />
+      <result property="cfpRelatedID" column="cfprelatedid" />
+      <result property="cfpDate" column="cfpdate" />
+      <result property="cfpOperatorID" column="cfpoperatorid" />
+      <result property="cfpContent" column="cfpcontent" />
+      <result property="cfpAddOperatorID" column="cfpaddoperatorid" />
+      <result property="cfpAddDate" column="cfpadddate" />
+      <result property="cfpModifyOperatorID" column="cfpmodifyoperatorid" />
+      <result property="cfpModifyDate" column="cfpmodifydate" />
+      <result property="cfpFilePath" column="cfpfilepath" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerFollowPlanDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerFollowPlan]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerFollowPlanDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerFollowPlan" parameterClass="int" resultMap="SelectResult">
+      Select
+      cfpid,
+      cfpsource,
+      cfprelatedid,
+      cfpdate,
+      cfpoperatorid,
+      cfpcontent,
+      cfpaddoperatorid,
+      cfpadddate,
+      cfpmodifyoperatorid,
+      cfpmodifydate,
+      cfpfilepath
+      From [CustomerFollowPlan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfpid=#cfpID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerFollowPlan" parameterClass="CustomerFollowPlan">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerFollowPlan'
+      Insert Into [CustomerFollowPlan] (
+      cfpid,
+      cfpsource,
+      cfprelatedid,
+      cfpdate,
+      cfpoperatorid,
+      cfpcontent,
+      cfpaddoperatorid,
+      cfpadddate,
+      cfpmodifyoperatorid,
+      cfpmodifydate,
+      cfpfilepath
+      )Values(
+      @primarykeyid ,
+      #cfpSource#,
+      #cfpRelatedID#,
+      #cfpDate#,
+      #cfpOperatorID#,
+      #cfpContent#,
+      #cfpAddOperatorID#,
+      #cfpAddDate#,
+      #cfpModifyOperatorID#,
+      #cfpModifyDate#,
+      #cfpFilePath#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerFollowPlan" parameterClass="CustomerFollowPlan">
+      Update [CustomerFollowPlan] Set
+      cfpid=#cfpID#,
+      cfpsource=#cfpSource#,
+      cfprelatedid=#cfpRelatedID#,
+      cfpdate=#cfpDate#,
+      cfpoperatorid=#cfpOperatorID#,
+      cfpcontent=#cfpContent#,
+      cfpaddoperatorid=#cfpAddOperatorID#,
+      cfpadddate=#cfpAddDate#,
+      cfpmodifyoperatorid=#cfpModifyOperatorID#,
+      cfpmodifydate=#cfpModifyDate#,
+      cfpfilepath=#cfpFilePath#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfpid=#cfpID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerFollowPlan" parameterClass="int">
+      Delete From [CustomerFollowPlan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfpid=#cfpID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

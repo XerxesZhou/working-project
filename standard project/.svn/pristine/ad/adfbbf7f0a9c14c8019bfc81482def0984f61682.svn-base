@@ -1,0 +1,70 @@
+﻿[2009-07-26 05:05:20] Error occurred in page PageBaseList at function lb_Search_Click by 管理员 Details:System.Data.SqlClient.SqlException: 列名 'xcusCooperationTimeLevelID' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   at UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   at UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   at UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   at UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   at SmartSoft.Presentation.PageBaseList.getDataSource() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 790
+   at SmartSoft.Presentation.PageBaseList.bindGrid() in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 861
+   at SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Presentation\PageBaseList.cs:line 514
+
+[2009-07-26 05:07:03] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcuscooparationtimelevelid ---> System.IndexOutOfRangeException: xcuscooparationtimelevelid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 132
+
+[2009-07-26 05:07:15] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by 管理员 Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcuscooparationtimelevelid ---> System.IndexOutOfRangeException: xcuscooparationtimelevelid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 137
+   at SmartSoft.Presentation.CommonController`1.Save(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 58
+   at CProxyTypeSmartSoft_Presentation_DataXCustomerControllerData0.callback__Save(FormAction , Control , Int32 , Int32 , Int32 )
+   at CProxyTypeSmartSoft_Presentation_DataXCustomerControllerData0.__delegate_1.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_Presentation_DataXCustomerControllerData0.Save(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 119
+

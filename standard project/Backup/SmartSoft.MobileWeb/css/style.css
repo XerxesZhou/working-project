@@ -1,0 +1,359 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  color: #7f8c97;
+  background-color: #e9f0f5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.SavaBtn
+{
+    background-color: #5E97F6;
+    border-radius: 5px;
+    color: #fff !important;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-shadow: none;
+}
+
+.ListLeft
+{
+    float: left;
+    width: 60%;
+}
+        
+.ListRight
+{
+    float: right; 
+    width: 40%; 
+    text-align:right;
+}
+
+.lblccStatus
+{
+    border: 1px solid #3C96DE;
+    color: #3C96DE;
+    border-radius: 3px;
+}
+
+.GroupDiv
+{
+    font-size: small; 
+    font-weight: normal;
+}
+
+select
+{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    outline: none;
+    background: url("../@images/combo_arrow.png") no-repeat 99%;
+    font-size: 14px;
+    background-size: 12px;
+    direction: rtl;
+    padding-right: 15px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+
+div.ui-input-text input.ui-input-text
+{
+    text-align:right;
+}
+
+.cssTextarea
+{
+    text-align:left !important;
+    height:80px !important;
+}
+
+textarea.ui-input-text
+{
+    text-align:right;
+}
+
+.cssMainPanel ul
+{
+    margin:0px !important;
+}
+
+.cssMainPanel table
+{
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 3em;
+    width: 100%;
+    font-family: @微软雅黑;
+    border: 0;
+}
+
+.cssMainPanel table tr {
+    line-height: 3em;
+}
+
+.cssMainPanel table tr th
+{
+    text-align: left;
+    width: 35%;
+    color: #828181;
+    font-size:15px;
+    padding-left:10px;
+    border-bottom: 1px solid #EEE;
+    font-weight: normal;
+}
+
+.cssMainPanel table tr td
+{
+    text-align: left;
+    border-bottom: 1px solid #EEE;
+    font-weight:normal;
+}
+
+.searchTable
+{
+    width:100%;
+    font-size: small;
+    font-weight: normal;
+    line-height: 3.5em;
+}
+
+ .searchTable tr th
+{
+    text-align:left;
+    padding-left:10px;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.searchTable tr td
+{
+    border-bottom: 1px solid #eee;
+}
+
+.DateSelect
+{
+    width: 80%;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline:none;
+    text-align: right;
+}
+
+.dis
+{
+    color:#888181;
+}
+
+.ui-content
+{
+    padding:0px;
+}
+
+.pullDown
+{
+    display:none;
+}
+
+textarea
+{
+    border: 0;
+}
+
+.cssHeader
+{
+    text-align: center;
+    color: #333333;
+}
+
+.cssMainPanel div label
+{
+    font-weight: normal;
+}
+
+.new_img
+{
+    height: 20px;
+    float: left;
+    margin-top: 10px;
+}
+        
+.new_div
+{
+    margin-left: 3px;
+    height: 40px;
+    line-height: 40px;
+}
+        
+.new_divtable
+{
+    border: 1px solid #ccc !important;
+    border-radius: 6px;
+}
+.new_table
+{
+    line-height: 40px !important;
+    background-color: #f8f8f8 !important;
+    height: 40px !important;
+}
+
+.new_div a
+{
+    font-size: 15px;
+}
+/*菜单滑动*/
+#divNavigation
+{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    top: 80px;
+    background-color: white;
+    z-index: 1003;
+}
+        
+#divNavigation ul
+{
+    position: absolute;
+    height: 40px;
+}
+        
+#divNavigation ul li
+{
+    float: left;
+    width: 33.33%;
+    height: 40px;
+}
+        
+#divNavigation ul a
+{
+    width: 100%;
+    color: #3C96DE;
+    font-weight: normal;
+    line-height: 40px;
+    display: block;
+    height: 40px;
+    text-align: center;
+}
+        
+#divNavigation .preNext
+{
+    width: 33px;
+    height: 100px;
+    position: absolute;
+    top: -33px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+    cursor: pointer;
+}
+#divNavigation .pre
+{
+    left: 0;
+}
+#divNavigation .next
+{
+    right: 0;
+    background-position: right top;
+}
+/*菜单滑动结束*/
+.li_title
+{
+    border-bottom: 1px solid #3C96DE !important;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.TitlecusName
+{
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    float: left;
+    padding: 5px 0px 5px 18px;
+    text-shadow: none;
+    width: 100%;
+    text-align: left;
+}
+
+.TitleTable tr td
+{
+    text-align: left;
+    font-size: 12px;
+    color: #989191;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.picView
+{
+    text-align: center;
+    max-width: 30%;
+    margin-right: 10px;
+}
+/*点赞评论*/
+.cssLike
+{
+    color:#3C96DE;
+}
+.cssNotLike
+{
+    color:Gray;
+}
+/*点赞评论结束*/
+
+.MainPanelli
+{
+    padding:0px !important;
+    margin-bottom:20px !important;
+}
+
+.MainView
+{
+    overflow: auto;
+    margin: 0px 4px 7px 4px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-top: 0px;    
+}
+
+.footerRecord
+{
+    border-top: 1px solid #ddd;
+    background: #fff !important;
+    color: #888181 !important;
+    text-shadow: none !important;
+    text-align: right !important;
+    font-weight: normal !important;
+    padding-right: 10px;
+}
+
+
+
+

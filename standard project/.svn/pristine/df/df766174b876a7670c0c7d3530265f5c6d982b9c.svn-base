@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Toolbar" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="Toolbar" type="SmartSoft.Domain.Purview.Toolbar, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="Toolbar">
+			<result property="ToolbarId" column="toolbarid" />
+			<result property="ToolbarName" column="toolbarname" />
+			<result property="ToolbarPageId" column="toolbarpageid" />
+			<result property="ToolbarParentId" column="toolbarparentid" />
+			<result property="ToolbarImageUrl" column="toolbarimageurl" />
+			<result property="ToolbarOrderByNo" column="toolbarorderbyno" />
+		</resultMap>
+    
+    <resultMap id="List" class="Toolbar" extends="SelectResult">
+      <result property="ToolbarPageName" column="menupagename" />
+      <result property="ToolbarPageUrl" column="menupageurl" />
+      <result property="PageSortId" column="pagesortid" />
+    </resultMap>
+    
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectToolbar" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  toolbarid,
+				  toolbarname,
+				  toolbarpageid,
+				  toolbarparentid,
+				  toolbarimageurl,
+				  toolbarorderbyno
+			From Toolbar
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectToolbar" parameterClass="int" resultMap="List">
+      Select
+        toolbarid,
+        toolbarname,
+        toolbarpageid,
+        (Select PageName From Page Where PageID=Toolbar.ToolbarPageId) as toolbarpagename,
+        (Select PageFilePath From Page Where PageID=Toolbar.ToolbarPageId) as toolbarpageurl,
+        (Select PageSortId From Page Where PageID=Toolbar.ToolbarPageId) as pagesortid,
+        toolbarparentid,
+        toolbarimageurl,
+        toolbarorderbyno
+      From Toolbar
+    </select>
+		
+		<select id="ToolbarDetail" parameterClass="int" resultMap="List" extends="BaseSelectToolbar">
+			Where toolbarid=#ToolbarId#
+		</select>
+
+    <select id="SelectToolbarListByParentId" parameterClass="int" resultMap="List" extends="BaseSelectToolbar">
+      Where toolbarparentid=#ToolbarParentId#
+    </select>
+				
+		<insert id="InsertToolbar" parameterClass="Toolbar">
+      Insert Into Toolbar (
+      toolbarid,
+      toolbarname,
+      toolbarpageid,
+      toolbarparentid,
+      toolbarimageurl,
+      menuorderbyno
+      )Values(
+      #ToolbarId#,
+      #ToolbarName#,
+      #ToolbarPageId#,
+      #ToolbarParentId#,
+      #ToolbarImageUrl#,
+      #ToolbarId#
+      )
+    </insert>
+		
+		<update id="UpdateToolbar" parameterClass="Toolbar">
+			Update Toolbar Set 
+				toolbarname=#ToolbarName#,
+				toolbarpageid=#ToolbarPageId#,
+				toolbarparentid=#ToolbarParentId#,
+				toolbarimageurl=#ToolbarImageUrl#,
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeleteToolbar" parameterClass="int">
+			Delete From Toolbar
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					toolbarid=#ToolbarId#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

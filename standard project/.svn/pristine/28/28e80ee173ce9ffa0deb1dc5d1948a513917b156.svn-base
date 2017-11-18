@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- BEGIN HEAD --><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>收费说明</title>
+		
+    <link href="css/HelpPageCss.css" rel="stylesheet" type="text/css" />
+    <link href="css/HelpForEmployeePageCss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="charge">
+	<div class="head">
+		<h3>创捷易CRM</h3>
+		<p>收费说明</p>
+	</div>
+	<div class="tableBox">
+		<table>
+			<thead>
+		        <tr>
+		            <th>价格对比</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+		        </tr>
+		    </thead>
+	        <tbody>
+	        	<tr>
+	        		<td class="table-zs" colspan="3">员工人数以实际使用人数为准 <br>购买2年赠6个月 3年赠12个月</td>
+	        	</tr>
+
+		        <tr>
+		        	<td>1-5人</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td>¥2400元/年</td>
+		        </tr>
+		        <tr>
+		        	<td>6-10人</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td>¥3600元/年</td>
+		        </tr>
+		        <tr>
+		        	<td>11-20人</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td>¥4800元/年</td>
+		        </tr>
+		        <tr>
+		        	<td>21-50人</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td>¥7200元/年</td>
+		        </tr>
+		        <tr>
+		        	<td>51人以上</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td>¥9600元/年</td>
+		        </tr>
+
+		        
+	        </tbody>
+	        <thead>
+		        <tr>
+		            <th>移动端对比</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		        	<td>客户管理</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>重点客户</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>附近客户</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>客户查重</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>联系人</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>公海池客户</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>跟进记录</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td><span>*</span>业绩目标</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>销售机会</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>重点机会</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>合同订单</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>合同回款</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>产品库</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>数据看板</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>统计报表</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>名片扫描</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>访客计划</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+				<tr>
+		        	<td>审批</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+				 <tr>
+		        	<td>PK榜</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+	        </tbody>
+	        <thead>
+		        <tr>
+		            <th>Web端对比</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		        	<td>数据看板(首页)</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>员工管理</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>角色管理</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>产品管理</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td><span>*</span>业绩目标</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>公海规则</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>业务模板</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>数据字典</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>客户管理</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>联系人</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>跟进记录</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>销售机会</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>合同订单</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>回款列表</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>访客计划</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>统计报表</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>批量导入</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+		        <tr>
+		        	<td>批量导出</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+				<tr>
+		        	<td>审批</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+				 <tr>
+		        	<td>PK榜</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+		        </tr>
+	        </tbody>
+	        <thead>
+	        	<tr>
+	        		<th>未来新功能</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+	        <tbody>
+	        	<tr>
+	        		<td>未来新功能</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+	        	</tr>
+	        </tbody>
+	        <thead>
+	        	<tr>
+	        		<th>API接口</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+	        <tbody>
+	        	<tr>
+	        		<td>开放性接口</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i>(另行收费)</td>
+	        	</tr>
+	        </tbody>
+	        <thead>
+	        	<tr>
+	        		<th>安全性</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+	        <tbody>
+	        	<tr>
+	        		<td>SSL传输加密</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+	        	</tr>
+	        	<tr>
+	        		<td>数据定时备份</td>
+		        	<td><i class="icon-check"></i></td>
+		        	<td><i class="icon-check"></i></td>
+	        	</tr>
+	        </tbody>
+	        <thead>
+	        	<tr>
+	        		<th>技术服务</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+			<tbody>
+				<tr>
+	        		<td>技术在线服务</td>
+		        	<td>5*9小时服务</td>
+		        	<td>7*24小时服务</td>
+	        	</tr>
+				<tr>
+	        		<td>远程培训</td>
+		        	<td><i class="icon-cross"></i></td>
+		        	<td><i class="icon-check"></i></td>
+	        	</tr>
+	        </tbody>
+			<thead>
+	        	<tr>
+	        		<th>现场实施与培训</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+			<tbody>
+	        	<tr>
+	        		<td>实施和培训</td>
+		        	<td>2000元/人天</td>
+		        	<td>2000元/人天</td>
+	        	</tr>
+	        </tbody>
+			<thead>
+	        	<tr>
+	        		<th>技术支持</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+			<tbody>
+				<tr>
+	        		<td>文件存储空间（公司）</td>
+		        	<td>5G</td>
+		        	<td>200G</td>
+	        	</tr>
+				<tr>
+	        		<td>文件存储空间（个人）</td>
+		        	<td>600M</td>
+		        	<td>2G</td>
+	        	</tr>
+	        </tbody>
+	        <thead>
+	        	<tr>
+	        		<th>其他</th>
+		            <th>免费版</th>
+		            <th>VIP版</th>
+	        	</tr>
+	        </thead>
+	        <tbody>
+	        	<tr>
+	        		<td>客户信息</td>
+		        	<td>限1000条</td>
+		        	<td>不限制</td>
+	        	</tr>
+	        	<tr>
+	        		<td>产品信息</td>
+		        	<td>限200条</td>
+		        	<td>不限制</td>
+	        	</tr>
+	        </tbody>
+		</table>
+		<div class="tableFootText">
+    		<p>*业绩目标免费版仅提供合同金额与回款金额两个业绩目标，VIP提供更多业绩目标管理。</p>
+    		<h3>权限说明：解释权归杭州逍邦网络科技有限公司所有；本报价单自2016年10月01日生效。</h3>
+    	</div>
+	</div>
+	<p class="phone">客服电话：<span><a href="tel:0755-33160172">0755-33160172</a></span></p>
+	<div class="usehelp Bcolffffff">
+		<div class="erweima imgBox">
+			<img src="https://dingtalkapi.xbongbong.com/images/qun.png" alt="">
+		</div>
+	</div>
+	<a navgoid="buy" href="/pay/buy.html?dd_nav_bgcolor=ffff943e" class="fixBtn dingtalkNavGo part buy">购买升级</a>
+</div>
+<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>

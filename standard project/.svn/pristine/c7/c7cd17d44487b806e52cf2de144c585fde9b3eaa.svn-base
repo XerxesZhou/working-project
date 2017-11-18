@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerFollowHistory" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerFollowHistory" type="SmartSoft.Domain.Data.CustomerFollowHistory, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerFollowHistory">
+      <result property="cfhID" column="cfhid" />
+      <result property="cfhSource" column="cfhsource" />
+      <result property="cfhRelatedID" column="cfhrelatedid" />
+      <result property="cfhContent" column="cfhcontent" />
+      <result property="cfhOperatorID" column="cfhoperatorid" />
+      <result property="cfhDate" column="cfhdate" />
+      <result property="cfhTypeID" column="cfhtypeid" />
+      <result property="cfhAddOperatorID" column="cfhaddoperatorid" />
+      <result property="cfhAddDate" column="cfhadddate" />
+      <result property="cfhModifyOperatorID" column="cfhmodifyoperatorid" />
+      <result property="cfhModifyDate" column="cfhmodifydate" />
+      <result property="cfhAddress" column="cfhaddress" />
+      <result property="cfhNextFollowTime" column="cfhnextfollowtime" />
+      <result property="cfhFilePath" column="cfhfilepath" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerFollowHistoryDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerFollowHistory]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerFollowHistoryDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerFollowHistory" parameterClass="int" resultMap="SelectResult">
+      Select
+      cfhid,
+      cfhsource,
+      cfhrelatedid,
+      cfhcontent,
+      cfhoperatorid,
+      cfhdate,
+      cfhtypeid,
+      cfhaddoperatorid,
+      cfhadddate,
+      cfhmodifyoperatorid,
+      cfhmodifydate,
+      cfhaddress,
+      cfhnextfollowtime,
+      cfhfilepath
+      From [CustomerFollowHistory]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfhid=#cfhID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerFollowHistory" parameterClass="CustomerFollowHistory">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerFollowHistory'
+      Insert Into [CustomerFollowHistory] (
+      cfhid,
+      cfhsource,
+      cfhrelatedid,
+      cfhcontent,
+      cfhoperatorid,
+      cfhdate,
+      cfhtypeid,
+      cfhaddoperatorid,
+      cfhadddate,
+      cfhmodifyoperatorid,
+      cfhmodifydate,
+      cfhaddress,
+      cfhnextfollowtime,
+      cfhfilepath
+      )Values(
+      @primarykeyid ,
+      #cfhSource#,
+      #cfhRelatedID#,
+      #cfhContent#,
+      #cfhOperatorID#,
+      #cfhDate#,
+      #cfhTypeID#,
+      #cfhAddOperatorID#,
+      #cfhAddDate#,
+      #cfhModifyOperatorID#,
+      #cfhModifyDate#,
+      #cfhAddress#,
+      #cfhNextFollowTime#,
+      #cfhFilePath#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerFollowHistory" parameterClass="CustomerFollowHistory">
+      Update [CustomerFollowHistory] Set
+      cfhid=#cfhID#,
+      cfhsource=#cfhSource#,
+      cfhrelatedid=#cfhRelatedID#,
+      cfhcontent=#cfhContent#,
+      cfhoperatorid=#cfhOperatorID#,
+      cfhdate=#cfhDate#,
+      cfhtypeid=#cfhTypeID#,
+      cfhaddoperatorid=#cfhAddOperatorID#,
+      cfhadddate=#cfhAddDate#,
+      cfhmodifyoperatorid=#cfhModifyOperatorID#,
+      cfhmodifydate=#cfhModifyDate#,
+      cfhaddress=#cfhAddress#,
+      cfhnextfollowtime=#cfhNextFollowTime#,
+      cfhfilepath=#cfhFilePath#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfhid=#cfhID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerFollowHistory" parameterClass="int">
+      Delete From [CustomerFollowHistory]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          cfhid=#cfhID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

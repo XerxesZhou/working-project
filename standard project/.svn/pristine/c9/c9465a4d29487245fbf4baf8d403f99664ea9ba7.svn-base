@@ -1,0 +1,97 @@
+[2009-08-28 23:02:09] Error occurred in page /Common/CustomerAssistant.aspx at function Page_Load by Jack Details:System.InvalidOperationException: The Update method can only be called on UpdatePanel with ID 'UpdatePanel1' when UpdateMode is set to Conditional.
+   at System.Web.UI.UpdatePanel.Update()
+   at SmartSoft.Web.Common.CustomerAssistant.bindNotSetCustomer() in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 262
+   at SmartSoft.Web.Common.CustomerAssistant.BindNoSetCustomer(Int32 assistantId, Boolean hasSearch) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 101
+   at SmartSoft.Web.Common.CustomerAssistant.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Common\CustomerAssistant.aspx.cs:line 83
+
+[2009-08-28 23:48:26] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:48:38] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:49:04] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:50:38] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:51:12] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:53:21] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:55:26] Error occurred in page /Data/XCustomerEditForm.aspx at function btn_Delete_Click by Jack Details:System.InvalidCastException: Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.DropDownList'.
+   at SmartSoft.Web.Data.XCustomerEditForm.bindSpecialData() in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 177
+   at SmartSoft.Web.Data.XCustomerEditForm.Page_Load(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 99
+
+[2009-08-28 23:57:49] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateCustomsValue' for update.  Cause: 列名 'xcusMonthlyAmount' 无效。 ---> System.Data.SqlClient.SqlException: 列名 'xcusMonthlyAmount' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   --- End of inner exception stack trace ---
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   at UDEF.Persistence.CustomColumnSqlMapDao.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.CustomColumnService.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.UserDefineBaseService.UpdateCustomValue(String updateSql)
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 81
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-08-28 23:58:03] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateCustomsValue' for update.  Cause: 列名 'xcusMonthlyAmount' 无效。 ---> System.Data.SqlClient.SqlException: 列名 'xcusMonthlyAmount' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   --- End of inner exception stack trace ---
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   at UDEF.Persistence.CustomColumnSqlMapDao.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.CustomColumnService.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.UserDefineBaseService.UpdateCustomValue(String updateSql)
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 81
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-08-28 23:59:37] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'UpdateCustomsValue' for update.  Cause: 列名 'xcusMonthlyAmount' 无效。 ---> System.Data.SqlClient.SqlException: 列名 'xcusMonthlyAmount' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   --- End of inner exception stack trace ---
+   at UDEF.Persistence.BaseSqlMapDao.ExecuteUpdate(String statementName, Object parameterObject)
+   at UDEF.Persistence.CustomColumnSqlMapDao.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.CustomColumnService.UpdateCustomsValue(String updateSql)
+   at UDEF.Service.UserDefineBaseService.UpdateCustomValue(String updateSql)
+   at SmartSoft.Presentation.CommonController.Save[T](FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID) in E:\SmartSoft\SmartSoft.Presentation\CommonController.cs:line 81
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysOperatorInRole" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysOperatorInRole" type="SmartSoft.Domain.Common.sysOperatorInRole, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysOperatorInRole">
+			<result property="OperatorID" column="operatorid" />
+			<result property="RoleID" column="roleid" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysOperatorInRole" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  operatorid,
+				  roleid
+			From sysOperatorInRole
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+          operatorid=#OperatorID#
+        </isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysOperatorInRole" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  operatorid,
+				  roleid
+			From sysOperatorInRole
+		</select>
+
+
+    <select id="SelectManager" parameterClass="int" resultMap="SelectResult">
+      select * from sysOperatorInRole where roleid in (select roleID from sysrole where rolename like '%采购经理%')
+    </select>
+    
+		<insert id="InsertsysOperatorInRole" parameterClass="sysOperatorInRole">
+			Insert Into sysOperatorInRole (
+				  operatorid,
+				  roleid
+			)Values(
+				 #OperatorID#,
+				 #RoleID#
+			)
+		</insert>
+		
+		<delete id="DeletesysOperatorInRole" parameterClass="int">
+			Delete From sysOperatorInRole
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+          operatorid=#OperatorID#
+        </isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

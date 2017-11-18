@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysViewLayoutControl" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysViewLayoutControl" type="SmartSoft.Domain.Common.sysViewLayoutControl, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysViewLayoutControl">
+			<result property="ControlID" column="controlid" />
+			<result property="PageID" column="pageid" />
+      <result property="ControlName" column="controlname" />
+      <result property="LayoutOrView" column="layoutorview" />
+      <result property="TableID" column="tableid" />
+    </resultMap>
+    <resultMap id="List" class="sysViewLayoutControl" extends="SelectResult">
+      <result property="PageName" column="pagename" />
+      <result property="TableText" column="tabletext" />
+    </resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysViewLayoutControl" parameterClass="int" resultMap="List">
+      SELECT sysViewLayoutControl.ControlID as controlid,
+            sysViewLayoutControl.PageID as pageid,
+            sysViewLayoutControl.ControlName as controlname,
+            sysViewLayoutControl.LayoutOrView as layoutorview,
+            sysViewLayoutControl.TableID as tableid,
+            sysPage.PageName as pagename,
+            udefSystemTable.TableText as tabletext
+      FROM sysPage INNER JOIN
+          sysViewLayoutControl ON
+          sysPage.PageID = sysViewLayoutControl.PageID INNER JOIN
+          udefSystemTable ON sysViewLayoutControl.TableID = udefSystemTable.TableID
+      <dynamic prepend="WHERE">
+				<isParameterPresent>
+					controlid=#ControlID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+		
+		<select id="BaseSelectsysViewLayoutControl" parameterClass="int" resultMap="List">
+      SELECT sysViewLayoutControl.ControlID as controlid, 
+             sysViewLayoutControl.PageID as pageid,
+             sysViewLayoutControl.ControlName as controlname, 
+             sysViewLayoutControl.LayoutOrView as layoutorview,
+             sysViewLayoutControl.TableID as tableid,  
+             sysPage.PageName as pagename,
+             udefSystemTable.TableText as tabletext
+      FROM sysPage INNER JOIN
+           sysViewLayoutControl ON
+           sysPage.PageID = sysViewLayoutControl.PageID INNER JOIN
+           udefSystemTable ON sysViewLayoutControl.TableID = udefSystemTable.TableID
+    </select>
+		
+		<select id="SelectsysViewLayoutControlByPageID" parameterClass="int" resultMap="List" extends="BaseSelectsysViewLayoutControl">
+      WHERE sysViewLayoutControl.PageID=#PageID#
+    </select>
+
+    <select id="SelectsysViewLayoutControlByPageControlName" parameterClass="Hashtable" resultMap="SelectResult">
+      SELECT *
+      FROM   sysViewLayoutControl
+      WHERE  controlname=#ControlName#
+      AND pageid = (Select pageid From sysPage Where pagefilepath=#PageFilePath#)
+    </select>
+				
+		<insert id="InsertsysViewLayoutControl" parameterClass="sysViewLayoutControl">
+			Insert Into sysViewLayoutControl (
+				  controlid,
+				  pageid,
+				  controlname,
+				  layoutorview,
+				  tableid
+			)Values(
+				 #ControlID#,
+				 #PageID#,
+				 #ControlName#,
+				 #LayoutOrView#,
+				 #TableID#
+			)
+		</insert>
+		
+		<update id="UpdatesysViewLayoutControl" parameterClass="sysViewLayoutControl">
+			Update sysViewLayoutControl Set 
+				pageid=#PageID#,
+				controlname=#ControlName#,
+				layoutorview=#LayoutOrView#,
+				tableid=#TableID#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					controlid=#ControlID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysViewLayoutControl" parameterClass="int">
+			Delete From sysViewLayoutControl
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					controlid=#ControlID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

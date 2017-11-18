@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>帮助中心</title>
+    <link href="../@Css/Help.css" rel="stylesheet" type="text/css" />
+    <script src="../@Scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Main .MenuBody:eq(0)").show();
+            $("#Main h3.MenuHead").click(function () {
+                $(this).addClass("current").next("div.MenuBody").slideToggle(300).siblings("div.MenuBody").slideUp("slow");
+                $(this).siblings().removeClass("current");
+            });
+        });
+
+        $(function () {
+            $("#Main .MenuBody a").click(function () {
+                $("#Main .MenuBody a").removeClass("into");
+                $(this).addClass("into");
+            });
+            $("#Main h3").click(function () {
+                $("#Main h3").removeClass("intoH3");
+                $(this).addClass("intoH3");
+            });
+            $("#Main h3:first-child").addClass("intoH3");
+
+            var h = window.innerHeight;
+            var MainHeight = parseInt(h) * 0.95;
+            var iframepageHeight = parseInt(h) * 0.9;
+            $("#iframepage").css("height", iframepageHeight);
+            $("#Main").css("height", MainHeight);
+        });
+    </script>
+</head>
+<body style=" margin:8px 0px;">
+    <div class="ViewAll">
+        <div class="helpLeft">
+            <div id="Main">
+                <div class="company_logo" style="border-bottom: 1px solid #EEE;height: 105px;background-color: #0082E5;text-align: center;">
+                    <img alt="创捷易工作平台" style="margin-top: 20px;" src="../@images/logo2.png" title="创捷易官网" />
+                </div>
+                <h3 class="MenuHead intoH3">市场活动</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=Introduce#Introduce">什么是市场活动</a>
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=Add#Add">新增市场活动</a>
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=Import#Import">导入市场活动</a>
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=InfoManage#InfoManage">市场活动信息管理</a>
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=Edit#Edit">编辑市场活动信息</a>
+                    <a target="rdetail" href="../help/MarketingActivity.htm?pageNode=Detail#Detail">查看线索信息详情</a>
+                </div>
+                <h3 class="MenuHead">线索</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=Introduce#Introduce">什么是线索</a>
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=Add#Add">新增线索</a>
+                    <!--<a target="rdetail" href="../help/CustomerClue.htm?pageNode=Import#Import">导入线索</a>-->
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=InfoManage#InfoManage">线索信息管理</a>
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=ToCustomer#ToCustomer">线索转成客户</a>
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=Edit#Edit">编辑线索信息</a>
+                    <!--<a target="rdetail" href="../help/CustomerClue.htm?pageNode=Group#Group">查看线索分组</a>-->
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=TranslateAndDelete#TranslateAndDelete">转移和删除线索</a>
+                    <a target="rdetail" href="../help/CustomerClue.htm?pageNode=Detail#Detail">查看线索信息详情</a>
+                </div>
+                <h3 class="MenuHead">客户</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=Introduce#Introduce">什么是客户</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=Add#Add">新增客户</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=Import#Import">导入客户</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=TranslateToOthers#TranslateToOthers">客户批量转移给他人</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=Delete#Delete">删除客户</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=InfoManage#InfoManage">客户信息管理</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=FollowStatus#FollowStatus">客户跟进状态</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=LinkManAdd#LinkManAdd">客户中添加联系人</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=OpptunityAdd#OpptunityAdd">客户中添加商机</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=BusinessAdd#BusinessAdd">客户中添加合同</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=CoWorkerAdd#CoWorkerAdd">客户中添加协作人</a>
+                    <a target="rdetail" href="../help/Customer.htm?pageNode=Edit#Edit">编辑客户信息</a>
+                </div>
+                <h3 class="MenuHead">联系人</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=Introduce#Introduce">什么是联系人</a>
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=Import#Import">导入联系人</a>
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=Delete#Delete">删除联系人</a>
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=InfoManage#InfoManage">联系人信息管理</a>
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=Edit#Edit">编辑联系人</a>
+                    <a target="rdetail" href="../help/CustomerLinkMan.htm?pageNode=Add#Add">新增联系人</a>
+                </div>
+                <h3 class="MenuHead">商机</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Introduce#Introduce">什么是商机</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Add#Add">新增商机</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Delete#Delete">删除商机</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=InfoManage#InfoManage">商机信息管理</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Status#Status">商机状态</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=ToBusiness#ToBusiness">商机转成合同</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Edit#Edit">编辑商机</a>
+                    <a target="rdetail" href="../help/CustomerOpptunity.htm?pageNode=Import#Import">导入商机</a>
+                </div>
+                <h3 class="MenuHead">合同</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Introduce#Introduce">什么是合同</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Add#Add">新增合同</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Delete#Delete">删除合同</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=InfoManage#InfoManage">合同信息管理</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Status#Status">合同状态</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Edit#Edit">编辑合同信息</a>
+                    <a target="rdetail" href="../help/CustomerBusiness.htm?pageNode=Import#Import">导入合同</a>
+                </div>
+                <h3 class="MenuHead">工作报告</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/CustomerWorkReport.htm?pageNode=Add#Add">新增工作报告</a>
+                    <a target="rdetail" href="../help/CustomerWorkReport.htm?pageNode=Export#Export">导出报告</a>
+                </div>
+                <h3 class="MenuHead">登录</h3>
+                <div class="MenuBody">
+                    <a target="rdetail" href="../help/loginHelp.htm?pageNode=Edit#Edit">修改账号和密码</a>
+                </div>
+            </div>
+        </div>
+        <div class="helpRight">
+            <div class="rightTitle">
+                帮助中心
+            </div>
+            <iframe name="rdetail" id="iframepage" frameborder="0" bordercolor="#ffffff" width="100%" src="../help/MarketingActivity.htm" border="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>

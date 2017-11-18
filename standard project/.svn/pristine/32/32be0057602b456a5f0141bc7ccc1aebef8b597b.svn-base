@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Project" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="Project" type="SmartSoft.Domain.Data.Project, SmartSoft.Domain" />
+	</alias>
+	
+	<resultMaps>
+		<resultMap id="SelectResult" class="Project">
+			<result property="pjID" column="pjid" />
+			<result property="pjNO" column="pjno" />
+			<result property="pjName" column="pjname" />
+			<result property="pjCompanyName" column="pjcompanyname" />
+			<result property="pjDetail" column="pjdetail" />
+			<result property="pjProduct" column="pjproduct" />
+			<result property="pjAmount" column="pjamount" />
+			<result property="pjContactor" column="pjcontactor" />
+			<result property="pjPrice" column="pjprice" />
+			<result property="pjAddDate" column="pjadddate" />
+			<result property="pjAddOperatorID" column="pjaddoperatorid" />
+			<result property="pjOperatorID" column="pjoperatorid" />
+			<result property="pjModifyDate" column="pjmodifydate" />
+			<result property="pjModifyOperatorID" column="pjmodifyoperatorid" />
+			<result property="pjStatusID" column="pjstatusid" />
+			<result property="pjRemark" column="pjremark" />
+			<result property="pjApproveTag" column="pjapprovetag" />
+			<result property="pjApproveOperatorID" column="pjapproveoperatorid" />
+			<result property="pjApproveDate" column="pjapprovedate" />
+			<result property="pjToApproveOperatorID" column="pjtoapproveoperatorid" />
+		</resultMap>
+	</resultMaps>
+	
+  	<parameterMaps>
+    	<parameterMap id="dynamicParameter">
+			<parameter property="whereCondition" />
+			<parameter property="orderByExpression" />
+    	</parameterMap>
+		<parameterMap id="dynamicParameterPage" class="Hashtable">
+			<parameter property="TableName" column="TableName"/>
+			<parameter property="WhereCondition" column="WhereCondition"/>
+			<parameter property="OrderByExpression" column="OrderByExpression"/>
+			<parameter property="PageSize" column="PageSize"/>
+			<parameter property="PageNumber" column="PageNumber"/>
+			<parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+		</parameterMap>
+  	</parameterMaps>
+
+	
+	<statements>
+	
+	    <select id="SelectProjectDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">  
+			Select *
+      		From [Project]
+      		<dynamic prepend="WHERE">
+				<isNotEmpty property="whereCondition" >
+					(1=1) $whereCondition$
+				</isNotEmpty>
+      		</dynamic>
+      		<dynamic prepend="Order By">
+        		<isNotEmpty property="orderByExpression" >
+          		$orderByExpression$
+        		</isNotEmpty>
+      		</dynamic>
+    	</select>
+	
+		<procedure id="SelectProjectDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+			usp_SelectDynamicPage
+		</procedure>
+	
+		<select id="SelectProject" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  pjid,
+				  pjno,
+				  pjname,
+				  pjcompanyname,
+				  pjdetail,
+				  pjproduct,
+				  pjamount,
+				  pjcontactor,
+				  pjprice,
+				  pjadddate,
+				  pjaddoperatorid,
+				  pjoperatorid,
+				  pjmodifydate,
+				  pjmodifyoperatorid,
+				  pjstatusid,
+				  pjremark,
+				  pjapprovetag,
+				  pjapproveoperatorid,
+				  pjapprovedate,
+				  pjtoapproveoperatorid
+			From [Project]
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pjid=#pjID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+				
+		<statement id="InsertProject" parameterClass="Project">
+			declare @primarykeyid int
+      		execute @primarykeyid = usp_GetID 'Project'
+			Insert Into [Project] (
+				  pjid,
+				  pjno,
+				  pjname,
+				  pjcompanyname,
+				  pjdetail,
+				  pjproduct,
+				  pjamount,
+				  pjcontactor,
+				  pjprice,
+				  pjadddate,
+				  pjaddoperatorid,
+				  pjoperatorid,
+				  pjmodifydate,
+				  pjmodifyoperatorid,
+				  pjstatusid,
+				  pjremark,
+				  pjapprovetag,
+				  pjapproveoperatorid,
+				  pjapprovedate,
+				  pjtoapproveoperatorid
+			)Values(
+				  @primarykeyid ,
+				  #pjNO#,
+				  #pjName#,
+				  #pjCompanyName#,
+				  #pjDetail#,
+				  #pjProduct#,
+				  #pjAmount#,
+				  #pjContactor#,
+				  #pjPrice#,
+				  #pjAddDate#,
+				  #pjAddOperatorID#,
+				  #pjOperatorID#,
+				  #pjModifyDate#,
+				  #pjModifyOperatorID#,
+				  #pjStatusID#,
+				  #pjRemark#,
+				  #pjApproveTag#,
+				  #pjApproveOperatorID#,
+				  #pjApproveDate#,
+				  #pjToApproveOperatorID#
+			)
+			Select @primarykeyid
+		</statement>
+		
+		<update id="UpdateProject" parameterClass="Project">
+			Update [Project] Set 
+				pjid=#pjID#,
+				pjno=#pjNO#,
+				pjname=#pjName#,
+				pjcompanyname=#pjCompanyName#,
+				pjdetail=#pjDetail#,
+				pjproduct=#pjProduct#,
+				pjamount=#pjAmount#,
+				pjcontactor=#pjContactor#,
+				pjprice=#pjPrice#,
+				pjadddate=#pjAddDate#,
+				pjaddoperatorid=#pjAddOperatorID#,
+				pjoperatorid=#pjOperatorID#,
+				pjmodifydate=#pjModifyDate#,
+				pjmodifyoperatorid=#pjModifyOperatorID#,
+				pjstatusid=#pjStatusID#,
+				pjremark=#pjRemark#,
+				pjapprovetag=#pjApproveTag#,
+				pjapproveoperatorid=#pjApproveOperatorID#,
+				pjapprovedate=#pjApproveDate#,
+				pjtoapproveoperatorid=#pjToApproveOperatorID#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pjid=#pjID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeleteProject" parameterClass="int">
+			Delete From [Project]
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					pjid=#pjID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+	</statements>
+</sqlMap>

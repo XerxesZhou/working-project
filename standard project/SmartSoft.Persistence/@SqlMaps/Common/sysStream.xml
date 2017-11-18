@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysStream" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysStream" type="SmartSoft.Domain.Common.sysStream, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysStream">
+			<result property="MaxID" column="maxid" />
+		</resultMap>
+	</resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="swapParas">
+      <parameter property="TableName" column="tablename" />
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+
+    <procedure id="GetStreamId" parameterMap="swapParas" resultMap="SelectResult">
+      usp_GetID
+    </procedure>
+
+  </statements>
+</sqlMap>

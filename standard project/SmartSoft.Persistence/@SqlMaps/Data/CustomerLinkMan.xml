@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerLinkMan" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerLinkMan" type="SmartSoft.Domain.Data.CustomerLinkMan, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerLinkMan">
+      <result property="clmID" column="clmid" />
+      <result property="clmCustomerID" column="clmcustomerid" />
+      <result property="clmName" column="clmname" />
+      <result property="clmSex" column="clmsex" />
+      <result property="clmPost" column="clmpost" />
+      <result property="clmTel" column="clmtel" />
+      <result property="clmMobile" column="clmmobile" />
+      <result property="clmEmail" column="clmemail" />
+      <result property="clmQQ" column="clmqq" />
+      <result property="clmWeChat" column="clmwechat" />
+      <result property="clmSkype" column="clmskype" />
+      <result property="clmBirthday" column="clmbirthday" />
+      <result property="clmTypeID" column="clmtypeid" />
+      <result property="clmHobby" column="clmhobby" />
+      <result property="clmHometown" column="clmhometown" />
+      <result property="clmRemark" column="clmremark" />
+      <result property="clmAddOperatorID" column="clmaddoperatorid" />
+      <result property="clmAddDate" column="clmadddate" />
+      <result property="clmModifyOperatorID" column="clmmodifyoperatorid" />
+      <result property="clmModifyDate" column="clmmodifydate" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerLinkManDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerLinkMan]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerLinkManDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerLinkMan" parameterClass="int" resultMap="SelectResult">
+      Select
+      clmid,
+      clmcustomerid,
+      clmname,
+      clmsex,
+      clmpost,
+      clmtel,
+      clmmobile,
+      clmemail,
+      clmqq,
+      clmwechat,
+      clmskype,
+      clmbirthday,
+      clmtypeid,
+      clmhobby,
+      clmhometown,
+      clmremark,
+      clmaddoperatorid,
+      clmadddate,
+      clmmodifyoperatorid,
+      clmmodifydate
+      From [CustomerLinkMan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          clmid=#clmID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerLinkMan" parameterClass="CustomerLinkMan">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerLinkMan'
+      Insert Into [CustomerLinkMan] (
+      clmid,
+      clmcustomerid,
+      clmname,
+      clmsex,
+      clmpost,
+      clmtel,
+      clmmobile,
+      clmemail,
+      clmqq,
+      clmwechat,
+      clmskype,
+      clmbirthday,
+      clmtypeid,
+      clmhobby,
+      clmhometown,
+      clmremark,
+      clmaddoperatorid,
+      clmadddate,
+      clmmodifyoperatorid,
+      clmmodifydate
+      )Values(
+      @primarykeyid ,
+      #clmCustomerID#,
+      #clmName#,
+      #clmSex#,
+      #clmPost#,
+      #clmTel#,
+      #clmMobile#,
+      #clmEmail#,
+      #clmQQ#,
+      #clmWeChat#,
+      #clmSkype#,
+      #clmBirthday#,
+      #clmTypeID#,
+      #clmHobby#,
+      #clmHometown#,
+      #clmRemark#,
+      #clmAddOperatorID#,
+      #clmAddDate#,
+      #clmModifyOperatorID#,
+      #clmModifyDate#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerLinkMan" parameterClass="CustomerLinkMan">
+      Update [CustomerLinkMan] Set
+      clmid=#clmID#,
+      clmcustomerid=#clmCustomerID#,
+      clmname=#clmName#,
+      clmsex=#clmSex#,
+      clmpost=#clmPost#,
+      clmtel=#clmTel#,
+      clmmobile=#clmMobile#,
+      clmemail=#clmEmail#,
+      clmqq=#clmQQ#,
+      clmwechat=#clmWeChat#,
+      clmskype=#clmSkype#,
+      clmbirthday=#clmBirthday#,
+      clmtypeid=#clmTypeID#,
+      clmhobby=#clmHobby#,
+      clmhometown=#clmHometown#,
+      clmremark=#clmRemark#,
+      clmaddoperatorid=#clmAddOperatorID#,
+      clmadddate=#clmAddDate#,
+      clmmodifyoperatorid=#clmModifyOperatorID#,
+      clmmodifydate=#clmModifyDate#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          clmid=#clmID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerLinkMan" parameterClass="int">
+      Delete From [CustomerLinkMan]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          clmid=#clmID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

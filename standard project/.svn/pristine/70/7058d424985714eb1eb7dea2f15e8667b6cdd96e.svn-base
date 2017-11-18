@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysMessage" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+    <typeAlias alias="sysMessage" type="SmartSoft.Domain.Common.sysMessage, SmartSoft.Domain" />
+    <typeAlias alias="sysMessage_Readed" type="SmartSoft.Domain.Common.sysMessage_Readed, SmartSoft.Domain" />
+    <typeAlias alias="sysMessage_Looker" type="SmartSoft.Domain.Common.sysMessage_Looker, SmartSoft.Domain" />
+    <typeAlias alias="sysMessage_Deleted" type="SmartSoft.Domain.Common.sysMessage_Deleted, SmartSoft.Domain" />
+  </alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysMessage">
+			<result property="MessageID" column="messageid" />
+			<result property="MessageTypeID" column="messagetypeid" />
+			<result property="SendOperatorID" column="sendoperatorid" />
+			<result property="SendTime" column="sendtime" />
+			<result property="MessageContent" column="messagecontent" />
+			<result property="AwokeTime" column="awoketime" />
+			<result property="URL" column="url" />
+      <result property="Title" column="title" />
+
+      <result property="SendOperatorName" column="sendoperatorname" />
+      <result property="MessageType" column="messagetype" />
+    </resultMap>
+
+    <resultMap id="ReceiveMessageList" class="sysMessage" extends="SelectResult">
+      <result property="IsRead" column="isread" />
+    </resultMap>
+
+    <resultMap id="SelectMessageReaded" class="sysMessage_Readed">
+      <result property="MessageID" column="messageid" />
+      <result property="OperatorID" column="operatorid" />
+    </resultMap>
+    
+	</resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="Msg" class="sysMessage">
+      <parameter property="MessageID" />
+      <parameter property="MessageTypeID" />
+      <parameter property="SendOperatorID" />
+      <parameter property="SendTime" />
+      <parameter property="MessageContent" />
+      <parameter property="AwokeTime" />
+      <parameter property="URL" />
+      <parameter property="Title" />
+
+    </parameterMap>
+  </parameterMaps>
+	
+	<statements>
+
+    <procedure id="InsertSysMessageUSP" parameterMap="Msg">
+      usp_InsertSysMessage
+    </procedure>
+
+    <procedure id="UpdateSysMessageUSP" parameterMap="Msg">
+      usp_UpdateSysMessage
+    </procedure>
+    
+    <select id="SelectMessageIsReaded" parameterClass="Hashtable" resultMap="SelectMessageReaded">
+      Select * From sysMessage_Readed
+      Where messageid=#MessageID# AND operatorid=#OperatorID#
+    </select>
+    
+    <!--得到要提醒的消息-->
+		<select id="SelectShowMessageList" parameterClass="int" resultMap="SelectResult">
+      <![CDATA[
+      Select 
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title,
+          (select mtTypeName from sdefMessageType Where mtTypeID=sysMessage.MessageTypeID) as messagetype,
+          (select opeName from Operators Where opeID=sysMessage.SendOperatorID) as sendoperatorname
+			From sysMessage
+      Where ISNULL(awoketime,getdate()) <= getdate()
+          AND messageid in (Select messageid from sysMessage_Looker Where objectid=#opeID#)
+          AND messageid not in (Select messageid from sysMessage_Readed Where operatorid=#opeID#)
+          AND messageid not in (Select messageid from sysMessage_Deleted Where operatorid=#opeID#)
+      ORDER BY SendTime DESC
+      ]]>
+        </select>
+
+        <!--得到我收到的消息-->
+        <select id="SelectReceiveMessageList" parameterClass="int" resultMap="ReceiveMessageList">
+          <![CDATA[
+      Select 
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title,
+          (select mtTypeName from sdefMessageType Where mtTypeID=sysMessage.MessageTypeID) as messagetype,
+          (select opeName from Operators Where opeID=sysMessage.SendOperatorID) as sendoperatorname,
+          (Case ISNULL((Select messageid From sysMessage_Readed Where messageid=sysMessage.MessageID and operatorid=#opeID#),0) When 0 then 0 else 1 end) as isread
+			From sysMessage
+      Where messageid in (Select messageid from sysMessage_Looker Where objectid=#opeID#)
+          AND messageid not in (Select messageid from sysMessage_Deleted Where operatorid=#opeID#)
+      ORDER BY SendTime DESC
+      ]]>
+    </select>
+
+    <!--得到我收到的消息-->
+    <select id="SelectReceiveMessageListByCount" parameterClass="int" resultMap="ReceiveMessageList">
+      <![CDATA[
+      Select TOP $COUNT$
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title,
+          (select mtTypeName from sdefMessageType Where mtTypeID=sysMessage.MessageTypeID) as messagetype,
+          (select opeName from Operators Where opeID=sysMessage.SendOperatorID) as sendoperatorname,
+          (Case ISNULL((Select messageid From sysMessage_Readed Where messageid=sysMessage.MessageID and operatorid=#opeID#),0) When 0 then 0 else 1 end) as isread
+			From sysMessage
+      Where messageid in (Select messageid from sysMessage_Looker Where objectid=#opeID#)
+          AND messageid not in (Select messageid from sysMessage_Deleted Where operatorid=#opeID#)
+      ORDER BY SendTime DESC
+      ]]>
+    </select>
+
+    <!--得到我发送的消息-->
+    <select id="SelectSendMessageList" parameterClass="int" resultMap="SelectResult">
+      <![CDATA[
+      Select 
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title,
+          (select mtTypeName from sdefMessageType Where mtTypeID=sysMessage.MessageTypeID) as messagetype,
+          (select opeName from Operators Where opeID=sysMessage.SendOperatorID) as sendoperatorname
+			From sysMessage
+      Where sendoperatorid=#opeID#
+          AND messageid not in (Select messageid from sysMessage_Deleted Where operatorid=#opeID#)
+      ORDER BY SendTime DESC
+      ]]>
+    </select>
+
+    <!--得到消息明细-->
+    <select id="GetMessageDetail" parameterClass="int" resultMap="SelectResult">
+      Select 
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title,
+          (select mtTypeName from sdefMessageType Where mtTypeID=sysMessage.MessageTypeID) as messagetype,
+          (select opeName from Operators Where opeID=sysMessage.SendOperatorID) as sendoperatorname
+			From sysMessage
+      Where messageid=#MessageID#
+    </select>
+    
+		<insert id="InsertsysMessage" parameterClass="sysMessage">
+			Insert Into sysMessage (
+				  messageid,
+				  messagetypeid,
+				  sendoperatorid,
+				  sendtime,
+				  messagecontent,
+				  awoketime,
+				  url,
+          title
+			)Values(
+				 #MessageID#,
+				 #MessageTypeID#,
+				 #SendOperatorID#,
+				 #SendTime#,
+				 #MessageContent#,
+				 #AwokeTime#,
+				 #URL#,
+         #Title#
+			)
+		</insert>
+    
+    <insert id="InsertsysMessage_Deleted" parameterClass="sysMessage_Deleted">
+			Insert Into sysMessage_Deleted (
+				  messageid,
+				  operatorid
+			)Values(
+				 #MessageID#,
+				 #OperatorID#
+			)
+		</insert>
+    
+    <insert id="InsertsysMessage_Readed" parameterClass="sysMessage_Readed">
+			Insert Into sysMessage_Readed (
+				  messageid,
+				  operatorid
+			)Values(
+				 #MessageID#,
+				 #OperatorID#
+			)
+		</insert>
+    
+    <insert id="InsertsysMessage_Looker" parameterClass="sysMessage_Looker">
+			Insert Into sysMessage_Looker (
+				  messageid,
+				  objectid
+			)Values(
+				 #MessageID#,
+				 #ObjectID#
+			)
+		</insert>
+
+
+		<update id="UpdateMessage" parameterClass="sysMessage">
+			Update sysMessage Set 
+				messagetypeid=#MessageTypeID#,
+				sendoperatorid=#SendOperatorID#,
+				sendtime=#SendTime#,
+				messagecontent=$MessageContent$,
+				awoketime=#AwokeTime#,
+				url=#URL#,
+        title=#Title#
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					messageid=#MessageID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+   
+		<delete id="DeleteMessage" parameterClass="int">
+
+      Delete From sysMessage_Deleted
+      Where messageid=#MessageID#
+
+      Delete From sysMessage_Looker
+      Where messageid=#MessageID#
+
+      Delete From sysMessage_Readed
+      Where messageid=#MessageID#
+
+      Delete From sysMessage
+      WHERE messageid=#MessageID#
+
+    </delete>
+
+    
+    <delete id="DeletesysMessage_Deleted" parameterClass="Hashtable">
+      Delete From sysMessage_Deleted
+      Where messageid=#MessageID# AND operatorid=#OperatorID#
+    </delete>
+
+    <delete id="DeletesysMessage_Looker" parameterClass="Hashtable">
+      Delete From sysMessage_Looker
+      Where messageid=#MessageID# AND operatorid=#OperatorID#
+    </delete>
+
+    <delete id="DeletesysMessage_Readed" parameterClass="Hashtable">
+      Delete From sysMessage_Readed
+      Where messageid=#MessageID# AND operatorid=#OperatorID#
+    </delete>
+		
+	</statements>
+</sqlMap>

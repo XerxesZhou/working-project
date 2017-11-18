@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="sysObjectPurview" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="sysObjectPurview" type="SmartSoft.Domain.Common.sysObjectPurview, SmartSoft.Domain" />
+  </alias>
+  <resultMaps>
+    <resultMap id="SelectResult" class="sysObjectPurview">
+      <result property="ObjectID" column="objectid" />
+      <result property="PageID" column="pageid" />
+      <result property="PurviewCode" column="purviewcode" />
+      <result property="PageFilePath" column="pagefilepath" />
+      <result property="FunctionCount" column="functioncount" />
+    </resultMap>
+
+    <resultMap id="SelectPurviewCodeResult" class="sysObjectPurview">
+      <result property="PurviewCode" column="purviewcode" />
+      <result property="FunctionCount" column="functioncount" />
+    </resultMap>
+  </resultMaps>
+  
+  <parameterMaps>
+    <parameterMap id="PurviewSearch">
+      <parameter property="objectIdString" />
+      <parameter property="PageID" />
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+    <select id="BaseSelectsysObjectPurview" parameterClass="int" resultMap="SelectResult">
+      SELECT
+      objectid,
+      pageid,
+      purviewcode,
+      (select pagefilepath from sysPage Where pageid=sysObjectPurview.PageID) as pagefilepath,
+      (select functioncount from sysPage Where pageid=sysObjectPurview.PageID) as functioncount
+      FROM sysObjectPurview
+    </select>
+
+    <!--得到单个对象在某页面的权限-->
+    <select id="SelectsysObjectPagePurview" parameterClass="int" resultMap="SelectResult" extends="BaseSelectsysObjectPurview">
+      Where objectid=#ObjectID# and pageid=#PageID#
+    </select>
+
+    <!--得到多个对象在某页面的权限-->
+    <procedure id="SelectsysObjectSTRPagePurview" parameterMap="PurviewSearch" resultMap="SelectPurviewCodeResult">
+      usp_GetSysObjectArrayPagePurview
+    </procedure>
+    
+    <insert id="InsertsysObjectPurview" parameterClass="sysObjectPurview">
+      Insert Into sysObjectPurview (
+      objectid,
+      pageid,
+      purviewcode
+      )Values(
+      #ObjectID#,
+      #PageID#,
+      #PurviewCode#
+      )
+    </insert>
+
+    <delete id="DeletesysObjectPurview" parameterClass="int">
+      Delete From sysObjectPurview
+      Where objectid=#ObjectID#
+    </delete>
+
+    <delete id="DeletesysObjectPagePurview" parameterClass="Hashtable">
+      Delete From sysObjectPurview
+      Where objectid=#ObjectID# and pageid=#PageID#
+    </delete>
+
+
+  </statements>
+</sqlMap>

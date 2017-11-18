@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>客户帮助</title>
+    <link href="../@Css/Help.css" rel="stylesheet" type="text/css" />
+    <script src="../@Scripts/jquery.js" type="text/javascript"></script>
+    <script language="javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script> 
+
+</head>
+<body>
+    <div class="Page" id="Edit">
+        <div class="Head">
+            <div class="HeadTitle">
+                修改账号和密码
+            </div>
+        </div>
+        <div class="Content">
+            <p>点击工作台界面右上角的“姓名”，点击“安全中心”，即可快速修改账号或密码。</p>
+            <p>
+                <img alt="" src="../@images/IntroduceClue.png" />
+            </p>
+        </div>
+    </div>
+</body>
+</html>

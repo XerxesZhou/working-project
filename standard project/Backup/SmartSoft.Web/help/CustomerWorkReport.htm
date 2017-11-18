@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>客户帮助</title>
+    <link href="../@Css/Help.css" rel="stylesheet" type="text/css" />
+    <script src="../@Scripts/jquery.js" type="text/javascript"></script>
+    <script language="javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script> 
+
+</head>
+<body>
+    <div class="Page" id="Add">
+        <div class="Head">
+            <div class="HeadTitle">
+                新增工资报告
+            </div>
+        </div>
+        <div class="Content">
+            <p>点击右上角“写工作报告”按钮，首先选择报表类型（日报/周报/月报），批阅人只能选择一位，抄送人（类似于邮箱里的抄送）可以选择多位。</p>
+            <p>
+                <img alt="" src="../@images/IntroduceClue.png" />
+            </p>
+        </div>
+    </div>
+    <div class="Page" id="Export">
+        <div class="Head">
+            <div class="HeadTitle">
+                导出报告
+            </div>
+        </div>
+        <div class="Content">
+            <p>进入报表详情页面，勾选报告类型和员工，然后点击右上角的“导出”按钮，即可导出所需的报表详情。</p>
+            <p>
+                <img alt="" src="../@images/ClueAdd.gif" />
+            </p>
+        </div>
+    </div>
+</body>
+</html>

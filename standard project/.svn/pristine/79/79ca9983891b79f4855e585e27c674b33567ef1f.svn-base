@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMapConfig 
+  xmlns="http://ibatis.apache.org/dataMapper" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <properties embedded="SmartSoft.Persistence.properties.config" />
+  <settings>
+    <setting useStatementNamespaces="false"/>
+  </settings>
+
+  <providers embedded="SmartSoft.Persistence.providers.config"/>
+
+  <!-- Database connection information -->
+  <database>
+    <provider name="${provider}"/>
+    <dataSource name="NewSmartTradeNET" connectionString="${connectionString}"/>
+  </database>
+
+  <!--
+  <sqlMaps>
+    <sqlMap embedded="${root.UDEF}Column.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnView.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewCondition.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewExpression.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewOrder.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}ColumnViewSort.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomColumn.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomColumnValue.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}CustomSelectType.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DataBaseColumn.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DataBaseTable.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}DropdownlistOption.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}Layout.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutDetail.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutDetailView.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}LayoutPart.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SelectDataDynamic.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SelectType.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}Stream.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemColumn.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemTable.xml,${assembly.UDEF}" />
+    <sqlMap embedded="${root.UDEF}SystemSelectType.xml,${assembly.UDEF}" />
+  </sqlMaps>
+  -->
+
+</sqlMapConfig>

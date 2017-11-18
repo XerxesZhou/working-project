@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="MarketingActivity" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="MarketingActivity" type="SmartSoft.Domain.Data.MarketingActivity, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="MarketingActivity">
+      <result property="maID" column="maid" />
+      <result property="maName" column="maname" />
+      <result property="maStartDate" column="mastartdate" />
+      <result property="maEndDate" column="maenddate" />
+      <result property="maStatusID" column="mastatusid" />
+      <result property="maTypeID" column="matypeid" />
+      <result property="maDescription" column="madescription" />
+      <result property="maPredictCost" column="mapredictcost" />
+      <result property="maPredictAmount" column="mapredictamount" />
+      <result property="maActualCost" column="maactualcost" />
+      <result property="maPredictNum" column="mapredictnum" />
+      <result property="maActualNum" column="maactualnum" />
+      <result property="maRemark" column="maremark" />
+      <result property="maOperatorID" column="maoperatorid" />
+      <result property="maDepartmentID" column="madepartmentid" />
+      <result property="maAddOperatorID" column="maaddoperatorid" />
+      <result property="maAddDate" column="maadddate" />
+      <result property="maModifyOperatorID" column="mamodifyoperatorid" />
+      <result property="maModifyDate" column="mamodifydate" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectMarketingActivityDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [MarketingActivity]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectMarketingActivityDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectMarketingActivity" parameterClass="int" resultMap="SelectResult">
+      Select
+      maid,
+      maname,
+      mastartdate,
+      maenddate,
+      mastatusid,
+      matypeid,
+      madescription,
+      mapredictcost,
+      mapredictamount,
+      maactualcost,
+      mapredictnum,
+      maactualnum,
+      maremark,
+      maoperatorid,
+      madepartmentid,
+      maaddoperatorid,
+      maadddate,
+      mamodifyoperatorid,
+      mamodifydate
+      From [MarketingActivity]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          maid=#maID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertMarketingActivity" parameterClass="MarketingActivity">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'MarketingActivity'
+      Insert Into [MarketingActivity] (
+      maid,
+      maname,
+      mastartdate,
+      maenddate,
+      mastatusid,
+      matypeid,
+      madescription,
+      mapredictcost,
+      mapredictamount,
+      maactualcost,
+      mapredictnum,
+      maactualnum,
+      maremark,
+      maoperatorid,
+      madepartmentid,
+      maaddoperatorid,
+      maadddate,
+      mamodifyoperatorid,
+      mamodifydate
+      )Values(
+      @primarykeyid ,
+      #maName#,
+      #maStartDate#,
+      #maEndDate#,
+      #maStatusID#,
+      #maTypeID#,
+      #maDescription#,
+      #maPredictCost#,
+      #maPredictAmount#,
+      #maActualCost#,
+      #maPredictNum#,
+      #maActualNum#,
+      #maRemark#,
+      #maOperatorID#,
+      #maDepartmentID#,
+      #maAddOperatorID#,
+      #maAddDate#,
+      #maModifyOperatorID#,
+      #maModifyDate#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateMarketingActivity" parameterClass="MarketingActivity">
+      Update [MarketingActivity] Set
+      maid=#maID#,
+      maname=#maName#,
+      mastartdate=#maStartDate#,
+      maenddate=#maEndDate#,
+      mastatusid=#maStatusID#,
+      matypeid=#maTypeID#,
+      madescription=#maDescription#,
+      mapredictcost=#maPredictCost#,
+      mapredictamount=#maPredictAmount#,
+      maactualcost=#maActualCost#,
+      mapredictnum=#maPredictNum#,
+      maactualnum=#maActualNum#,
+      maremark=#maRemark#,
+      maoperatorid=#maOperatorID#,
+      madepartmentid=#maDepartmentID#,
+      maaddoperatorid=#maAddOperatorID#,
+      maadddate=#maAddDate#,
+      mamodifyoperatorid=#maModifyOperatorID#,
+      mamodifydate=#maModifyDate#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          maid=#maID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteMarketingActivity" parameterClass="int">
+      Delete From [MarketingActivity]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          maid=#maID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

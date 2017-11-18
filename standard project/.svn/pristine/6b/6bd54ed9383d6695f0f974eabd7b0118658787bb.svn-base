@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="CustomerClue" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="CustomerClue" type="SmartSoft.Domain.Data.CustomerClue, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="CustomerClue">
+      <result property="ccID" column="ccid" />
+      <result property="ccCustomerName" column="cccustomername" />
+      <result property="ccName" column="ccname" />
+      <result property="ccTel" column="cctel" />
+      <result property="ccMobile" column="ccmobile" />
+      <result property="ccAddress" column="ccaddress" />
+      <result property="ccStatusID" column="ccstatusid" />
+      <result property="ccRemark" column="ccremark" />
+      <result property="ccOperatorID" column="ccoperatorid" />
+      <result property="ccDepartmentID" column="ccdepartmentid" />
+      <result property="ccAddOperatorID" column="ccaddoperatorid" />
+      <result property="ccAddDate" column="ccadddate" />
+      <result property="ccModifyOperatorID" column="ccmodifyoperatorid" />
+      <result property="ccModifyDate" column="ccmodifydate" />
+      <result property="ccCustomerID" column="cccustomerid" />
+      <result property="ccActivityID" column="ccactivityid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectCustomerClueDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [CustomerClue]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectCustomerClueDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectCustomerClue" parameterClass="int" resultMap="SelectResult">
+      Select
+      ccid,
+      cccustomername,
+      ccname,
+      cctel,
+      ccmobile,
+      ccaddress,
+      ccstatusid,
+      ccremark,
+      ccoperatorid,
+      ccdepartmentid,
+      ccaddoperatorid,
+      ccadddate,
+      ccmodifyoperatorid,
+      ccmodifydate,
+      cccustomerid,
+      ccactivityid
+      From [CustomerClue]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          ccid=#ccID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertCustomerClue" parameterClass="CustomerClue">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'CustomerClue'
+      Insert Into [CustomerClue] (
+      ccid,
+      cccustomername,
+      ccname,
+      cctel,
+      ccmobile,
+      ccaddress,
+      ccstatusid,
+      ccremark,
+      ccoperatorid,
+      ccdepartmentid,
+      ccaddoperatorid,
+      ccadddate,
+      ccmodifyoperatorid,
+      ccmodifydate,
+      cccustomerid,
+      ccactivityid
+      )Values(
+      @primarykeyid ,
+      #ccCustomerName#,
+      #ccName#,
+      #ccTel#,
+      #ccMobile#,
+      #ccAddress#,
+      #ccStatusID#,
+      #ccRemark#,
+      #ccOperatorID#,
+      #ccDepartmentID#,
+      #ccAddOperatorID#,
+      #ccAddDate#,
+      #ccModifyOperatorID#,
+      #ccModifyDate#,
+      #ccCustomerID#,
+      #ccActivityID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateCustomerClue" parameterClass="CustomerClue">
+      Update [CustomerClue] Set
+      ccid=#ccID#,
+      cccustomername=#ccCustomerName#,
+      ccname=#ccName#,
+      cctel=#ccTel#,
+      ccmobile=#ccMobile#,
+      ccaddress=#ccAddress#,
+      ccstatusid=#ccStatusID#,
+      ccremark=#ccRemark#,
+      ccoperatorid=#ccOperatorID#,
+      ccdepartmentid=#ccDepartmentID#,
+      ccaddoperatorid=#ccAddOperatorID#,
+      ccadddate=#ccAddDate#,
+      ccmodifyoperatorid=#ccModifyOperatorID#,
+      ccmodifydate=#ccModifyDate#,
+      cccustomerid=#ccCustomerID#,
+      ccactivityid=#ccActivityID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          ccid=#ccID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteCustomerClue" parameterClass="int">
+      Delete From [CustomerClue]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          ccid=#ccID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

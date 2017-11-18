@@ -1,0 +1,2105 @@
+header
+{
+	background-image: url(../favicon.ico);
+}
+/* ::-webkit-scrollbar-button { background-color: #7c2929;} 滑轨两头的监听按钮颜色 */
+/*::-webkit-scrollbar-corner { background-color: black;}  横向滚动条和纵向滚动条相交处尖角的颜色 */
+::-webkit-scrollbar{width:14px;}/* 滚动条宽度 */
+::-webkit-scrollbar-track{background-color:#F5F4F3;}/* 拖动区域颜色 */
+::-webkit-scrollbar-thumb{background-color:#D2D1D0;}/* 滑块颜色 */
+::-webkit-scrollbar-thumb:hover {background-color:#89C5F3}
+::-webkit-scrollbar-thumb:active {background-color:#89C5F3}
+/*IE*/
+*
+{
+    SCROLLBAR-FACE-COLOR: #D2D1D0;
+	SCROLLBAR-HIGHLIGHT-COLOR: #D2D1D0;
+	SCROLLBAR-SHADOW-COLOR: #D2D1D0;
+	SCROLLBAR-DARKSHADOW-COLOR: #D2D1D0;
+	SCROLLBAR-3DLIGHT-COLOR: #D2D1D0;
+	SCROLLBAR-ARROW-COLOR: #FFFFFF;
+	SCROLLBAR-TRACK-COLOR: #F5F4F3;
+  }
+body
+{
+    background-color:White;
+	margin-top: 0px;
+	font: 12px 宋体;
+	padding-left: 1px;
+    overflow:auto;
+	/*
+		禁止右键和选择\
+	
+    Windsor:expression(document.body.onselectstart=document.body.oncontextmenu=function(){return false;});
+*/
+}
+TD
+{
+    
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+}
+img
+{
+	border: 0px;
+}
+
+
+.SavabtnCss
+{
+    background-color: #0174CF;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 14px !important;
+    cursor:pointer;
+}
+
+.SavabtnCss:hover
+{
+    background-color: blue;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+.afile:link
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: blue;
+	text-decoration: none;
+}
+.afile:visited
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: Black;
+	text-decoration: none;
+}
+.afile:hover
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-weight: bold;
+	font-size: 14px;
+	color: red;
+	text-decoration: underline;
+}
+
+.frmContainer
+{
+	border: 1px silver solid;
+	background-color: #F6F6F6;
+}
+TEXTAREA
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	border-color:rgb(204,204,204);
+}
+
+
+SELECT
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    height: 23px;
+    line-height: 23px;
+    width: 200px;
+    border: rgb(204,204,204) 1px solid;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: "Aria,Microsoft Sans Serif,宋体";
+    background-size: 5px 5px,5px 5px,25px 25px,1px 25px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 134px 10px,139px 10px,right top,150px top;
+    background: url(../images/widget_arrows2.png);
+    background-repeat:no-repeat;
+    background-position: 97% -13%;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+SELECT::-ms-expand { display: none; }
+.BlockBorder
+{
+	background-color: #FFFFFF;
+	border-color: #3A6AB0;
+	border-left: solid 1px #3A6AB0;
+	border-bottom: solid 1px #3A6AB0;
+	border-right: solid 1px #3A6AB0;
+}
+
+
+.ctable TH
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	height: 25px;
+	font-weight: bold;
+	font-size: 9pt;
+	color: black;
+	background-color: #A7CCF5;
+}
+
+.ctable
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	border-right: #183789 1px solid;
+	border-top: #183789 1px solid;
+	border-left: #183789 1px solid;
+	border-bottom: #183789 1px solid;
+	background-color: #FFFFFF;
+}
+
+.tableforTreeView
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	border-right: #183789 1px solid;
+	border-top: #183789 1px solid;
+	border-left: #183789 1px solid;
+	border-bottom: #183789 1px solid;
+	background-color: #FFFFFF;
+}
+
+.ctable
+{
+     border-style:none;
+    }
+
+.ctable tr td
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	padding-right: 3px;
+	padding-left: 3px;
+
+	background-color:White;
+    color:#4c4747;
+}
+
+.STD
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	padding-right: 1px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	background-color: #F3F5F8;
+}
+
+
+.frmLeft
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=  '#3C6EC2' , EndColorStr= '#A5CAED' );
+}
+
+.btn_normal
+{
+	background-image: url(../@images/button_bg.gif);
+	border: 0px solid #000000;
+	font-size: 12px;
+	font-family: 宋体;
+	padding-top: 1px;
+	padding-left: 5px;
+	height: 22px;
+	width: 60px;
+}
+
+.ListTopBorder
+{
+}
+
+.TopBorder
+{
+	padding-left: 1px;
+	font-weight: bold;
+	height: 20px;
+}
+
+.ListTopBorder a:hover
+{
+	text-decoration: none;
+}
+.lbclass
+{
+    line-height:25px;
+    height:25px;
+    }
+.lbclass img
+{
+    vertical-align:middle;
+    
+    }
+.lbclass:link
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: #0035AD;
+	text-decoration: none;
+}
+.lbclass:visited
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: #0035AD;
+	text-decoration: none;
+}
+.lbclass:hover
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: red;
+	text-decoration: none;
+}
+
+.lbclass1:link
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: blue;
+    text-decoration: underline;
+}
+.lbclass1:visited
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: #0035AD;
+	text-decoration: underline;
+}
+.lbclass1:hover
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: red;
+	text-decoration: underline;
+}
+
+.descriptionPanel
+{
+	font-size: x-small;
+	font-weight: normal;
+	padding-top: 2px;
+	background-color: #FAFAFA;
+	width: 100%;
+	height: 100px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-right: 5px;
+	color: #3C7FD1; /* royalblue; */
+	cursor: default;
+}
+.descriptionPanelContent
+{
+	border: solid 1px silver;
+	background-color: #FDFDFD;
+}
+.descriptionPanelHeader
+{
+	font-family: verdana,helvetica,arial;
+	font-weight: bold;
+	font-size: small;
+	height: 20px;
+	background-image: url(../@images/silverglass.gif);
+	color: dimgray;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	border-left: silver 1px solid;
+	border-right: silver 1px solid;
+}
+.content
+{
+	/*background-color:F9F9F9; */
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #FF0000;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.Visible
+{
+	height: 0px;
+	width: 0px;
+}
+
+.button
+{
+	border: 1px solid #0066cc;
+    font-size: 12px;
+	line-height: 120%;
+	background-color: #f1f5fa;
+    height: 18px;
+}
+
+.tdFont
+{
+	color: #309DC0;
+}
+
+.tdTitle
+{
+	color: #333399;
+	font-weight: bold;
+	font-family: 宋体;
+	font-size: 14px;
+}
+
+.btnLogin
+{
+	background-image: url(../@images/btnLogIn.jpg);
+	border: 0px solid #000000;
+	font-size: 12px;
+	font-family: 宋体;
+	padding-top: 1px;
+	padding-left: 5px;
+	height: 23px;
+	width: 83px;
+}
+
+
+/* Xql Add Css Begion*/
+
+
+.ToolBar
+{
+	padding-left: 1px;
+	height: 30px !important;
+	background-color:#0174CF;
+	color:#FFF;
+	vertical-align: middle;
+	font-family:"微软雅黑";
+}
+
+.ToolBar td
+{
+    background-color:#0174CF !important;
+	color:#FFF !important;
+}
+
+.ToolBar td div
+{
+	float:right;
+}
+
+.ToolBar td div a
+{
+    color:#FFF;
+    text-decoration:none;
+    padding-right:10px;
+    vertical-align: middle;
+    margin-top:5px;
+   
+}
+
+/* EditForm Css Begion*/
+.TableMain
+{
+	font-family: "微软雅黑, 宋体, 新宋体, sans-serif";
+	
+	background-color: White;
+	width: 100%;
+	margin: 0 auto;
+	border: "0";
+	cellPadding: 0;
+	cellSpacing: 0;
+}
+
+
+.TableMain TR TD
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	background-color: White;
+}
+
+.TableMain TH
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	height: 30px;
+	font-weight: bold;
+	font-size: 10.5pt;
+	color: Gray;
+	background-color: White;
+}
+
+/*布局样式
+-----------------------------*/
+TABLE.TablePanel
+{
+	width: 100%;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	background-color: White;
+	/*字母换行*/
+	word-break:break-all;
+}
+TABLE.TablePanel TD
+{
+    min-height:38px;
+	font-size: 12px;
+	color: #000000;
+}
+TABLE.TablePanel TH
+{
+	font-size: 12px;
+	color: Gray;
+	font-weight: normal;
+	text-align: right;
+	width: 120px;
+}
+TABLE.TablePanel TD A:link
+{
+	color: darkblue;
+	text-decoration: none;
+}
+TABLE.TablePanel TD A:visited
+{
+	color: darkblue;
+	text-decoration: none;
+}
+TABLE.TablePanel TD A:hover
+{
+	color: darkblue;
+	text-decoration: underline;
+}
+
+TABLE.TablePanel INPUT
+{
+    line-height:20px;
+	border: solid 1px rgb(204,204,204);
+	ime-mode: active;
+}
+
+TABLE.TablePanel INPUT.RequiredTextBox
+{
+	border: solid 1px Red;
+	ime-mode: active;
+}
+
+TABLE.TablePanel SPAN.RequiredDropdownList
+{
+	border: solid 1px Red;
+	padding: 8px 0 2px 0;
+	border-radius: 3px;
+}
+
+TABLE.TablePanel select.RequiredDropdownList
+
+{
+	border:none;
+}
+
+TABLE.TablePanel INPUT.OnlyBottom
+{
+	background: #f8f8f8;
+	border-top: #FFFFFF 0px none;
+	border-right: #FFFFFF 0px none;
+	border-left: #FFFFFF 0px none;
+	border-bottom: #B7B7B7 1px solid;
+	ime-mode: active;
+}
+
+TABLE.TablePanel SELECT
+{
+	width:150px;
+}
+
+TABLE.TablePanel TD.TableHeader
+{
+	color: #343d47;
+	font-weight: bold;
+	cursor: hand;
+	background-color: White;
+	border-bottom: 1px dotted DimGray;
+	margin-bottom:10px;
+	
+	padding-left:30px;
+	background-image:url("/@images/feed_class_20.png");
+	background-repeat:no-repeat;
+	background-position-x:0px;
+	background-position-y:-420px;
+	background-color:transparent;
+}
+TABLE.TablePanel TD.TableHeaderHidden
+{
+	color: #343d47;
+	font-weight: bold;
+	cursor: hand;
+	background-color: White;
+	border-bottom: 1px dotted DimGray;
+	margin-bottom:10px;
+    padding-left:30px;
+	background-image:url("/@images/feed_class_20.png");
+	background-repeat:no-repeat;
+	background-position-x:0px;
+	background-position-y:-420px;
+	background-color:transparent;
+}
+
+TABLE.List TH
+{
+	font-size: 12px;
+	color: #183789;
+	background-color: #F8F8F8;
+	font-weight: normal;
+	text-align: right;
+	width: 120px;
+}
+TABLE.List TD
+{
+	font-size: 12px;
+	background-color: #F8F8F8;
+	color: #000000;
+}
+
+TABLE.List TD INPUT
+{
+	background-color: #FFFFFF;
+	border: solid 1px #3A6AB0;
+	ime-mode: active;
+}
+/*布局样式结束
+-----------------------------*/
+
+TABLE.NotBorder INPUT
+{
+	background-color: #FFFFFF;
+	border-color: #3A6AB0;
+	border: solid 1px #3A6AB0;
+	border-width: 0;
+	ime-mode: active;
+}
+
+TABLE.CheckBox
+{
+	border-width: 0;
+}
+/* Tab Css Start */
+.TopGroup
+{
+	z-index: 99;
+	position: relative;
+}
+
+.DefaultTab
+{
+	color: black;
+	background-image: url(../@images/tab_bg.gif);
+	font-family: MS Sans Serif, Verdana;
+	font-size: 10px;
+	cursor: default;
+}
+
+.DefaultTabHover
+{
+	color: black;
+	background-image: url(../@images/hover_tab_bg.gif);
+	font-family: MS Sans Serif, Verdana;
+	font-size: 10px;
+	cursor: default;
+}
+
+.SelectedTab
+{
+	color: black;
+	background-image: url(../@images/selected_tab_bg.gif);
+	font-family: MS Sans Serif, Verdana;
+	font-size: 10px;
+	cursor: default;
+}
+
+.MultiPage
+{
+	background-color: White;
+	border: 1px solid #919B9C;
+	width: 487px;
+	height: 150px;
+	position: relative;
+	padding: 10px;
+	top: -3px;
+	left: 1px;
+	z-index: 98;
+}
+
+.PageContent
+{
+	font-family: MS Sans Serif, Verdana;
+	font-size: 10px;
+}
+/* Tab Css End */
+/* EditForm Css End*/
+
+
+/* List Css Begin*/
+/* Search Css Begin*/
+TABLE.TableSearch
+{
+	width: 100%;
+	border-width: 0;
+	margin: auto 0;
+    height: 26px;
+	line-height:30px;
+	background-color:#F4F4F4;
+}
+
+TABLE.TableSearch TD.TableSearchHeader
+{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 12px;
+	background-color:#0174CF;
+	height: 30px;
+	line-height:30px;
+	cursor: hand;
+	text-indent:1em;
+	color:#FFF;
+	 
+}
+
+
+TABLE.TableSearch INPUT
+{
+    line-height:20px;
+	border: solid 1px rgb(204,204,204);
+	width: 150px;
+	ime-mode: active;
+}
+
+TABLE.TableSearch SELECT
+{
+	width: 150px;
+	background-color:White;
+}
+#DispalycusRelationCompanyId
+{
+	width: 20px;
+	border-width: 0;
+}
+#DispalysupRelationCompanyId
+{
+	width: 20px;
+	border-width: 0;
+}
+#SearchIsShowStop
+{
+	width: 20px;
+	border-width: 0;
+}
+#SearchIsShowStop
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID1
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID2
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID3
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID4
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID5
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID6
+{
+	width: 20px;
+	border-width: 0;
+}
+#cbID7
+{
+	width: 20px;
+	border-width: 0;
+}
+
+TABLE.TableSearch INPUT.Checkbox
+{
+	background-color: #FFFFFF;
+	border-color: #3A6AB0;
+	border: solid 0px #3A6AB0;
+}
+
+TABLE.TableSearch TH
+{ 
+	font-family: "微软雅黑","宋体","新宋体","sans-serif";
+	height: 25px;
+	font-weight: normal;
+	font-size: 12px;
+	color: black;
+	text-align: right;
+}
+/* Search Css End*/
+.ListHeader
+{
+	width: 100%;
+	height:30px;
+}
+
+.ListTitle
+{
+	padding-left: 1px;
+	font-weight: bold;
+	background-color: White;
+	padding: 0px;
+	vertical-align: middle;
+	text-decoration: none;
+	height: 40px;
+	text-align: left;
+	font-size:15px;
+	color:#343d47;
+}
+
+.ListTitle div
+{
+    background-color:White;
+}
+INPUT.Hidden
+{
+	display: none;
+	position: absolute;
+}
+
+.fixhead
+{
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Black;
+	background-color:#DDDCE0;
+	white-space: nowrap;
+	
+	/*固定表头*/
+	position:relative ; 
+	table-layout:fixed;
+	top:expression(this.offsetParent.scrollTop);   
+	z-index: 999;
+}
+
+
+/* Grid Css Start */
+#divGridView
+{
+	
+	overflow: auto;
+}
+
+
+TABLE.Grid
+{
+	background-color: White;
+	border-color: #999999;
+	border-style: none;
+	width: 100%;
+}
+
+TABLE.Grid TH
+{
+	white-space: nowrap;
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Gray;
+}
+
+TABLE.Grid TD
+{
+	white-space: nowrap;
+}
+
+TABLE.Grid TR.GridHeader th
+{
+    background-color:White;
+}
+
+TABLE.Grid TR.GridHeader
+{
+    background-color:White;
+	height: 30px;
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Gray;
+	white-space: nowrap;
+	
+	/*固定表头*/
+	position:relative  !important; 
+	table-layout:fixed !important;
+	top:expression(this.offsetParent.scrollTop)  !important;   
+	z-index: 999  !important;
+
+}
+
+TABLE.Grid TR.Row td
+{
+    border-left:0px;
+    border-right:0px;
+}
+
+TABLE.Grid TR.RowA td
+{
+    border-left:0px;
+    border-right:0px;
+}
+
+TABLE.Grid TR.Row
+{
+	color: Gray;
+	text-align: center;
+	background-color: White;
+	height: 32px;
+    padding-left: 10px;
+    border-left:0px;
+    border-right:0px;
+    border-style:none;
+    border-spacing:0px;
+    border-bottom:1px solid #999;
+}
+
+TABLE.Grid TR.RowA
+{
+    color: Gray;
+	background-color: White;
+	text-align: center;
+	height: 32px;
+	border-left:0px;
+    border-right:0px;
+    border-style:none;
+     border-bottom:1px solid #999;
+}
+
+TABLE.Grid TR.Row A
+{
+    color:Blue;
+    font-weight:bold;
+}
+
+TABLE.Grid TR.RowA A
+{
+    color:Blue;
+    font-weight:bold;
+}
+
+
+TABLE.Grid TR.Row1
+{
+	color: Gray;
+	text-align: center;
+	background-color: #FFFFFF;
+	height: 20px;
+    padding-left: 15px;
+}
+.TotalRow
+{
+	background-color: #E3EFFF; 
+	cursor: default;
+	font-weight:bold;
+	font-size:15px;	
+	text-align: right;
+}
+
+.SelectedRow 
+{ 
+  cursor: default; 
+}
+
+.SelectedRow td.DataCell 
+{ 
+  background-color: #FFEEC2; 
+  padding: 2px; 
+  font-family:新宋体; 
+  font-size: 12px; 
+  border-bottom: 1px solid #4B4B6F; 
+  border-top: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  cursor: default; 
+}
+
+.SelectedRow td.FirstDataCell 
+{ 
+  border-left: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  padding-right: 3px; 
+  cursor: default; 
+}
+
+.SelectedRow td.LastDataCell 
+{ 
+  border-right: 1px solid #4B4B6F; 
+  cursor: default; 
+}
+
+
+.EditRow
+{
+    background-color:#CEF9DE;
+}
+
+TABLE.Grid A
+{
+	color: Gray;
+	text-decoration:none;
+}
+
+TABLE.Grid A:hover
+{
+	text-decoration:underline;
+}
+
+DIV.Pager
+{
+	font-size: 12px;
+	width: 100%;
+}
+
+.PagerCustomerInfo
+{
+	width: 100px;
+	text-align: left;
+}
+/* Grid Css End */
+
+.ToolBarButton
+{
+	text-decoration: none;
+}
+
+.Message
+{
+	color: Red;
+}
+/* List Css End*/
+
+/* TreeView Css Start*/
+.TreeView
+{
+	background-color: White;
+	padding-top: 4px;
+	padding-left: 1px;
+	border: #7C7C94 1px solid;
+	cursor: default;
+}
+
+.TreeNode
+{
+	font-family: Verdana;
+	font-size: 12px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.GrayedTreeNode
+{
+	font-family: Verdana;
+	font-size: 12px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: gray;
+	cursor: hand;
+}
+
+.HoverTreeNode
+{
+	font-family: Verdana;
+	font-size: 12px;
+	text-decoration: underline;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	cursor: hand;
+}
+
+.SelectedTreeNode
+{
+	font-family: Verdana;
+	font-size: 12px;
+	background-color: gray;
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	cursor: hand;
+}
+
+.NodeEdit
+{
+	border: 1px gray solid;
+	font-family: Verdana;
+	font-size: 12px;
+}
+/* TreeView Css End*/
+/* EditTab Css Start */
+DIV.EditTab
+{
+	float: left;
+	width: 100%;
+	background: #F4F4F4;
+	font-size: 110%;
+	line-height: normal;
+	border-bottom: 1px solid #24618E;
+}
+DIV.EditTab .EditTabSpanOff
+{
+	background-color: #eeeeee;
+	cursor: hand;
+	vertical-align: middle;
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	padding: 4px 4px 4px 4px;
+	color: Black;
+	background-image: url(../@images/WhiteTabLong.gif);
+}
+
+DIV.EditTab .EditTabSpan
+{
+	cursor: hand;
+	vertical-align: middle;
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	padding: 4px 4px 4px 4px;
+	color: White;
+	background-image: url(../@images/BlackTabLong.gif);
+}
+
+
+
+DIV.Pager DIV#AspNetPager1{text-align: left;color: #ccc;}
+DIV.Pager DIV#AspNetPager1 a
+{
+    display: inline-block;
+    color: #428bca;
+    display: inline-block;
+    height: 23px;	
+    line-height: 23px;
+    padding: 0 8px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+DIV.Pager DIV#AspNetPager1 a:hover{text-decoration: none;border: 1px solid #428bca;}
+DIV.Pager DIV#AspNetPager1 span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+DIV.Pager DIV#AspNetPager1 span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+DIV.Pager DIV#AspNetPager1 A:link
+{
+	
+	
+
+	text-decoration: none;
+}
+
+/*
+DIV.Pager DIV#AspNetPager1 A:visited
+{
+	font-size: 10px;
+	color: blue;
+	background-color: lightskyblue;
+	padding: 0 4 0 4;
+	text-decoration: none;
+	border: steelblue 1px solid;
+}
+
+DIV.Pager DIV#AspNetPager1 A:hover
+{
+	font-size: 10px;
+	border: steelblue 1px solid;
+	color: Red;
+	padding: 0 4 0 4;
+	text-decoration: none;
+	background-color: lavender;
+
+}
+*/
+/* EditTab Css End */
+/* Xql Add Css End*/
+
+
+INPUT.OnlyBottom
+{
+	background: #f8f8f8;
+	border-top: #FFFFFF 0px none;
+	border-right: #FFFFFF 0px none;
+	border-left: #FFFFFF 0px none;
+	border-bottom: #B7B7B7 1px solid;
+	ime-mode: active;
+}
+
+
+#ShowNameResult
+{
+	position:absolute;
+	width: 134px;
+	height:160px;
+	z-index: 999;
+	background: #EEE;
+}
+#ShowSNResult
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowTypeResult
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowProductSNResult
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowCustomerProductPartNumberResult
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowCustomerProductSNResult
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowPriceResult
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowPartNumber2Result
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowCustomerProNumberID
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowCustomerProSNID
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#ShowStockInOutSNResult
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+
+#divProductSN
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#divProductPartNumber
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#divCustomerSN
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#divCustomerName
+{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#divSupplierSN
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+#divSupplierName
+{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	z-index: 999;
+	background: #FFFFFF;
+}
+
+
+.ListBox
+{
+	width: 250px;
+	height: 160px;
+}
+
+.SumRow
+{
+	background-color: #66ccff;
+	font-weight: bold;
+	text-align: right;
+}
+
+.ExecuteTag
+{
+	line-height: 10px;
+}
+
+INPUT.Normal
+{
+	background-color: #FFFFFF;
+	border-color: #3A6AB0;
+	border: solid 1px #3A6AB0;
+}
+
+
+.ctable2 TH
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	height: 25px;
+	font-weight: bold;
+	font-size: 9pt;
+	color: black;
+	background-color: #A7CCF5;
+}
+
+.ctable2
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	border-right: #183789 1px solid;
+	border-top: #183789 1px solid;
+	border-left: #183789 1px solid;
+	border-bottom: #183789 1px solid;
+	background-color: #FFFFFF;
+}
+
+.ctable2 tr td
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	background-color: #F3F5F8;
+}
+
+TD.Remarkable
+{
+	font-weight:bold;
+	color:Red;
+}
+TR.CurrentRow
+{
+	background-color:#B9D1F3;
+	cursor:pointer;
+}
+
+TABLE.TablePanel INPUT.ReadOnly
+{	
+	background: #f8f8f8;
+	border-top: #FFFFFF 0px none;
+	border-right: #FFFFFF 0px none;
+	border-left: #FFFFFF 0px none;
+	border-bottom: #B7B7B7 1px solid;
+}
+
+.ReadOnly
+{	
+	background: #f8f8f8;
+	border-top: #FFFFFF 0px none;
+	border-right: #FFFFFF 0px none;
+	border-left: #FFFFFF 0px none;
+	border-bottom: #B7B7B7 1px solid;
+}
+
+T
+{
+    background-color:lightblue;
+    border-color:red;
+}
+
+/*
+如果全选按钮所在GridView行数太大时，全选按钮自动隐藏
+*/
+#chk
+{
+	display:expression(this.parentElement.parentElement.parentElement.rows.length > 2500 ? "none" : "");
+}
+
+
+
+.TTT1
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 padding-left:10px;
+	 height: 25px;
+}
+
+.TTT3
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 text-decoration:underline;
+	 
+	 height: 25px;
+}
+
+.TTT2
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 padding:15px; 	 
+}
+
+.TTT4
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 text-decoration:underline;
+	 
+	 height: 15px;
+}
+
+.TTT5
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 
+	 height: 25px;
+}
+
+
+.Z1
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 padding-left:5px;
+	 height: 15px;	
+}
+
+.Z2
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 padding-left:10px;
+	 text-decoration:underline;
+	 height: 15px;
+	 background-color:#FFFF99;				
+}
+
+.Z3
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 padding-left:20px;
+	 font-weight:bold;
+	 height: 15px;
+}
+
+.Z4
+{
+	 font-family:新宋体;
+	 font-size:	12pt;
+	 font-weight:bold;
+	 height: 30px;
+	 text-align:center;	
+	 background-color:#CCFFFF;
+}
+
+.Z5
+{
+	 font-family:verdana,tahoma;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 height: 25px;
+	 text-align:center;
+}
+
+.Z55
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 font-weight:bold;
+	 height: 20px;
+	 text-align:right;	
+}
+
+.Z6
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 height: 20px;
+	 text-align:right;
+	 padding-left:15px;
+}
+
+.Z7
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 height: 20px;
+	 text-align:right;
+	 color:Blue;
+	 padding-left:15px;
+}
+
+.Z8
+{
+	 font-family:新宋体;
+	 font-size:	9pt;
+	 height: 20px;
+	 text-align:right;
+	 color:red;
+	 padding-left:15px;
+}
+
+.HeaderRow
+{
+	height: 20px;
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Black;
+	text-align:center;
+	background-color:#FFFF99;
+}
+
+.divBackgroud
+{
+	 	
+}
+
+
+.fixhead1
+{
+	font-size: 16px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Black;
+	background-color:#FFFF99;
+	white-space: nowrap;
+	height:30px;
+}
+
+.fixhead2
+{
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: Black;
+	background-color:#FFFF99;
+	white-space: nowrap;
+}
+
+
+.LinkRow
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: #0035AD;
+	text-decoration:underline;
+
+}
+
+.LinkRow2
+{
+	font-family: "Aria,Microsoft Sans Serif,宋体";
+	font-size: 12px;
+	color: red;
+	text-decoration:underline;
+}
+
+.BlueRow
+{
+	 color:Red;	
+}
+
+.LightRow
+{
+	 color:Blue;	
+}
+
+.GrayRow
+{
+	 color:Red;	
+}
+
+/* SplitterBar Css Begin */
+.HorizontalSplitterBar
+{
+  background: url(images/splitter_horColBg.gif); 
+}
+
+.VerticalSplitterBar
+{
+  background: url(images/splitter_verColBg.gif); 
+}
+
+.ActiveSplitterBar
+{
+  background-color: #000000;  
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40); 
+  opacity: 0.4;
+}
+
+.SplitterPane
+{
+  border: 1px solid #333333;
+}
+
+.DetailsPane
+{
+  border: 7px solid #666666;
+}
+/* SplitterBar Css End */
+
+
+.LockTag
+{
+	background-color: #66ccff;
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////// 
+// Super Tables v0.30 - MIT Style License
+// Copyright (c) 2008 Matt Murphy --- www.matts411.com
+//
+// Contributors:
+// Joe Gallo
+///////////////////////////////////////////////////////////////////////////////////////// 
+*/
+.sBase {
+	    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* HEADERS */
+.sHeader {
+	position: absolute;
+	z-index: 3;
+	background-color: #ffffff;
+}
+.sHeaderInner {
+	position: relative;
+}
+.sHeaderInner table {
+	border-spacing: 0px 0px !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	background-color: #ffffff; /* Here b/c of Opera 9.25 :( */
+}
+
+/* HEADERS - FIXED */
+.sFHeader {
+	position: absolute;
+	z-index: 4;
+	overflow: hidden;
+}
+.sFHeader table {
+	border-spacing: 0px 0px !important;
+	border-collapse: collapse !important;
+	width: 1px !important;
+	table-layout: fixed !important;
+	background-color: #ffffff; /* Here b/c of Opera 9.25 :( */
+}
+
+/* BODY */
+
+
+.sData {
+	position: absolute;
+	z-index: 2;
+	overflow:auto !important;
+	background-color: #ffffff;
+	width:99% !important;
+  
+}
+
+.sData table {
+	border-spacing: 0px 0px !important;
+	border-collapse: collapse !important;
+	width: 100% !important;
+	table-layout: fixed !important;
+}
+
+/* BODY - FIXED */
+.sFData {
+	position: absolute;
+	z-index: 1;
+	background-color: #ffffff;
+}
+.sFDataInner {
+	position: relative;
+}
+.sFData table {
+	border-spacing: 0px 0px !important;
+	border-collapse: collapse !important;
+	width: 1px !important;	
+	table-layout: fixed !important;
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////// 
+// Super Tables - Skin Classes
+// Remove if not needed
+///////////////////////////////////////////////////////////////////////////////////////// 
+*/
+
+/* sDefault */
+.sDefault {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-family: Verdana, Arial, sans serif;
+	font-size: 1.3em;
+}
+.sDefault th, .sDefault td {
+	border: 1px solid #cccccc;
+	padding: 3px 6px 3px 4px;
+	white-space: nowrap;
+}
+.sDefault th {
+	background-color: #e5e5e5;
+	border-color: #c5c5c5;
+}
+.sDefault-Fixed {
+	background-color: #eeeeee;
+	border-color: #c5c5c5;
+}
+
+/* sSky */
+.sSky {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-family: Verdana, Arial, sans serif;
+	font-size: 0.8em;
+}
+.sSky th, .sSky td {
+	border: 1px solid #9eb6ce;
+	padding: 3px 6px 3px 4px;
+	white-space: nowrap;
+}
+.sSky th {
+	background-color: #CFDCEE;
+}
+.sSky-Fixed {
+	background-color: #e4ecf7;
+}
+
+/* sOrange */
+.sOrange {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-family: Verdana, Arial, sans serif;
+	font-size: 0.8em;
+}
+.sOrange th, .sOrange td {
+	border: 1px solid #cebb9e;
+	padding: 3px 6px 3px 4px;
+	white-space: nowrap;
+}
+.sOrange th {
+	background-color: #ECD8C7;
+}
+.sOrange-Fixed {
+	background-color: #f7ede4;
+}
+
+/* sDark */
+.sDark {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-family: Verdana, Arial, sans serif;
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.sDark th, .sDark td {
+	border: 1px solid #555555;
+	padding: 3px 6px 3px 4px;
+	white-space: nowrap;
+}
+.sDark th {
+	background-color: #000000;
+}
+.sDark-Fixed {
+	background-color: #222222;
+}
+.sDark-Main {
+	background-color: #333333;
+}
+
+.new_icon
+{ width:15px; 
+  height:15px;
+    
+}
+#searchMain 
+{
+    background-color:#f4f4f4;
+    font-family: "Aria,Microsoft Sans Serif,宋体" 
+             }
+             
+ 
+ #up1
+{  
+   
+    }
+       
+
+/** 
+ 
+ @Name： laydate 核心样式
+ @Author：
+
+ 
+**/
+
+html
+{
+    _background-image:url(about:blank);
+      _background-attachment:fixed;
+      overflow:hidden;
+   }
+.laydate_body .laydate_box, .laydate_body .laydate_box *{margin:0; padding:0;}
+.laydate-icon,
+.laydate-icon-default,
+.laydate-icon-danlan,
+.laydate-icon-dahong,
+.laydate-icon-molv{height:22px; line-height:22px; padding-right:20px; border:1px solid #C6C6C6; background-repeat:no-repeat; background-position:right center;  background-color:#fff; outline:0;}
+.laydate-icon-default{ background-image:url(../images/icon.png)}
+.laydate-icon-danlan{border:1px solid #B1D2EC; background-image:url(../images/icon.png)}
+.laydate-icon-dahong{background-image:url(../images/icon.png)}
+.laydate-icon-molv{background-image:url(../images/icon.png)}
+.laydate_body .laydate_box{width:240px; font:12px '\5B8B\4F53'; z-index:99999999; *margin:-2px 0 0 -2px; *overflow:hidden; _margin:0; _position:absolute!important; background-color:#fff;}
+.laydate_body .laydate_box li{list-style:none;}
+.laydate_body .laydate_box .laydate_void{cursor:text!important;}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{text-decoration:none; blr:expression(this.onFocus=this.blur()); cursor:pointer;}
+.laydate_body .laydate_box a:hover{text-decoration:none;}
+.laydate_body .laydate_box cite, .laydate_body .laydate_box label{position:absolute; width:0; height:0; border-width:5px; border-style:dashed; border-color:transparent; overflow:hidden; cursor:pointer;}
+.laydate_body .laydate_box .laydate_yms, .laydate_body .laydate_box .laydate_time{display:none;}
+.laydate_body .laydate_box .laydate_show{display:block;}
+.laydate_body .laydate_box input{outline:0; font-size:14px; background-color:#fff;}
+.laydate_body .laydate_top{position:relative; height:26px; padding:5px; *width:100%; z-index:99;}
+.laydate_body .laydate_ym{position:relative; float:left; height:24px; cursor:pointer;}
+.laydate_body .laydate_ym input{float:left; height:24px; line-height:24px; text-align:center; border:none; cursor:pointer;}
+.laydate_body .laydate_ym .laydate_yms{position:absolute; left: -1px; top: 24px; height:181px;}
+.laydate_body .laydate_y{width:121px; margin-right:6px;}
+.laydate_body .laydate_y input{width:64px; margin-right:15px;}
+.laydate_body .laydate_y .laydate_yms{width:121px; text-align:center;}
+.laydate_body .laydate_y .laydate_yms a{position:relative; display:block; height:20px;}
+.laydate_body .laydate_y .laydate_yms ul{height:139px; padding:0; *overflow:hidden;}
+.laydate_body .laydate_y .laydate_yms ul li{float:left; width:60px; height:20px; line-height: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.laydate_body .laydate_m{width:99px;}
+.laydate_body .laydate_m .laydate_yms{width:99px; padding:0;}
+.laydate_body .laydate_m input{width:42px; margin-right:15px;}
+.laydate_body .laydate_m .laydate_yms span{display:block; float:left; width:42px; margin: 5px 0 0 5px; line-height:24px; text-align:center; _display:inline;}
+.laydate_body .laydate_choose{display:block; float:left; position:relative; width:20px; height:24px;}
+.laydate_body .laydate_choose cite, .laydate_body .laydate_tab cite{left:50%; top:50%;}
+.laydate_body .laydate_chtop cite{margin:-7px 0 0 -5px; border-bottom-style:solid;}
+.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label{top:50%; margin:-2px 0 0 -5px; border-top-style:solid;}
+.laydate_body .laydate_chprev cite{margin:-5px 0 0 -7px;}
+.laydate_body .laydate_chnext cite{margin:-5px 0 0 -2px;}
+.laydate_body .laydate_ym label{right:28px;}
+.laydate_body .laydate_table{ width:230px; margin:0 5px; border-collapse:collapse; border-spacing:0px; }
+.laydate_body .laydate_table td{width:31px; height:19px; line-height:19px; text-align: center; cursor:pointer; font-size: 12px;}
+.laydate_body .laydate_table thead{height:22px; line-height:22px;}
+.laydate_body .laydate_table thead th{font-weight:400; font-size:12px; text-align:center;}
+.laydate_body .laydate_bottom{position:relative; height:22px; line-height:20px; padding:5px; font-size:12px;}
+.laydate_body .laydate_bottom #laydate_hms{position: relative; z-index: 1; float:left; }
+.laydate_body .laydate_time{ position:absolute; left:5px; bottom: 26px; width:129px; height:125px; *overflow:hidden;}
+.laydate_body .laydate_time .laydate_hmsno{ padding:5px 0 0 5px;}
+.laydate_body .laydate_time .laydate_hmsno span{display:block; float:left; width:24px; height:19px; line-height:19px; text-align:center; cursor:pointer; *margin-bottom:-5px;}
+.laydate_body .laydate_time1{width:228px; height:154px;}
+.laydate_body .laydate_time1 .laydate_hmsno{padding: 6px 0 0 8px;}
+.laydate_body .laydate_time1 .laydate_hmsno span{width:21px; height:20px; line-height:20px;}
+.laydate_body .laydate_msg{left:49px; bottom:67px; width:141px; height:auto; overflow: hidden;}
+.laydate_body .laydate_msg p{padding:5px 10px;}
+.laydate_body .laydate_bottom li{float:left; height:20px; line-height:20px; border-right:none; font-weight:900;}
+.laydate_body .laydate_bottom .laydate_sj{width:33px; text-align:center; font-weight:400;}
+.laydate_body .laydate_bottom input{float:left; width:21px; height:20px; line-height:20px; border:none; text-align:center; cursor:pointer; font-size:12px;  font-weight:400;}
+.laydate_body .laydate_bottom .laydte_hsmtex{height:20px; line-height:20px; text-align:center;}
+.laydate_body .laydate_bottom .laydte_hsmtex span{position:absolute; width:20px; top:0; right:0px; cursor:pointer;}
+.laydate_body .laydate_bottom .laydte_hsmtex span:hover{font-size:14px;}
+.laydate_body .laydate_bottom .laydate_btn{position:absolute; right:5px; top:5px;}
+.laydate_body .laydate_bottom .laydate_btn a{float:left; height:20px; padding:0 6px; _padding:0 5px;}
+.laydate_body .laydate_bottom .laydate_v{position:absolute; left:10px; top:6px; font-family:Courier; z-index:0;}
+
+
+/** 
+ 
+ @Name： laydate皮肤：淡蓝
+ @Author：贤心
+ @Site：http://sentsin.com/layui/laydate
+ 
+**/
+
+.laydate-icon{border:1px solid #B1D2EC; background-image:url(../images/icon.png)}
+
+.laydate_body .laydate_box,
+.laydate_body .laydate_ym,
+.laydate_body .laydate_ym .laydate_yms,
+.laydate_body .laydate_table,
+.laydate_body .laydate_table td,
+.laydate_body .laydate_bottom #laydate_hms,
+.laydate_body .laydate_time,
+.laydate_body .laydate_bottom .laydate_btn a{border:1px solid #B1D2EC;}
+
+.laydate_body .laydate_y .laydate_yms a,
+.laydate_body .laydate_choose,
+.laydate_body .laydate_table thead{background-color:#DEECF8;}
+
+.laydate_body .laydate_box, 
+.laydate_body .laydate_ym .laydate_yms,
+.laydate_body .laydate_time{box-shadow: 2px 2px 5px rgba(0,0,0,.1);}
+
+.laydate_body .laydate_box{border-top:none; border-bottom:none; background-color:#fff; color:#1F547E;}
+.laydate_body .laydate_box input{color:#1F547E;}
+.laydate_body .laydate_box .laydate_void{color:#BDD8EE!important;}
+.laydate_body .laydate_box .laydate_void:hover{background-color:#fff!important}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{color:#1F547E;}
+.laydate_body .laydate_click{background-color:#DEECF8!important;}
+.laydate_body .laydate_top{border-top:1px solid #B1D2EC;}
+.laydate_body .laydate_ym .laydate_yms{background-color:#fff;}
+.laydate_body .laydate_y .laydate_yms a{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_y .laydate_yms .laydate_chdown{border-top:1px solid #B1D2EC; border-bottom:none;}
+.laydate_body .laydate_y .laydate_yms ul li:hover, 
+.laydate_body .laydate_m .laydate_yms span:hover{color:#000;}
+.laydate_body .laydate_choose{border-left:1px solid #B1D2EC;}
+.laydate_body .laydate_chprev{border-left:none; border-right:1px solid #B1D2EC;}
+.laydate_body .laydate_chtop cite{border-bottom-color:#3081C2;}
+.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label{border-top-color:#3081C2;}
+.laydate_body .laydate_chprev cite{border-right-style:solid; border-right-color:#3081C2;}
+.laydate_body .laydate_chnext cite{border-left-style:solid; border-left-color:#3081C2;}
+.laydate_body .laydate_table td{background-color:#fff; color:#1F547E;}
+.laydate_body .laydate_table .laydate_nothis{color:#60A2D7;}
+.laydate_body .laydate_table thead{color:#163A58;}
+.laydate_body .laydate_bottom{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom #laydate_hms{background-color:#fff;}
+.laydate_body .laydate_time{background-color:#fff;}
+.laydate_body .laydate_bottom .laydate_sj{border-right:1px solid #B1D2EC; background-color:#ECF4FB;}
+.laydate_body .laydate_bottom input{background-color:#fff;}
+.laydate_body .laydate_bottom .laydte_hsmtex{border-bottom:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom .laydate_btn{border-right:1px solid #B1D2EC;}
+.laydate_body .laydate_bottom .laydate_v{color:#75AEDD}
+.laydate_body .laydate_bottom .laydate_btn a{ border-right:none; background-color:#ECF4FB;}
+.laydate_body .laydate_bottom .laydate_btn a:hover{ background-color:#fff;}
+
+.laydate_body .laydate_y .laydate_yms ul li:hover,
+.laydate_body .laydate_m .laydate_yms span:hover,
+.laydate_body .laydate_choose:hover,
+.laydate_body .laydate_y .laydate_yms a:hover,
+.laydate_body .laydate_table td:hover,
+.laydate_body .laydate_bottom .laydate_time span:hover,
+.laydate_body .laydate_bottom .laydte_hsmtex{background-color:#ECF4FB}
+
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+ 
+#lb_Add
+{
+    
+    line-height:30px;
+    height:30px;
+    color:#FFF;
+    float:right;
+    }
+#lb_Add img
+{
+    vertical-align:middle;
+    
+    }
+#lb_Add:link
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lb_Add:visited
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lb_Add:hover
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#lb_Search
+{
+    vertical-align: middle;
+    line-height:30px;
+    height:30px;
+    color:#FFF;
+    float:right;
+    margin-right:10px;
+    }
+#lb_Search img
+{
+    vertical-align:middle;
+    
+    }
+#lb_Search:link
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lb_Search:visited
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lb_Search:hover
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+ 
+#lbt_Save
+{
+    vertical-align: middle;
+    line-height:30px;
+    height:30px;
+    color:#FFF;
+    float:right;
+    margin-right:10px;
+    }
+#lbt_Save img
+{
+    vertical-align:middle;
+    
+    }
+#lbt_Save:link
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lbt_Save:visited
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#lbt_Save:hover
+{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+.footpager
+{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #F3F4F5;
+ }
+ .footpager table
+ { width:100%;
+   line-height:24px;
+     }
+/*
+#Chart1
+{
+    width:600px !important;
+    height:400px !important;
+}*/

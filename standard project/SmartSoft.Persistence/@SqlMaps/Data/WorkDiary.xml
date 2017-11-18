@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="WorkDiary" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="WorkDiary" type="SmartSoft.Domain.Data.WorkDiary, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="WorkDiary">
+      <result property="wdID" column="wdid" />
+      <result property="wdTitle" column="wdtitle" />
+      <result property="wdDate" column="wddate" />
+      <result property="wdContent" column="wdcontent" />
+      <result property="wdAddDate" column="wdadddate" />
+      <result property="wdAddOperatorID" column="wdaddoperatorid" />
+      <result property="wdModifyDate" column="wdmodifydate" />
+      <result property="wdModifyOperatorID" column="wdmodifyoperatorid" />
+      <result property="wdTypeID" column="wdtyid" />
+      <result property="wdFile" column="wdfile" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectWorkDiaryDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [WorkDiary]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectWorkDiaryDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectWorkDiary" parameterClass="int" resultMap="SelectResult">
+      Select
+      wdid,
+      wdtitle,
+      wddate,
+      wdcontent,
+      wdadddate,
+      wdaddoperatorid,
+      wdmodifydate,
+      wdmodifyoperatorid,
+      wdtypeid,
+      wdfile
+      From [WorkDiary]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          wdid=#wdID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertWorkDiary" parameterClass="WorkDiary">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'WorkDiary'
+      Insert Into [WorkDiary] (
+      wdid,
+      wdtitle,
+      wddate,
+      wdcontent,
+      wdadddate,
+      wdaddoperatorid,
+      wdmodifydate,
+      wdmodifyoperatorid,
+      wdtypeid,
+      wdfile
+      )Values(
+      @primarykeyid ,
+      #wdTitle#,
+      #wdDate#,
+      #wdContent#,
+      #wdAddDate#,
+      #wdAddOperatorID#,
+      #wdModifyDate#,
+      #wdModifyOperatorID#,
+      #wdTypeID#,
+      #wdFile#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateWorkDiary" parameterClass="WorkDiary">
+      Update [WorkDiary] Set
+      wdid=#wdID#,
+      wdtitle=#wdTitle#,
+      wddate=#wdDate#,
+      wdcontent=#wdContent#,
+      wdadddate=#wdAddDate#,
+      wdaddoperatorid=#wdAddOperatorID#,
+      wdmodifydate=#wdModifyDate#,
+      wdmodifyoperatorid=#wdModifyOperatorID#,
+      wdtypeid=#wdTypeID#,
+      wdfile=#wdFile#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          wdid=#wdID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteWorkDiary" parameterClass="int">
+      Delete From [WorkDiary]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          wdid=#wdID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

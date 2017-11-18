@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="Department" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="Department" type="SmartSoft.Domain.Common.Department, SmartSoft.Domain" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectResult" class="Department">
+      <result property="depID" column="depid" />
+      <result property="depName" column="depname" />
+      <result property="depChargeMan" column="depchargeman" />
+      <result property="depTel" column="deptel" />
+      <result property="depFax" column="depfax" />
+      <result property="depRemark" column="depremark" />
+      <result property="depOrderAmount" column="deporderamount" />
+      <result property="depReceiptAmount" column="depreceiptamount" />
+      <result property="depParentID" column="depparentid" />
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id="dynamicParameter">
+      <parameter property="whereCondition" />
+      <parameter property="orderByExpression" />
+    </parameterMap>
+    <parameterMap id="dynamicParameterPage" class="Hashtable">
+      <parameter property="TableName" column="TableName"/>
+      <parameter property="WhereCondition" column="WhereCondition"/>
+      <parameter property="OrderByExpression" column="OrderByExpression"/>
+      <parameter property="PageSize" column="PageSize"/>
+      <parameter property="PageNumber" column="PageNumber"/>
+      <parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <statements>
+
+    <select id="SelectDepartmentDynamic" parameterMap="dynamicParameter" resultMap="SelectResult">
+      Select *
+      From [Department]
+      <dynamic prepend="WHERE">
+        <isNotEmpty property="whereCondition" >
+          (1=1) $whereCondition$
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By">
+        <isNotEmpty property="orderByExpression" >
+          $orderByExpression$
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <procedure id="SelectDepartmentDynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+      usp_SelectDynamicPage
+    </procedure>
+
+    <select id="SelectDepartment" parameterClass="int" resultMap="SelectResult">
+      Select
+      depid,
+      depname,
+      depchargeman,
+      deptel,
+      depfax,
+      depremark,
+      deporderamount,
+      depreceiptamount,
+      depparentid
+      From [Department]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          depid=#depID#
+        </isParameterPresent>
+      </dynamic>
+    </select>
+
+    <statement id="InsertDepartment" parameterClass="Department">
+      declare @primarykeyid int
+      execute @primarykeyid = usp_GetID 'Department'
+      Insert Into [Department] (
+      depid,
+      depname,
+      depchargeman,
+      deptel,
+      depfax,
+      depremark,
+      deporderamount,
+      depreceiptamount,
+      depparentid
+      )Values(
+      @primarykeyid ,
+      #depName#,
+      #depChargeMan#,
+      #depTel#,
+      #depFax#,
+      #depRemark#,
+      #depOrderAmount#,
+      #depReceiptAmount#,
+      #depParentID#
+      )
+      Select @primarykeyid
+    </statement>
+
+    <update id="UpdateDepartment" parameterClass="Department">
+      Update [Department] Set
+      depid=#depID#,
+      depname=#depName#,
+      depchargeman=#depChargeMan#,
+      deptel=#depTel#,
+      depfax=#depFax#,
+      depremark=#depRemark#,
+      deporderamount=#depOrderAmount#,
+      depreceiptamount=#depReceiptAmount#,
+      depparentid=#depParentID#
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          depid=#depID#
+        </isParameterPresent>
+      </dynamic>
+    </update>
+
+    <delete id="DeleteDepartment" parameterClass="int">
+      Delete From [Department]
+      <dynamic prepend="WHERE">
+        <isParameterPresent>
+          depid=#depID#
+        </isParameterPresent>
+      </dynamic>
+    </delete>
+  </statements>
+</sqlMap>

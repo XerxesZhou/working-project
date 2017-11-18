@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <components>
+    <component id="base.dao" type="UDEF.Persistence.BaseSqlMapDao, UDEF.Persistence" />
+    <component id="column.dao" type="UDEF.Persistence.ColumnSqlMapDao, UDEF.Persistence" />
+    <component id="columnviewcondition.dao" type="UDEF.Persistence.ColumnViewConditionSqlMapDao, UDEF.Persistence" />
+    <component id="columnviewexpression.dao" type="UDEF.Persistence.ColumnViewExpressionSqlMapDao, UDEF.Persistence" />
+    <component id="columnvieworder.dao" type="UDEF.Persistence.ColumnViewOrderSqlMapDao, UDEF.Persistence" />
+    <component id="columnview.dao" type="UDEF.Persistence.ColumnViewSqlMapDao, UDEF.Persistence" />
+    <component id="columnviewsort.dao" type="UDEF.Persistence.ColumnViewSortSqlMapDao, UDEF.Persistence" />
+    <component id="customcolumn.dao" type="UDEF.Persistence.CustomColumnSqlMapDao, UDEF.Persistence" />
+    <component id="customcolumnvalue.dao" type="UDEF.Persistence.CustomColumnValueSqlMapDao, UDEF.Persistence" />
+    <component id="customselecttype.dao" type="UDEF.Persistence.CustomSelectTypeSqlMapDao, UDEF.Persistence" />
+    <component id="databasecolumn.dao" type="UDEF.Persistence.DataBaseColumnSqlMapDao, UDEF.Persistence" />
+    <component id="databasetable.dao" type="UDEF.Persistence.DataBaseTableSqlMapDao, UDEF.Persistence" />
+    <component id="dropdownlistoption.dao" type="UDEF.Persistence.DropdownlistOptionSqlMapDao, UDEF.Persistence" />
+    <component id="layoutdetail.dao" type="UDEF.Persistence.LayoutDetailSqlMapDao, UDEF.Persistence" />
+    <component id="layoutdetailview.dao" type="UDEF.Persistence.LayoutDetailViewSqlMapDao, UDEF.Persistence" />
+    <component id="layoutpart.dao" type="UDEF.Persistence.LayoutPartSqlMapDao, UDEF.Persistence" />
+    <component id="layout.dao" type="UDEF.Persistence.LayoutSqlMapDao, UDEF.Persistence" />
+    <component id="selectdatadynamic.dao" type="UDEF.Persistence.SelectDataDynamicSqlMapDao, UDEF.Persistence" />
+    <component id="selecttype.dao" type="UDEF.Persistence.SelectTypeSqlMapDao, UDEF.Persistence" />
+    <component id="systemcolumn.dao" type="UDEF.Persistence.SystemColumnSqlMapDao, UDEF.Persistence" />
+    <component id="systemselecttype.dao" type="UDEF.Persistence.SystemSelectTypeSqlMapDao, UDEF.Persistence" />
+    <component id="systemtable.dao" type="UDEF.Persistence.SystemTableSqlMapDao, UDEF.Persistence" />
+  </components>
+</configuration>

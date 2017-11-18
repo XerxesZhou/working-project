@@ -1,0 +1,17 @@
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Persistence.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Persistence.pdb
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\Castle.Core.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\Castle.MicroKernel.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\Castle.Windsor.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\IBatisNet.Common.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\IBatisNet.DataMapper.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Component.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Domain.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\NPOI.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\System.Web.Extensions.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\Castle.DynamicProxy.dll
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Component.pdb
+F:\working project\standard project\SmartSoft.Persistence\bin\Debug\SmartSoft.Domain.pdb
+F:\working project\standard project\SmartSoft.Persistence\obj\Debug\SmartSoft.Persistence.csprojResolveAssemblyReference.cache
+F:\working project\standard project\SmartSoft.Persistence\obj\Debug\SmartSoft.Persistence.dll
+F:\working project\standard project\SmartSoft.Persistence\obj\Debug\SmartSoft.Persistence.pdb

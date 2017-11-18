@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0B0C16A-E19C-43CF-9B76-494413879AED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartSoft.Domain</RootNamespace>
+    <AssemblyName>SmartSoft.Domain</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common, Version=1.4.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper, Version=1.5.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\OperatorLog.cs" />
+    <Compile Include="Common\sysOperatorSubordinate.cs" />
+    <Compile Include="Common\OperatorDesktop.cs" />
+    <Compile Include="Data\CustomerFeedback.cs" />
+    <Compile Include="Data\CustomerFollowHistory.cs" />
+    <Compile Include="Data\CustomerFollowPlan.cs" />
+    <Compile Include="Common\Department.cs" />
+    <Compile Include="Common\Operators.cs" />
+    <Compile Include="Common\sysConfig.cs" />
+    <Compile Include="Common\sysFunction.cs" />
+    <Compile Include="Common\sysLog.cs" />
+    <Compile Include="Common\sysMessage.cs" />
+    <Compile Include="Common\sysMessage_Deleted.cs" />
+    <Compile Include="Common\sysMessage_Looker.cs" />
+    <Compile Include="Common\sysMessage_Readed.cs" />
+    <Compile Include="Common\sysObjectPurview.cs" />
+    <Compile Include="Common\sysOperatorInRole.cs" />
+    <Compile Include="Common\sysPage.cs" />
+    <Compile Include="Common\sysParameter.cs" />
+    <Compile Include="Common\sysRole.cs" />
+    <Compile Include="Common\sysRoleLayoutView.cs" />
+    <Compile Include="Common\sysStream.cs" />
+    <Compile Include="Common\sysViewLayoutControl.cs" />
+    <Compile Include="Data\DataBaseColumn.cs" />
+    <Compile Include="Data\defCommon.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\CustomerLinkMan.cs" />
+    <Compile Include="Data\CustomerBusiness.cs" />
+    <Compile Include="Data\CustomerReceipt.cs" />
+    <Compile Include="Common\Knowledge.cs" />
+    <Compile Include="Data\CustomerOpptunity.cs" />
+    <Compile Include="Data\OperatorPlan.cs" />
+    <Compile Include="Data\Project.cs" />
+    <Compile Include="Data\WorkDiary.cs" />
+    <Compile Include="Data\BillComment.cs" />
+    <Compile Include="Data\CoWorker.cs" />
+    <Compile Include="Data\CustomerClue.cs" />
+    <Compile Include="DomainBase.cs" />
+    <Compile Include="Enumerate\Action.cs" />
+    <Compile Include="Enumerate\FormAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purview\Menu.cs" />
+    <Compile Include="Purview\MenuPurview.cs" />
+    <Compile Include="Purview\Page.cs" />
+    <Compile Include="Purview\Toolbar.cs" />
+    <Compile Include="Purview\ToolbarPurview.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FES.Domain.dll" />
+    <Content Include="bin\Debug\FES.Domain.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

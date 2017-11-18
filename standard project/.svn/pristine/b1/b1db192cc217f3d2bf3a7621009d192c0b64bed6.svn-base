@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- BEGIN HEAD --><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no" name="viewport"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>历史版本</title>
+    <link href="../css/HelpPageCss.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .upgrade{padding:15px;}
+        .upgrade .topCon{text-align:center;width:210px;margin: 0 auto;}
+        .upgrade .topCon img{display: inline-block;float:left;}
+        .upgrade .topCon p{line-height:32px;color:#929292;font-size:16px;display: inline-block;}
+        .upgrade .upgradeList{margin-top:30px}
+        .upgrade .upgradeList li{padding:10px;margin-bottom:15px;background:#fff;border-radius:4px;box-shadow:0 2px 4px 0 rgba(197,197,197,0.50);}
+        .upgrade .upgradeList li h1{padding-bottom:5px;font-size:14px;}
+        .upgrade .upgradeList li h5{padding-bottom:5px;color:#929292;}
+        .upgrade .upgradeList li p{color:#666;font-size:14px;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;overflow: hidden; height: 42px;}
+        .upgrade .upgradeList li a{color:#008cee;float:right;padding-top:10px;}
+    </style>
+</head>
+<body>
+	
+<div class="upgrade">
+    <div class="topCon">
+        <p>创捷易CRM &amp; 钉钉版本</p>
+	</div>
+    <ul class="upgradeList">
+        <li class="clearfix" id="copyLi" style="display:none;">
+            <h1 name="title">创捷易CRM V2.2.6版本</h1>
+            <h5 name="time">2017-06-11</h5>
+            <p name="info">本次升级提升了稳定性，并且增加了销售自动化联系人模块，APP端也加入了消息落地界面。WEB端员工可自动跟新可见范围本次升级提升了稳定性，并且增加了销售自动化联系人模块，APP端也加入了消息落地界面。WEB端员工可自动跟新可见范围本次升级提升了稳定性，并且增加了销售自动化联系人模块，APP端也加入了消息落地界面。WEB端员工可自动跟新可见范围</p>
+		</li>
+	<li class="clearfix">
+            <h1 name="title">新版本2.1发布了</h1>
+            <h5 name="time">2016-12-31</h5>
+            <p name="info">创捷易CRM V3.6正式上线啦！以后更新内容都会在这里进行展示啦，有活动也会在这里第一时间告诉您哦~接下来让我们来看看我为您带来了什么吧：</p>
+		</li><li class="clearfix">
+            <h1 name="title">新版本2.0发布了</h1>
+            <h5 name="time">2016-05-15</h5>
+            <p name="info">创捷易CRM V2.0正式上线啦！以后更新内容都会在这里进行展示啦，有活动也会在这里第一时间告诉您哦~接下来让我们来看看我为您带来了什么吧：</p>
+		</li><li class="clearfix">
+            <h1 name="title">新版本1.5发布了</h1>
+            <h5 name="time">2015-12-21</h5>
+            <p name="info">创捷易CRM V1.5正式上线啦！以后更新内容都会在这里进行展示啦，有活动也会在这里第一时间告诉您哦~接下来让我们来看看我为您带来了什么吧：</p>
+		</li><li class="clearfix">
+            <h1 name="title">新版本1.4发布了</h1>
+            <h5 name="time">2015-09-01</h5>
+            <p name="info">创捷易CRM V1.4正式上线啦！以后更新内容都会在这里进行展示啦，有活动也会在这里第一时间告诉您哦~接下来让我们来看看我为您带来了什么吧：</p>
+		</li><li class="clearfix">
+            <h1 name="title">新版本1.3发布了</h1>
+            <h5 name="time">2015-03-19</h5>
+            <p name="info">创捷易CRM V1.3正式上线啦！以后更新内容都会在这里进行展示啦，有活动也会在这里第一时间告诉您哦~接下来让我们来看看我为您带来了什么吧：</p>
+		</li></ul>
+</div>
+</body></html>

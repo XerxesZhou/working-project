@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <facilities>
+
+    <facility id="ibatis" type="Castle.Facilities.IBatisNetIntegration.IBatisNetFacility, Castle.Facilities.IBatisNetIntegration" >
+      <sqlMap id="sqlServerSqlMap" config="SmartSoft.Persistence.SqlMap.config, SmartSoft.Persistence" embedded="true" />
+    </facility>
+
+    <facility id="transaction" type="Castle.Facilities.AutomaticTransactionManagement.TransactionFacility, Castle.Facilities.AutomaticTransactionManagement" />
+
+    <!--
+    <facility 
+      id="logging"
+      type="Castle.Facilities.Logging.LoggingFacility, Castle.Facilities.Logging"
+      loggingApi="log4net" />
+    -->
+    
+  </facilities>
+
+</configuration>

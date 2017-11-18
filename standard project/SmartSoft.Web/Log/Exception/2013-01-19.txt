@@ -1,0 +1,209 @@
+[2013-01-19 11:34:25] Error occurred in page /Data/CustomerEditForm.aspx at function Page_Load by 开发员 Details:System.Web.HttpException: DataBinding:“System.Data.DataRowView”不包含名为“cbID”的属性。
+   在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.data_customereditform_aspx.__DataBind__control142(Object sender, EventArgs e) 位置 f:\SmartSoftCommon\SmartSoft.Web\Data\CustomerEditForm.aspx:行号 1579
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   在 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   在 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   在 System.Web.UI.WebControls.GridView.DataBind()
+   在 SmartSoft.Web.Data.CustomerEditForm.bindRecords() 位置 F:\SmartSoftCommon\SmartSoft.Web\Data\CustomerEditForm.aspx.cs:行号 426
+   在 SmartSoft.Web.Data.CustomerEditForm.Page_Load(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Web\Data\CustomerEditForm.aspx.cs:行号 126
+
+[2013-01-19 15:29:37] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 15:29:38] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 15:29:39] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 15:29:46] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 15:30:47] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 15:33:06] Error occurred in page PageBaseList at function lb_Search_Click by 开发员 Details:System.Data.SqlClient.SqlException: 将 varchar 值 '(2012)' 转换为数据类型为 int 的列时发生语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 UDEF.Persistence.BaseSqlMapDao.ExecuteQueryForDataTable(String statementName, Object paramObject, Hashtable htOutPutParameter)
+   在 UDEF.Persistence.SelectDataDynamicSqlMapDao.SelectDataDynamic(String result)
+   在 UDEF.Service.SelectDataDynamicService.selectDataSource(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.selectDynamic(Int32 tableID, String strFilter, String strOrderBy, String columnSelect, String o_columnSelect, String whereConditionColumn, Boolean isPage, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTalbe, Hashtable htColumnViewOrder, Hashtable htColumnSum)
+   在 UDEF.Service.SelectDataDynamicService.getViewDataSource(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Boolean isPaging, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isItemTable, Boolean isSum)
+   在 UDEF.Service.SelectDataDynamicService.GetViewDataSourcePaging(Int32 viewID, String requiredColumn, String strFilter, String whereConditionColumn, String strOrderBy, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 UDEF.Service.UserDefineBaseService.GetDataSource(Int32 viewID, String requiredColumn, String whereCondition, String whereConditionColumn, String orderByExpression, Int32 pageSize, Int32 pageIndex, Int32& recordCount, Boolean isSum)
+   在 SmartSoft.Presentation.PageBaseList.getDataSource() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 812
+   在 SmartSoft.Presentation.PageBaseList.bindGrid() 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 915
+   在 SmartSoft.Presentation.PageBaseList.lb_Search_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 527
+
+[2013-01-19 17:09:07] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+
+[2013-01-19 17:10:13] Error occurred in page PageBaseList at function lb_Export_Click by 开发员 Details:System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 SmartSoft.Presentation.PageBase.ToExcelNew(Control ctrl, String fileName) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBase.cs:行号 403
+   在 SmartSoft.Presentation.PageBaseList.lb_Export_Click(Object sender, EventArgs e) 位置 F:\SmartSoftCommon\SmartSoft.Presentation\PageBaseList.cs:行号 591
+

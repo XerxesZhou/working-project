@@ -1,0 +1,64 @@
+[2009-08-31 22:42:36] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusmonthlyamountid ---> System.IndexOutOfRangeException: xcusmonthlyamountid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-31 22:43:00] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusmonthlyamountid ---> System.IndexOutOfRangeException: xcusmonthlyamountid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-31 22:43:09] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusmonthlyamountid ---> System.IndexOutOfRangeException: xcusmonthlyamountid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+
+[2009-08-31 22:43:45] Error occurred in page Service.BaseService at function:GetDetail Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'SelectXCustomer' for object.  Cause: xcusmonthlyamountid ---> System.IndexOutOfRangeException: xcusmonthlyamountid
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at IBatisNet.DataMapper.TypeHandlers.Nullables.NullableInt32TypeHandler.GetValueByName(ResultProperty mapping, IDataReader dataReader)
+   at IBatisNet.DataMapper.Configuration.ResultMapping.ResultProperty.GetDataBaseValue(IDataReader dataReader)
+   at IBatisNet.DataMapper.MappedStatements.PropertyStrategy.DefaultStrategy.Set(RequestScope request, ResultMap resultMap, ResultProperty mapping, Object& target, IDataReader reader, Object keys)
+   at IBatisNet.DataMapper.MappedStatements.ResultStrategy.ResultMapStrategy.Process(RequestScope request, IDataReader& reader, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject[T](RequestScope request, IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject, T resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject[T](IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject[T](String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 126
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteQueryForObject[T](String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 130
+   at SmartSoft.Service.BaseService.GetDetail[T](Int32 rowID) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 145
+

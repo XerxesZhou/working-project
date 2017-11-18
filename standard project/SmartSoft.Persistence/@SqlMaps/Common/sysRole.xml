@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="sysRole" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="sysRole" type="SmartSoft.Domain.Common.sysRole, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="sysRole">
+			<result property="RoleID" column="roleid" />
+			<result property="RoleName" column="rolename" />
+			<result property="Remark" column="remark" />
+      <result property="SellDiscount" column="selldiscount" />
+      <result property="CustomerMaxAMT" column="customermaxamt" />
+      <result property="CustomerMaxCreditAMT" column="customermaxcreditamt" />
+      <result property="isAdmin" column="isadmin" />
+    </resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="SelectsysRole" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  roleid,
+				  rolename,
+				  remark,
+          selldiscount,
+          customermaxamt,
+          customermaxcreditamt,
+          isadmin
+			From sysRole
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					roleid=#RoleID# 
+				</isParameterPresent>
+			</dynamic>
+		</select>
+
+    <select id="SelectOperatorRoles" parameterClass="int" resultMap="SelectResult">
+      Select *
+      From sysRole
+      Where roleid IN
+      (
+        Select roleid From sysOperatorInRole Where operatorid=#OperatorID#
+      )
+    </select>
+		
+		<insert id="InsertsysRole" parameterClass="sysRole">
+      Insert Into sysRole (
+      roleid,
+      rolename,
+      remark,
+      selldiscount,
+      customermaxamt,
+      customermaxcreditamt,
+      isadmin
+      )Values(
+      #RoleID#,
+      #RoleName#,
+      #Remark#,
+      #SellDiscount#,
+      #CustomerMaxAMT#,
+      #CustomerMaxCreditAMT#,
+      #isAdmin#
+      )
+    </insert>
+		
+		<update id="UpdatesysRole" parameterClass="sysRole">
+      Update sysRole Set
+      rolename=#RoleName#,
+      remark=#Remark#,
+      selldiscount=#SellDiscount#,
+      customermaxamt=#CustomerMaxAMT#,
+      customermaxcreditamt=#CustomerMaxCreditAMT#,
+      isadmin=#isAdmin#
+      <dynamic prepend="WHERE">
+				<isParameterPresent>
+					roleid=#RoleID#
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="DeletesysRole" parameterClass="int">
+			Delete From sysRole
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					roleid=#RoleID#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

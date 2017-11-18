@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="MenuPurview" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="MenuPurview" type="SmartSoft.Domain.Purview.MenuPurview, SmartSoft.Domain" />
+	</alias>
+	<resultMaps>
+		<resultMap id="SelectResult" class="MenuPurview">
+			<result property="MenuId" column="menuid" />
+			<result property="ObjectId" column="objectid" />
+		</resultMap>
+	</resultMaps>
+	
+	<statements>
+		<select id="BaseSelectMenuPurview" parameterClass="int" resultMap="SelectResult">
+			Select 
+				  menuid,
+				  objectid
+			From MenuPurview
+		</select>
+
+				
+		<insert id="InsertMenuPurview" parameterClass="MenuPurview">
+			Insert Into MenuPurview (
+				  menuid,
+				  objectid
+			)Values(
+				 #MenuId#,
+				 #ObjectId#
+			)
+		</insert>
+		
+		<delete id="DeleteMenuPurview" parameterClass="int">
+			Delete From MenuPurview
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+					objectid=#ObjectId#
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+		
+	</statements>
+</sqlMap>

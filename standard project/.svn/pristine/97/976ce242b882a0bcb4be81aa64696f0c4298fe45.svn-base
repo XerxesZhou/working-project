@@ -1,0 +1,236 @@
+[2009-09-01 21:25:10] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM. ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at System.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at System.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-01 21:26:01] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM. ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at System.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at System.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 86
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-09-01 21:28:54] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM. ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at System.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at System.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-01 21:28:54] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM. ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at System.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at System.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 86
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-09-01 21:30:42] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-01 21:30:51] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 86
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-09-01 21:40:11] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-01 21:40:20] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 86
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+
+[2009-09-01 21:50:03] Error occurred in page Service.BaseService at function:Add Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 170
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 93
+
+[2009-09-01 21:50:03] Error occurred in page /Data/XCustomerEditForm.aspx at function lbt_Save_Click by Jack Details:IBatisNet.DataMapper.Exceptions.DataMapperException: Error executing query 'InsertXCustomer' for insert.  Cause: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。 ---> System.Data.SqlClient.SqlException: 不允许从数据类型 datetime 到 int 的隐性转换。请使用 CONVERT 函数来运行此查询。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteInsert(IDalSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Insert(String statementName, Object parameterObject)
+   at SmartSoft.Persistence.BaseSqlMapDao.ExecuteInsert(String statementName, Object parameterObject) in E:\SmartSoft\SmartSoft.Persistence\BaseSqlMapDao.cs:line 161
+   --- End of inner exception stack trace ---
+   at SmartSoft.Service.BaseService.Add[T](T obj) in E:\SmartSoft\SmartSoft.Service\BaseService.cs:line 98
+   at SmartSoft.Presentation.DataController.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID) in E:\SmartSoft\SmartSoft.Presentation\DataController.cs:line 86
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.callback__SaveCustomer(FormAction , Control , Int32 , Int32 , Int32 , Nullable`1 )
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.__delegate_2.Call(Object[] )
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.IBatisNetIntegration.AutomaticSessionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Facilities.AutomaticTransactionManagement.TransactionInterceptor.Intercept(IMethodInvocation invocation, Object[] args)
+   at Castle.Windsor.Proxy.DefaultMethodInvocation.Proceed(Object[] args)
+   at Castle.Windsor.Proxy.InterceptorChain.Intercept(IMethodInvocation invocation, Object[] args)
+   at CProxyTypeSmartSoft_PresentationDataControllerPresentation0.SaveCustomer(FormAction action, Control ctrl, Int32 layoutID, Int32 rowID, Int32 operatorID, Nullable`1 employeeID)
+   at SmartSoft.Web.Data.XCustomerEditForm.lb_Save_Click(Object sender, EventArgs e) in E:\SmartSoft\SmartSoft.Web\Data\XCustomerEditForm.aspx.cs:line 118
+

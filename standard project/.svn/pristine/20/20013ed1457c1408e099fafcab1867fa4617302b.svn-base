@@ -1,0 +1,136 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="Xml" ResponseEncoding="UTF-8" Description="Template description here." %>
+<%@ Property Name="assemblyname" Type="System.String" Default="SomeValue" Optional="True" Category="Strings" Description="This is a sample string property." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the mapping file is based on" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+
+<script runat="template">
+	public string ToLowercase(string str)
+	{
+		str = str.ToLower();	
+		return str;
+	}
+	
+	public string GetClassName(TableSchema table)
+	{
+		string pre = "udef";
+		
+		return table.Name.Replace(pre, "");
+	}
+	
+</script>
+<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="<%=GetClassName(SourceTable)%>" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<alias>
+		<typeAlias alias="<%=GetClassName(SourceTable)%>" type="<%=assemblyname%>.<%=GetClassName(SourceTable)%>, <%=assemblyname.Replace(".Data","").Replace(".Common","")%>" />
+	</alias>
+	
+	<resultMaps>
+		<resultMap id="SelectResult" class="<%=GetClassName(SourceTable)%>">
+			<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+			<result property="<%=SourceTable.Columns[i].Name%>" column="<%=ToLowercase(SourceTable.Columns[i].Name)%>" />
+			<%}%>
+		</resultMap>
+	</resultMaps>
+	
+  	<parameterMaps>
+    	<parameterMap id="dynamicParameter">
+			<parameter property="whereCondition" />
+			<parameter property="orderByExpression" />
+    	</parameterMap>
+		<parameterMap id="dynamicParameterPage" class="Hashtable">
+			<parameter property="TableName" column="TableName"/>
+			<parameter property="WhereCondition" column="WhereCondition"/>
+			<parameter property="OrderByExpression" column="OrderByExpression"/>
+			<parameter property="PageSize" column="PageSize"/>
+			<parameter property="PageNumber" column="PageNumber"/>
+			<parameter property="TotalRecord" column="TotalRecord" direction="Output"/>
+		</parameterMap>
+  	</parameterMaps>
+
+	
+	<statements>
+	
+	    <select id="Select<%=GetClassName(SourceTable)%>Dynamic" parameterMap="dynamicParameter" resultMap="SelectResult">  
+			Select *
+      		From [<%=GetClassName(SourceTable)%>]
+      		<dynamic prepend="WHERE">
+				<isNotEmpty property="whereCondition" >
+					(1=1) $whereCondition$
+				</isNotEmpty>
+      		</dynamic>
+      		<dynamic prepend="Order By">
+        		<isNotEmpty property="orderByExpression" >
+          		$orderByExpression$
+        		</isNotEmpty>
+      		</dynamic>
+    	</select>
+	
+		<procedure id="Select<%=GetClassName(SourceTable)%>DynamicPage" parameterMap="dynamicParameterPage" resultMap="SelectResult">
+			usp_SelectDynamicPage
+		</procedure>
+	
+		<select id="Select<%=GetClassName(SourceTable)%>" parameterClass="int" resultMap="SelectResult">
+			Select 
+				<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+				  <%=ToLowercase(SourceTable.Columns[i].Name)%><%if(i<SourceTable.Columns.Count - 1){%>,<%}%>
+				<%}%>
+			From [<%=SourceTable.Name%>]
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+				<% if(SourceTable.HasPrimaryKey){ %>
+				<%for(int i=0;i<SourceTable.PrimaryKey.MemberColumns.Count;i++){%>
+					<%=ToLowercase(SourceTable.PrimaryKey.MemberColumns[i].Name)%>=#<%=SourceTable.PrimaryKey.MemberColumns[i].Name%># <%if(i<SourceTable.PrimaryKey.MemberColumns.Count-1){%>AND<%}%>
+				<%}%>
+				<% } %>
+				</isParameterPresent>
+			</dynamic>
+		</select>
+				
+		<statement id="Insert<%=GetClassName(SourceTable)%>" parameterClass="<%=GetClassName(SourceTable)%>">
+			declare @primarykeyid int
+      		execute @primarykeyid = usp_GetID '<%=SourceTable.Name%>'
+			Insert Into [<%=SourceTable.Name%>] (
+				<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+				  <%=ToLowercase(SourceTable.Columns[i].Name)%><%if(i<SourceTable.Columns.Count - 1){%>,<%}%>
+				<%}%>
+			)Values(
+				<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+				 <%if(SourceTable.Columns[i].IsPrimaryKeyMember){%> @primarykeyid <%}else{%> #<%=SourceTable.Columns[i].Name%>#<%}if(i<SourceTable.Columns.Count - 1){%>,<%}%>
+				<%}%>
+			)
+			Select @primarykeyid
+		</statement>
+		
+		<update id="Update<%=GetClassName(SourceTable)%>" parameterClass="<%=GetClassName(SourceTable)%>">
+			Update [<%=SourceTable.Name%>] Set 
+				<%for(int i=0;i<SourceTable.Columns.Count;i++){%>
+				<%=ToLowercase(SourceTable.Columns[i].Name)%>=#<%=SourceTable.Columns[i].Name%>#<%if(i<SourceTable.Columns.Count - 1){%>,<%}%>
+				<%}%>
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+				<% if(SourceTable.HasPrimaryKey){ %>
+				<%for(int i=0;i<SourceTable.PrimaryKey.MemberColumns.Count;i++){%>
+					<%=ToLowercase(SourceTable.PrimaryKey.MemberColumns[i].Name)%>=#<%=SourceTable.PrimaryKey.MemberColumns[i].Name%>#<%if(i<SourceTable.PrimaryKey.MemberColumns.Count-1){%>AND<%}%>
+				<%}%>
+				<% } %>
+				</isParameterPresent>
+			</dynamic>
+		</update>
+		
+		<delete id="Delete<%=GetClassName(SourceTable)%>" parameterClass="int">
+			Delete From [<%=SourceTable.Name%>]
+			<dynamic prepend="WHERE">
+				<isParameterPresent>
+				<% if(SourceTable.HasPrimaryKey){ %>
+				<%for(int i=0;i<SourceTable.PrimaryKey.MemberColumns.Count;i++){%>
+					<%=ToLowercase(SourceTable.PrimaryKey.MemberColumns[i].Name)%>=#<%=SourceTable.PrimaryKey.MemberColumns[i].Name%>#<%if(i<SourceTable.PrimaryKey.MemberColumns.Count-1){%>AND<%}%>
+				<%}%>
+				<% } %>
+				</isParameterPresent>
+			</dynamic>
+		</delete>
+	</statements>
+</sqlMap>
